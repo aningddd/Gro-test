@@ -1,5 +1,5 @@
 //
-//  OrgTableViewCell.swift
+//  EventTableViewCell.swift
 //  Gro-test
 //
 //  Created by aning on 17/10/22.
@@ -8,14 +8,17 @@
 
 import UIKit
 
-class OrgTableViewCell: UITableViewCell {
+class EventTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var orgNameLabel: UILabel!
-    @IBOutlet weak var orgInfoButton: UIButton!
-    @IBOutlet weak var orgLogo: UIImageView!
-    @IBOutlet weak var recentEventLabel: UILabel!
-    @IBOutlet weak var toEventsButton: UIButton!
     @IBOutlet weak var view: UIView!
+    @IBOutlet weak var eventName: UILabel!
+    @IBOutlet weak var RSVPLabel: UILabel!
+    @IBOutlet weak var RSVPNumberLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var infoButton: UIButton!
+    @IBOutlet weak var infoArrow: UIButton!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
