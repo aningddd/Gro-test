@@ -31,6 +31,7 @@ class SingleEventViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Make all blocks rounded
         RSVPButton.layer.cornerRadius = 5
         contactButton.layer.cornerRadius = 5

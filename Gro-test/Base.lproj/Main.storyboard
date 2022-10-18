@@ -569,84 +569,43 @@ Is Written Here</string>
         <!--Explore-->
         <scene sceneID="eru-qG-fo9">
             <objects>
-                <viewController id="FKF-Iw-c9A" sceneMemberID="viewController">
+                <viewController id="FKF-Iw-c9A" customClass="ExploreViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Mr-HU-dpc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Search by Name" translatesAutoresizingMaskIntoConstraints="NO" id="uKx-cN-pdj">
-                                <rect key="frame" x="13" y="102" width="388" height="56"/>
+                                <rect key="frame" x="20" y="102" width="374" height="56"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="388" id="cg8-jO-sSz"/>
+                                    <constraint firstAttribute="width" constant="374" id="cg8-jO-sSz"/>
                                     <constraint firstAttribute="height" constant="56" id="n7l-lf-xkN"/>
                                 </constraints>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Se7-G7-68H">
-                                <rect key="frame" x="13" y="167" width="388" height="401"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="388" id="exA-IU-LF6"/>
-                                    <constraint firstAttribute="height" constant="401" id="qPY-fT-TM7"/>
-                                </constraints>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2x6-fC-fQk">
-                                        <rect key="frame" x="0.0" y="28" width="388" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2x6-fC-fQk" id="lmX-F5-67s">
-                                            <rect key="frame" x="0.0" y="0.0" width="388" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="NcJ-j6-D8z">
-                                        <rect key="frame" x="0.0" y="71.666667938232422" width="388" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NcJ-j6-D8z" id="S5r-68-dfs">
-                                            <rect key="frame" x="0.0" y="0.0" width="388" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="LtC-HX-6Tp">
-                                        <rect key="frame" x="0.0" y="115.33333587646484" width="388" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LtC-HX-6Tp" id="i2F-m5-rWp">
-                                            <rect key="frame" x="0.0" y="0.0" width="388" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="d5S-Ih-vCP">
-                                        <rect key="frame" x="0.0" y="159.00000381469727" width="388" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d5S-Ih-vCP" id="zB9-2z-HtX">
-                                            <rect key="frame" x="0.0" y="0.0" width="388" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories Selected: None" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDw-XJ-40C">
-                                <rect key="frame" x="105" y="576" width="204" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Categories Selected: None" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDw-XJ-40C">
+                                <rect key="frame" x="105" y="252" width="204" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="Grey E"/>
                         <constraints>
                             <constraint firstItem="LDw-XJ-40C" firstAttribute="centerX" secondItem="0Mr-HU-dpc" secondAttribute="centerX" id="8m0-7m-1st"/>
-                            <constraint firstItem="LDw-XJ-40C" firstAttribute="top" secondItem="Se7-G7-68H" secondAttribute="bottom" constant="8" id="MDn-CU-MUS"/>
-                            <constraint firstItem="Se7-G7-68H" firstAttribute="centerX" secondItem="0Mr-HU-dpc" secondAttribute="centerX" id="bCV-9k-DFO"/>
                             <constraint firstItem="uKx-cN-pdj" firstAttribute="top" secondItem="CsQ-M2-26r" secondAttribute="top" constant="14" id="iO7-Qc-TnV"/>
                             <constraint firstItem="uKx-cN-pdj" firstAttribute="centerX" secondItem="0Mr-HU-dpc" secondAttribute="centerX" id="lhl-5S-iN7"/>
-                            <constraint firstItem="Se7-G7-68H" firstAttribute="top" secondItem="uKx-cN-pdj" secondAttribute="bottom" constant="9" id="rAW-gq-UxM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CsQ-M2-26r"/>
                     </view>
                     <navigationItem key="navigationItem" title="Explore" id="Rcl-9G-fiD"/>
+                    <connections>
+                        <outlet property="searchBar" destination="uKx-cN-pdj" id="Jdi-c4-Dwg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XxA-zF-mrU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-742" y="721"/>
+            <point key="canvasLocation" x="-742.02898550724649" y="720.53571428571422"/>
         </scene>
     </scenes>
     <resources>
