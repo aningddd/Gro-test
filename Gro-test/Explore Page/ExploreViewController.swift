@@ -20,10 +20,8 @@ class ExploreViewController: UIViewController {
         super.viewDidLoad()
         searchBar.layer.cornerRadius = 5
         categoryView.layer.cornerRadius = 5
-        plusButton.setImage(UIImage(named: "plus"), for: .normal)
-        plusButton.tintColor = UIColor.black
-        
-        // Do any additional setup after loading the view.
+        plusButton.setImage(UIImage(systemName: "plus")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        plusButton.tintColor = .black
     }
     
 
