@@ -865,10 +865,10 @@ Is Written Here</string>
             </objects>
             <point key="canvasLocation" x="-742.02898550724649" y="720.53571428571422"/>
         </scene>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="kGd-nF-SbO">
             <objects>
-                <viewController id="aeV-X3-BA3" customClass="ViewController" customModule="alpha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aeV-X3-BA3" customClass="LoginVC" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EhB-4c-UMe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -959,6 +959,9 @@ Is Written Here</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zAU-1L-g5M"/>
+                    <connections>
+                        <outlet property="LoginTitleLabel" destination="SZD-V5-tlw" id="i3G-jk-7YA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmv-XZ-cxM" sceneMemberID="firstResponder"/>
             </objects>
@@ -987,7 +990,7 @@ Is Written Here</string>
         <!--Register PageVC-->
         <scene sceneID="rGl-cf-jNn">
             <objects>
-                <viewController id="VLs-LN-K3S" customClass="registerPageVC" customModule="alpha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VLs-LN-K3S" customClass="RegisterPageVC" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vgm-ie-ScO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1081,15 +1084,19 @@ Is Written Here</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="olH-QX-UJT"/>
+                    <connections>
+                        <outlet property="mainTable" destination="PEL-L6-mlw" id="Mvo-qz-UXo"/>
+                        <outlet property="registerPageTitleLabel" destination="sl0-6Q-oW6" id="Btx-l5-x3R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWA-S6-gXz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3913" y="-929"/>
         </scene>
-        <!--Forgot PasswordVC-->
+        <!--Forget PasswordVC-->
         <scene sceneID="oxk-su-1Io">
             <objects>
-                <viewController id="mHI-4a-ezc" customClass="forgotPasswordVC" customModule="alpha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mHI-4a-ezc" customClass="forgetPasswordVC" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xy0-Kk-l07">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1142,6 +1149,9 @@ Is Written Here</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Mrr-1f-kIM"/>
+                    <connections>
+                        <outlet property="ForgetPasswordTitleLable" destination="WtP-Xk-HYq" id="Oxd-RT-zXo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lqQ-5u-C2n" sceneMemberID="firstResponder"/>
             </objects>
@@ -1150,7 +1160,7 @@ Is Written Here</string>
         <!--Reset PasswordVC-->
         <scene sceneID="V1Q-K2-4Wq">
             <objects>
-                <viewController id="bbH-Mf-h7v" customClass="ResetPasswordVC" customModule="alpha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bbH-Mf-h7v" customClass="ResetPasswordVC" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2bP-YD-Qry">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1222,10 +1232,13 @@ Is Written Here</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0H0-k8-Fip"/>
+                    <connections>
+                        <outlet property="resetPasswordTitleLabel" destination="7MV-f4-nte" id="Nyj-4d-3nf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4K-5u-TmO" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1310" y="-1961"/>
+            <point key="canvasLocation" x="-1178" y="-1714"/>
         </scene>
         <!--Register PageVC-->
         <scene sceneID="kY0-ZV-ktg">
@@ -1439,6 +1452,26 @@ Is Written Here</string>
             <point key="canvasLocation" x="-3913" y="-929"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="0zo-Im-Wu1">
+            <size key="intrinsicContentSize" width="32" height="34"/>
+        </designable>
+        <designable name="HOI-et-WMH">
+            <size key="intrinsicContentSize" width="32" height="34"/>
+        </designable>
+        <designable name="SNP-3Z-m6H">
+            <size key="intrinsicContentSize" width="32" height="34"/>
+        </designable>
+        <designable name="VJi-p5-w1v">
+            <size key="intrinsicContentSize" width="32" height="34"/>
+        </designable>
+        <designable name="bK7-sp-Zte">
+            <size key="intrinsicContentSize" width="32" height="34"/>
+        </designable>
+        <designable name="oHK-4h-0zo">
+            <size key="intrinsicContentSize" width="32" height="34"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="Aaa-5i-WZ7"/>
         <segue reference="Wam-tx-ANT"/>
