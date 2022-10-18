@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RgU-si-FJL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RgU-si-FJL">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -76,19 +76,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4a9-OC-TKJ">
-                                <rect key="frame" x="20" y="118" width="374" height="1"/>
+                                <rect key="frame" x="20" y="202" width="374" height="1"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="VUc-Zl-HN9"/>
-                                    <constraint firstAttribute="width" constant="374" id="ZWV-xN-xXf"/>
+                                    <constraint firstAttribute="width" constant="374" id="1Zr-jr-x1T"/>
+                                    <constraint firstAttribute="height" constant="1" id="O8B-uM-xCm"/>
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dQ3-VW-HzQ">
-                                <rect key="frame" x="20" y="127" width="374" height="128"/>
+                                <rect key="frame" x="20" y="211" width="374" height="97"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="EU2-aW-td0"/>
-                                    <constraint firstAttribute="width" constant="374" id="ufT-h5-cka"/>
+                                    <constraint firstAttribute="height" constant="97" id="D9f-XE-mKu"/>
+                                    <constraint firstAttribute="width" constant="374" id="LLk-Ih-O9P"/>
                                 </constraints>
                                 <string key="text">The purpose of EHS is to foster and encourage the study of the English literature and language. Students are encouraged to actively partipicate in the club through volunteer opportunities aimed at increasing literacy and literary appreciation in the community.</string>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -96,11 +96,11 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gbg-dO-jcO">
-                                <rect key="frame" x="20" y="272" width="374" height="453"/>
+                                <rect key="frame" x="20" y="325" width="374" height="400"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="EBe-OV-P6k"/>
-                                    <constraint firstAttribute="height" constant="453" id="wEM-Aq-4mp"/>
+                                    <constraint firstAttribute="height" constant="400" id="roi-4c-xaU"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="phB-0L-GXe">
                                     <size key="itemSize" width="128" height="128"/>
@@ -120,13 +120,49 @@
                                 </cells>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTZ-jb-vBM">
-                                <rect key="frame" x="20" y="263" width="374" height="1"/>
+                                <rect key="frame" x="20" y="316" width="374" height="1"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="Iyd-Up-t8h"/>
-                                    <constraint firstAttribute="height" constant="1" id="eii-Ul-Dl7"/>
+                                    <constraint firstAttribute="width" constant="374" id="iHG-HO-3Ei"/>
+                                    <constraint firstAttribute="height" constant="1" id="uo1-T0-ADi"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrZ-1R-p29">
+                                <rect key="frame" x="20" y="143" width="85" height="35"/>
+                                <color key="backgroundColor" name="Light Orange"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="84e-uU-vc7"/>
+                                    <constraint firstAttribute="width" constant="85" id="hvG-MG-6st"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Contact"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUf-Kg-nHa">
+                                <rect key="frame" x="113" y="143" width="158" height="35"/>
+                                <color key="backgroundColor" name="Light Orange"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="Gji-Vk-0Xs"/>
+                                    <constraint firstAttribute="height" constant="35" id="rHn-Jm-rBw"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Upcoming Events"/>
+                                <connections>
+                                    <segue destination="Eps-vE-UOJ" kind="show" id="vhY-yc-Cr2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJe-eK-bea">
+                                <rect key="frame" x="279" y="143" width="115" height="35"/>
+                                <color key="backgroundColor" name="Light Orange"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="7k4-hR-Ezg"/>
+                                    <constraint firstAttribute="height" constant="35" id="jjs-6D-T4A"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Subscribe"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eZa-vq-d87"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -134,15 +170,22 @@
                             <constraint firstItem="ga3-TX-cDb" firstAttribute="top" secondItem="eZa-vq-d87" secondAttribute="top" constant="10" id="0b9-SG-GSW"/>
                             <constraint firstItem="j54-sV-Qju" firstAttribute="leading" secondItem="eZa-vq-d87" secondAttribute="leading" constant="20" id="0bB-5L-Dzp"/>
                             <constraint firstItem="j54-sV-Qju" firstAttribute="top" secondItem="eZa-vq-d87" secondAttribute="top" constant="10" id="2Iq-8M-K7y"/>
-                            <constraint firstItem="dQ3-VW-HzQ" firstAttribute="top" secondItem="4a9-OC-TKJ" secondAttribute="bottom" constant="8" symbolic="YES" id="61Y-Xg-ya4"/>
-                            <constraint firstItem="gbg-dO-jcO" firstAttribute="top" secondItem="kTZ-jb-vBM" secondAttribute="bottom" constant="8" symbolic="YES" id="CkC-9G-uQW"/>
-                            <constraint firstItem="4a9-OC-TKJ" firstAttribute="top" secondItem="ga3-TX-cDb" secondAttribute="bottom" constant="8" symbolic="YES" id="GFb-m8-IoT"/>
-                            <constraint firstItem="dQ3-VW-HzQ" firstAttribute="centerX" secondItem="k0i-27-mId" secondAttribute="centerX" id="Na8-PT-gx2"/>
-                            <constraint firstItem="4a9-OC-TKJ" firstAttribute="centerX" secondItem="k0i-27-mId" secondAttribute="centerX" id="VV7-o7-wId"/>
-                            <constraint firstItem="kTZ-jb-vBM" firstAttribute="top" secondItem="dQ3-VW-HzQ" secondAttribute="bottom" constant="8" symbolic="YES" id="X2P-pc-mX6"/>
-                            <constraint firstItem="gbg-dO-jcO" firstAttribute="centerX" secondItem="k0i-27-mId" secondAttribute="centerX" id="YpV-0t-yyH"/>
+                            <constraint firstItem="4a9-OC-TKJ" firstAttribute="top" secondItem="BUf-Kg-nHa" secondAttribute="bottom" constant="24" id="4Hu-Vh-End"/>
+                            <constraint firstItem="qJe-eK-bea" firstAttribute="top" secondItem="eZa-vq-d87" secondAttribute="top" constant="143" id="Cou-b8-x2y"/>
+                            <constraint firstItem="kTZ-jb-vBM" firstAttribute="top" secondItem="dQ3-VW-HzQ" secondAttribute="bottom" constant="8" symbolic="YES" id="FIv-PG-uWQ"/>
+                            <constraint firstItem="qJe-eK-bea" firstAttribute="leading" secondItem="BUf-Kg-nHa" secondAttribute="trailing" constant="8" symbolic="YES" id="NtT-IK-mb5"/>
+                            <constraint firstItem="BUf-Kg-nHa" firstAttribute="top" secondItem="eZa-vq-d87" secondAttribute="top" constant="143" id="OsM-ik-fPS"/>
+                            <constraint firstItem="kTZ-jb-vBM" firstAttribute="centerX" secondItem="k0i-27-mId" secondAttribute="centerX" id="Pgw-d8-CIB"/>
+                            <constraint firstItem="XrZ-1R-p29" firstAttribute="leading" secondItem="eZa-vq-d87" secondAttribute="leading" constant="20" id="QJC-jk-7Mo"/>
+                            <constraint firstItem="dQ3-VW-HzQ" firstAttribute="top" secondItem="4a9-OC-TKJ" secondAttribute="bottom" constant="8" symbolic="YES" id="SsE-wh-AR8"/>
+                            <constraint firstItem="BUf-Kg-nHa" firstAttribute="leading" secondItem="XrZ-1R-p29" secondAttribute="trailing" constant="8" symbolic="YES" id="Z1E-Ib-yg1"/>
+                            <constraint firstItem="eZa-vq-d87" firstAttribute="trailing" secondItem="qJe-eK-bea" secondAttribute="trailing" constant="20" id="ipk-Ob-zdk"/>
+                            <constraint firstItem="dQ3-VW-HzQ" firstAttribute="centerX" secondItem="k0i-27-mId" secondAttribute="centerX" id="jac-xh-y2q"/>
                             <constraint firstItem="eZa-vq-d87" firstAttribute="trailing" secondItem="ga3-TX-cDb" secondAttribute="trailing" constant="43" id="oUo-IP-TdS"/>
-                            <constraint firstItem="kTZ-jb-vBM" firstAttribute="centerX" secondItem="k0i-27-mId" secondAttribute="centerX" id="uFQ-Qg-9Pr"/>
+                            <constraint firstItem="XrZ-1R-p29" firstAttribute="top" secondItem="eZa-vq-d87" secondAttribute="top" constant="143" id="opw-e6-k8W"/>
+                            <constraint firstItem="gbg-dO-jcO" firstAttribute="top" secondItem="kTZ-jb-vBM" secondAttribute="bottom" constant="8" symbolic="YES" id="uFv-tt-oTA"/>
+                            <constraint firstItem="gbg-dO-jcO" firstAttribute="centerX" secondItem="k0i-27-mId" secondAttribute="centerX" id="xJ8-am-tTh"/>
+                            <constraint firstItem="4a9-OC-TKJ" firstAttribute="centerX" secondItem="k0i-27-mId" secondAttribute="centerX" id="xzc-f6-nBa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Organization Page" id="3fq-hH-CK2"/>
@@ -173,7 +216,7 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventCell" rowHeight="135" id="Mxc-Xs-YKd" customClass="EventTableViewCell" customModule="Gro_test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="135"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="135"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mxc-Xs-YKd" id="Akj-b6-riO">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
@@ -300,7 +343,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="3uQ-Uu-dTl" customClass="CheckableTableViewCell" customModule="Gro_test" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="50" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3uQ-Uu-dTl" id="Mc2-F5-0oT">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
@@ -506,7 +549,7 @@ Is Written Here</string>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrgCell" rowHeight="135" id="L6h-4Y-Src" customClass="OrgTableViewCell" customModule="Gro_test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="135"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="135"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L6h-4Y-Src" id="h8I-y3-vOY">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
@@ -1018,7 +1061,7 @@ Is Written Here</string>
                                 <size key="shadowOffset" width="0.0" height="5"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dY-lU-os9">
-                                <rect key="frame" x="106" y="338.33333333333331" width="202" height="31"/>
+                                <rect key="frame" x="106" y="338.33333333333331" width="202" height="34.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="202" id="3tt-zw-nxP"/>
                                 </constraints>
@@ -1153,10 +1196,10 @@ Is Written Here</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="HTd-zi-lwa">
-                                <rect key="frame" x="108.66666666666669" y="581.33333333333337" width="197" height="160.66666666666663"/>
+                                <rect key="frame" x="93.333333333333329" y="581.33333333333337" width="227.33333333333337" height="160.66666666666663"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmc-cO-LTk">
-                                        <rect key="frame" x="0.0" y="0.0" width="197" height="115.66666666666667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="227.33333333333334" height="112.33333333333333"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Register!">
@@ -1167,7 +1210,7 @@ Is Written Here</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oz5-MM-Kxr">
-                                        <rect key="frame" x="0.0" y="129.66666666666663" width="197" height="31"/>
+                                        <rect key="frame" x="0.0" y="126.33333333333324" width="227.33333333333334" height="34.333333333333329"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="You run an org? Click here!"/>
@@ -1186,7 +1229,7 @@ Is Written Here</string>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="registerTC" rowHeight="116" id="SUR-0C-OWS" customClass="LabelTextFieldCell" customModule="Gro_test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="374" height="116"/>
+                                        <rect key="frame" x="0.0" y="50" width="374" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SUR-0C-OWS" id="eab-GM-UEo">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="116"/>
@@ -1292,7 +1335,7 @@ Is Written Here</string>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="registerTC" rowHeight="116" id="tqf-YC-HXd" customClass="LabelTextFieldCell" customModule="Gro_test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="374" height="116"/>
+                                        <rect key="frame" x="0.0" y="50" width="374" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tqf-YC-HXd" id="bzA-OX-D5Q">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="116"/>
@@ -1381,21 +1424,21 @@ Is Written Here</string>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="7gW-hy-C5d"/>
         <segue reference="zyO-WO-2Mb"/>
         <segue reference="Wam-tx-ANT"/>
+        <segue reference="vhY-yc-Cr2"/>
         <segue reference="b4K-ym-n02"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="Image" width="1200" height="1200"/>
-        <image name="arrow.right.circle" catalog="system" width="128" height="121"/>
-        <image name="calendar" catalog="system" width="128" height="106"/>
-        <image name="house.fill" catalog="system" width="128" height="106"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="arrow.right.circle" catalog="system" width="128" height="123"/>
+        <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="square.stack.3d.down.right" catalog="system" width="124" height="128"/>
+        <image name="square.stack.3d.down.right" catalog="system" width="123" height="128"/>
         <image name="utcsLogo" width="5987" height="1362"/>
         <namedColor name="Burnt Orange">
             <color red="0.74901960784313726" green="0.3411764705882353" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1413,7 +1456,7 @@ Is Written Here</string>
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
