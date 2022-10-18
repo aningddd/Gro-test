@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6F062D8D28FE4BD10018F873 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F062D8C28FE4BD10018F873 /* ExploreViewController.swift */; };
+		6F062D9828FF128B0018F873 /* CategoryPopoverControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F062D9728FF128B0018F873 /* CategoryPopoverControllerTableViewController.swift */; };
 		6F6A30AB28FDF64E00DF8D12 /* OrgTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6A30AA28FDF64E00DF8D12 /* OrgTableViewCell.swift */; };
 		6F6A30B028FE13AD00DF8D12 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6A30AF28FE13AD00DF8D12 /* EventViewController.swift */; };
 		6F6A30B228FE173200DF8D12 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6A30B128FE173200DF8D12 /* EventTableViewCell.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		6F062D8C28FE4BD10018F873 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		6F062D9728FF128B0018F873 /* CategoryPopoverControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPopoverControllerTableViewController.swift; sourceTree = "<group>"; };
 		6F6A30AA28FDF64E00DF8D12 /* OrgTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgTableViewCell.swift; sourceTree = "<group>"; };
 		6F6A30AF28FE13AD00DF8D12 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		6F6A30B128FE173200DF8D12 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				6F062D8C28FE4BD10018F873 /* ExploreViewController.swift */,
+				6F062D9728FF128B0018F873 /* CategoryPopoverControllerTableViewController.swift */,
 			);
 			path = "Explore Page";
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				6F6A30B428FE393300DF8D12 /* SingleEventViewController.swift in Sources */,
 				6F6A30AB28FDF64E00DF8D12 /* OrgTableViewCell.swift in Sources */,
 				6F6A30B028FE13AD00DF8D12 /* EventViewController.swift in Sources */,
+				6F062D9828FF128B0018F873 /* CategoryPopoverControllerTableViewController.swift in Sources */,
 				6F8616EB28FB62DC0012FBB0 /* TabBarController.swift in Sources */,
 				6F062D8D28FE4BD10018F873 /* ExploreViewController.swift in Sources */,
 				6F8616EF28FB84670012FBB0 /* HomeViewController.swift in Sources */,

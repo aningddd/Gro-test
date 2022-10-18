@@ -13,11 +13,15 @@ let categories = ["Academic", "Greek Life", "Volunteering", "Sports", "Culture"]
 class ExploreViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var categoryView: UIView!
+    @IBOutlet weak var plusButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.layer.cornerRadius = 5
-        
+        categoryView.layer.cornerRadius = 5
+        plusButton.setImage(UIImage(named: "plus"), for: .normal)
+        plusButton.tintColor = UIColor.black
         
         // Do any additional setup after loading the view.
     }
