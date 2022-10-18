@@ -24,5 +24,4 @@ class ExploreViewController: UIViewController {
         plusButton.tintColor = .black
     }
     
-
 }
