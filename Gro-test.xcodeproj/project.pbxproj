@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14F65E7228FF4D4E00EF92D0 /* LabelTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F65E7028FF4D4E00EF92D0 /* LabelTextFieldCell.swift */; };
-		14F65E7328FF4D4E00EF92D0 /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F65E7128FF4D4E00EF92D0 /* UnderlineTextField.swift */; };
 		14F65E9128FF4F5900EF92D0 /* forgetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F65E8C28FF4F5900EF92D0 /* forgetPasswordVC.swift */; };
 		14F65E9228FF4F5900EF92D0 /* RegisterPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F65E8D28FF4F5900EF92D0 /* RegisterPageVC.swift */; };
 		14F65E9328FF4F5900EF92D0 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F65E8E28FF4F5900EF92D0 /* LoginVC.swift */; };
 		14F65E9428FF4F5900EF92D0 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F65E8F28FF4F5900EF92D0 /* ResetPasswordVC.swift */; };
 		14F65E9528FF4F5900EF92D0 /* TmpAdmimRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F65E9028FF4F5900EF92D0 /* TmpAdmimRegisterVC.swift */; };
+		14F65EA228FF5D6700EF92D0 /* LabelTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F65E9F28FF5CAB00EF92D0 /* LabelTextFieldCell.swift */; };
+		14F65EA328FF5D6900EF92D0 /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F65EA028FF5CAD00EF92D0 /* UnderlineTextField.swift */; };
 		6F062D8D28FE4BD10018F873 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F062D8C28FE4BD10018F873 /* ExploreViewController.swift */; };
 		6F062D9828FF128B0018F873 /* CategoryPopoverControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F062D9728FF128B0018F873 /* CategoryPopoverControllerTableViewController.swift */; };
 		6F062D9A28FF41650018F873 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F062D9928FF41650018F873 /* ProfileViewController.swift */; };
@@ -37,13 +37,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		14F65E7028FF4D4E00EF92D0 /* LabelTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LabelTextFieldCell.swift; path = "../../Styling Objects/LabelTextFieldCell.swift"; sourceTree = SOURCE_ROOT; };
-		14F65E7128FF4D4E00EF92D0 /* UnderlineTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnderlineTextField.swift; path = "../../Styling Objects/UnderlineTextField.swift"; sourceTree = SOURCE_ROOT; };
-		14F65E8C28FF4F5900EF92D0 /* forgetPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = forgetPasswordVC.swift; path = "../../Register Login/forgetPasswordVC.swift"; sourceTree = SOURCE_ROOT; };
-		14F65E8D28FF4F5900EF92D0 /* RegisterPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterPageVC.swift; path = "../../Register Login/RegisterPageVC.swift"; sourceTree = SOURCE_ROOT; };
-		14F65E8E28FF4F5900EF92D0 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginVC.swift; path = "../../Register Login/LoginVC.swift"; sourceTree = SOURCE_ROOT; };
-		14F65E8F28FF4F5900EF92D0 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResetPasswordVC.swift; path = "../../Register Login/ResetPasswordVC.swift"; sourceTree = SOURCE_ROOT; };
-		14F65E9028FF4F5900EF92D0 /* TmpAdmimRegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TmpAdmimRegisterVC.swift; path = "../../Register Login/TmpAdmimRegisterVC.swift"; sourceTree = SOURCE_ROOT; };
+		14F65E8C28FF4F5900EF92D0 /* forgetPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = forgetPasswordVC.swift; path = "Gro-test/Register Login1/forgetPasswordVC.swift"; sourceTree = SOURCE_ROOT; };
+		14F65E8D28FF4F5900EF92D0 /* RegisterPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterPageVC.swift; path = "Gro-test/Register Login1/RegisterPageVC.swift"; sourceTree = SOURCE_ROOT; };
+		14F65E8E28FF4F5900EF92D0 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginVC.swift; path = "Gro-test/Register Login1/LoginVC.swift"; sourceTree = SOURCE_ROOT; };
+		14F65E8F28FF4F5900EF92D0 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResetPasswordVC.swift; path = "Gro-test/Register Login1/ResetPasswordVC.swift"; sourceTree = SOURCE_ROOT; };
+		14F65E9028FF4F5900EF92D0 /* TmpAdmimRegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TmpAdmimRegisterVC.swift; path = "Gro-test/Register Login1/TmpAdmimRegisterVC.swift"; sourceTree = SOURCE_ROOT; };
+		14F65E9F28FF5CAB00EF92D0 /* LabelTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LabelTextFieldCell.swift; path = "Gro-test/Styling Objects1/LabelTextFieldCell.swift"; sourceTree = SOURCE_ROOT; };
+		14F65EA028FF5CAD00EF92D0 /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UnderlineTextField.swift; path = "Gro-test/Styling Objects1/UnderlineTextField.swift"; sourceTree = SOURCE_ROOT; };
 		6F062D8C28FE4BD10018F873 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		6F062D9728FF128B0018F873 /* CategoryPopoverControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPopoverControllerTableViewController.swift; sourceTree = "<group>"; };
 		6F062D9928FF41650018F873 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -79,27 +79,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		14F65E6F28FF4D4E00EF92D0 /* Styling Objects */ = {
+		14F65E9E28FF5CA100EF92D0 /* Styling Objects1 */ = {
 			isa = PBXGroup;
 			children = (
-				14F65E7028FF4D4E00EF92D0 /* LabelTextFieldCell.swift */,
-				14F65E7128FF4D4E00EF92D0 /* UnderlineTextField.swift */,
+				14F65E9F28FF5CAB00EF92D0 /* LabelTextFieldCell.swift */,
+				14F65EA028FF5CAD00EF92D0 /* UnderlineTextField.swift */,
 			);
-			name = "Styling Objects";
-			path = "../../../Styling Objects";
-			sourceTree = "<group>";
+			name = "Styling Objects1";
+			path = "Gro-test/Styling Objects1";
+			sourceTree = SOURCE_ROOT;
 		};
-		14F65E8B28FF4F5900EF92D0 /* Register Login */ = {
+		14F65EA128FF5CF200EF92D0 /* Register Login1 */ = {
 			isa = PBXGroup;
 			children = (
 				14F65E8C28FF4F5900EF92D0 /* forgetPasswordVC.swift */,
-				14F65E8D28FF4F5900EF92D0 /* RegisterPageVC.swift */,
-				14F65E8E28FF4F5900EF92D0 /* LoginVC.swift */,
-				14F65E8F28FF4F5900EF92D0 /* ResetPasswordVC.swift */,
 				14F65E9028FF4F5900EF92D0 /* TmpAdmimRegisterVC.swift */,
+				14F65E8F28FF4F5900EF92D0 /* ResetPasswordVC.swift */,
+				14F65E8E28FF4F5900EF92D0 /* LoginVC.swift */,
+				14F65E8D28FF4F5900EF92D0 /* RegisterPageVC.swift */,
 			);
-			name = "Register Login";
-			path = "../../../Register Login";
+			path = "Register Login1";
 			sourceTree = "<group>";
 		};
 		6F062D8E28FE4BE30018F873 /* Explore Page */ = {
@@ -142,8 +141,8 @@
 		6F8616D228FB5A960012FBB0 /* Gro-test */ = {
 			isa = PBXGroup;
 			children = (
-				14F65E8B28FF4F5900EF92D0 /* Register Login */,
-				14F65E6F28FF4D4E00EF92D0 /* Styling Objects */,
+				14F65EA128FF5CF200EF92D0 /* Register Login1 */,
+				14F65E9E28FF5CA100EF92D0 /* Styling Objects1 */,
 				94BE423528FF1D90009153E5 /* Organization Page */,
 				6F8616D328FB5A960012FBB0 /* AppDelegate.swift */,
 				6F8616D528FB5A960012FBB0 /* SceneDelegate.swift */,
@@ -248,6 +247,7 @@
 				6F8616DE28FB5A960012FBB0 /* Gro_test.xcdatamodeld in Sources */,
 				14F65E9328FF4F5900EF92D0 /* LoginVC.swift in Sources */,
 				94BE423728FF1DB5009153E5 /* OrganizationPageViewController.swift in Sources */,
+				14F65EA328FF5D6900EF92D0 /* UnderlineTextField.swift in Sources */,
 				14F65E9528FF4F5900EF92D0 /* TmpAdmimRegisterVC.swift in Sources */,
 				6F8616D828FB5A960012FBB0 /* ViewController.swift in Sources */,
 				6F8616D428FB5A960012FBB0 /* AppDelegate.swift in Sources */,
@@ -255,17 +255,16 @@
 				14F65E9128FF4F5900EF92D0 /* forgetPasswordVC.swift in Sources */,
 				6F062D9A28FF41650018F873 /* ProfileViewController.swift in Sources */,
 				6F6A30AB28FDF64E00DF8D12 /* OrgTableViewCell.swift in Sources */,
-				14F65E7228FF4D4E00EF92D0 /* LabelTextFieldCell.swift in Sources */,
 				94BE423A28FF21EE009153E5 /* UpcomingEventsCollectionViewCell.swift in Sources */,
 				6F6A30B028FE13AD00DF8D12 /* EventViewController.swift in Sources */,
 				6F062D9828FF128B0018F873 /* CategoryPopoverControllerTableViewController.swift in Sources */,
 				6F8616EB28FB62DC0012FBB0 /* TabBarController.swift in Sources */,
 				14F65E9428FF4F5900EF92D0 /* ResetPasswordVC.swift in Sources */,
 				6F062D8D28FE4BD10018F873 /* ExploreViewController.swift in Sources */,
-				14F65E7328FF4D4E00EF92D0 /* UnderlineTextField.swift in Sources */,
 				6F8616EF28FB84670012FBB0 /* HomeViewController.swift in Sources */,
 				6F6A30B228FE173200DF8D12 /* EventTableViewCell.swift in Sources */,
 				14F65E9228FF4F5900EF92D0 /* RegisterPageVC.swift in Sources */,
+				14F65EA228FF5D6700EF92D0 /* LabelTextFieldCell.swift in Sources */,
 				6F8616D628FB5A960012FBB0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
