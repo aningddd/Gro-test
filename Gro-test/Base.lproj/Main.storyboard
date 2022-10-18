@@ -299,7 +299,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="3uQ-Uu-dTl">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="3uQ-Uu-dTl" customClass="CheckableTableViewCell" customModule="Gro_test" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3uQ-Uu-dTl" id="Mc2-F5-0oT">
@@ -1358,6 +1358,9 @@ Is Written Here</string>
         </scene>
     </scenes>
     <designables>
+        <designable name="9Ca-ZK-oiw">
+            <size key="intrinsicContentSize" width="32" height="34"/>
+        </designable>
         <designable name="HOI-et-WMH">
             <size key="intrinsicContentSize" width="32" height="34"/>
         </designable>
@@ -1371,6 +1374,9 @@ Is Written Here</string>
             <size key="intrinsicContentSize" width="32" height="34"/>
         </designable>
         <designable name="oHK-4h-0zo">
+            <size key="intrinsicContentSize" width="32" height="34"/>
+        </designable>
+        <designable name="yME-ls-ZwX">
             <size key="intrinsicContentSize" width="32" height="34"/>
         </designable>
     </designables>
