@@ -26,4 +26,7 @@ class ProfileViewController: UIViewController {
         profileImage.layer.cornerRadius = 85
     }
     
+    @IBAction func switchAccount(_ sender: Any) { self.navigationController?.navigationController?.popToRootViewController(animated: true)
+    }
+    
 }

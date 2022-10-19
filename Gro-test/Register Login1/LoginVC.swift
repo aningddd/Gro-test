@@ -14,6 +14,7 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(false, animated: false)
         LoginTitleLabel.font = UIFont(name:"ArialRoundedMTBold",size:30.0)
     }
 

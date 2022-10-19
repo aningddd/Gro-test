@@ -22,5 +22,11 @@ class TabBarController: UITabBarController {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        // Readd registration navigation bar
+        navigationController?.setNavigationBarHidden(false, animated: false)
 
+    }
+    
 }
