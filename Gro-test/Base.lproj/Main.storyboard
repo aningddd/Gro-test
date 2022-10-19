@@ -37,7 +37,7 @@
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="Qfg-3p-nOx"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="IoT-Kj-1Bn">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="Burnt Orange"/>
                     </navigationBar>
@@ -54,7 +54,7 @@
             <objects>
                 <viewController id="3M1-M4-zYm" customClass="OrganizationPageViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k0i-27-mId">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="j54-sV-Qju">
@@ -134,7 +134,7 @@
                                     <constraint firstAttribute="width" constant="85" id="hvG-MG-6st"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Contact"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUf-Kg-nHa">
                                 <rect key="frame" x="113" y="143" width="158" height="35"/>
@@ -144,7 +144,7 @@
                                     <constraint firstAttribute="height" constant="35" id="rHn-Jm-rBw"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Coming Events"/>
                                 <connections>
                                     <segue destination="Eps-vE-UOJ" kind="show" id="vhY-yc-Cr2"/>
                                 </connections>
@@ -157,7 +157,7 @@
                                     <constraint firstAttribute="height" constant="35" id="jjs-6D-T4A"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Subscribe"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -200,11 +200,11 @@
             <objects>
                 <viewController id="Eps-vE-UOJ" customClass="EventViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7zt-gx-b66">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wdM-33-LtJ">
-                                <rect key="frame" x="0.0" y="55" width="414" height="670"/>
+                                <rect key="frame" x="0.0" y="87" width="414" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="670" id="ttd-fY-Yha"/>
@@ -361,8 +361,8 @@
         <scene sceneID="8Jf-Fw-6xZ">
             <objects>
                 <viewController id="4gp-rV-B8K" customClass="SingleEventViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1Hc-9X-k71">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="1Hc-9X-k71">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0p-XM-ntM">
@@ -398,7 +398,7 @@
                                     <constraint firstAttribute="height" constant="163" id="xME-N6-V6B"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wfh-l9-2vc">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wfh-l9-2vc">
                                 <rect key="frame" x="17" y="259" width="380" height="278"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxD-5M-dyD">
@@ -426,7 +426,7 @@ Is Written Here</string>
                                     <constraint firstAttribute="height" constant="278" id="eaD-F9-Tv9"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zop-45-Oup">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zop-45-Oup">
                                 <rect key="frame" x="207" y="545" width="190" height="171"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zn-AM-Lne">
@@ -475,7 +475,7 @@ Is Written Here</string>
                                     <constraint firstAttribute="width" constant="190" id="P01-6k-nzq"/>
                                 </constraints>
                             </view>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1Sg-yQ-tQD">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1Sg-yQ-tQD">
                                 <rect key="frame" x="17" y="545" width="182" height="171"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="171" id="gX7-cJ-Odg"/>
@@ -527,7 +527,7 @@ Is Written Here</string>
             <objects>
                 <viewController id="q9E-ke-TVD" customClass="HomeViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vwl-dl-juQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your subscribed organizations:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFA-7B-ELy">
@@ -537,7 +537,7 @@ Is Written Here</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XUe-vN-QDc">
-                                <rect key="frame" x="0.0" y="55" width="414" height="670"/>
+                                <rect key="frame" x="0.0" y="87" width="414" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="0wV-G0-lqA"/>
@@ -651,7 +651,7 @@ Is Written Here</string>
                 <navigationController id="xlg-eM-aYi" customClass="NavigationViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" id="0nF-zd-wGd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TBw-bJ-08l">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="Burnt Orange"/>
                     </navigationBar>
@@ -669,7 +669,7 @@ Is Written Here</string>
                 <navigationController id="G7G-al-QrJ" customClass="NavigationViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" id="BwH-2L-BEm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gMU-PZ-EF7">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="Burnt Orange"/>
                     </navigationBar>
@@ -687,7 +687,7 @@ Is Written Here</string>
                 <navigationController id="y1h-Qo-vch" customClass="NavigationViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle.fill" catalog="system" id="Sgo-O1-bmt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3H8-QH-GLR">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="Burnt Orange"/>
                     </navigationBar>
@@ -704,11 +704,11 @@ Is Written Here</string>
             <objects>
                 <viewController id="NOP-NN-9bC" customClass="ProfileViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IZ8-La-kXh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2mb-4Z-xOE">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="34" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzK-Aq-2em">
                                         <rect key="frame" x="62.666666666666657" y="215" width="289" height="245"/>
@@ -824,7 +824,7 @@ Is Written Here</string>
             <objects>
                 <viewController id="hLh-q5-OiH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SBi-EE-33G">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="xpp-UI-549"/>
@@ -840,11 +840,11 @@ Is Written Here</string>
             <objects>
                 <viewController id="FKF-Iw-c9A" customClass="ExploreViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Mr-HU-dpc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Search by Name" translatesAutoresizingMaskIntoConstraints="NO" id="uKx-cN-pdj">
-                                <rect key="frame" x="20" y="102" width="374" height="56"/>
+                                <rect key="frame" x="20" y="70" width="374" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="cg8-jO-sSz"/>
                                     <constraint firstAttribute="height" constant="56" id="n7l-lf-xkN"/>
@@ -854,7 +854,7 @@ Is Written Here</string>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQT-Jw-RF8">
-                                <rect key="frame" x="20" y="178" width="374" height="50"/>
+                                <rect key="frame" x="20" y="146" width="374" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4v-wC-Hw7">
                                         <rect key="frame" x="30" y="14" width="88" height="21"/>
@@ -917,7 +917,7 @@ Is Written Here</string>
             <objects>
                 <viewController id="aeV-X3-BA3" customClass="LoginVC" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EhB-4c-UMe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FV9-Oa-Rnh">
@@ -952,7 +952,7 @@ Is Written Here</string>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FR3-bR-qj3">
                                 <rect key="frame" x="44" y="594" width="78" height="31"/>
                                 <color key="tintColor" red="0.74901960779999999" green="0.3411764706" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Register"/>
                                 <connections>
                                     <segue destination="eph-sv-mNT" kind="show" id="7gW-hy-C5d"/>
                                 </connections>
@@ -960,18 +960,21 @@ Is Written Here</string>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeJ-OK-wg5">
                                 <rect key="frame" x="242" y="594" width="132" height="31"/>
                                 <color key="tintColor" red="0.74901960779999999" green="0.3411764706" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Forgot Password"/>
                                 <connections>
                                     <segue destination="mHI-4a-ezc" kind="show" id="Wjn-TH-s7O"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ao-Ww-tLm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ao-Ww-tLm">
                                 <rect key="frame" x="106" y="489" width="202" height="31"/>
+                                <color key="backgroundColor" name="Light Orange"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="202" id="7I1-35-4pE"/>
+                                    <constraint firstAttribute="height" constant="31" id="OnK-Xq-ov2"/>
                                     <constraint firstAttribute="width" constant="202" id="it8-4p-xc1"/>
                                 </constraints>
-                                <color key="tintColor" red="0.74901960779999999" green="0.3411764706" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Login"/>
                                 <connections>
                                     <segue destination="jQZ-Tp-CtF" kind="show" id="vCN-Tp-4cD"/>
                                 </connections>
@@ -1039,7 +1042,7 @@ Is Written Here</string>
             <objects>
                 <viewController id="mHI-4a-ezc" customClass="forgetPasswordVC" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xy0-Kk-l07">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWf-uq-BnF">
@@ -1061,12 +1064,14 @@ Is Written Here</string>
                                 <size key="shadowOffset" width="0.0" height="5"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dY-lU-os9">
-                                <rect key="frame" x="106" y="294.33333333333331" width="202" height="30"/>
+                                <rect key="frame" x="106" y="382.33333333333331" width="202" height="30"/>
+                                <color key="backgroundColor" name="Light Orange"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="202" id="3tt-zw-nxP"/>
+                                    <constraint firstAttribute="height" constant="30" id="SFb-G0-b9D"/>
                                 </constraints>
-                                <color key="tintColor" red="0.74901960779999999" green="0.3411764706" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Send email"/>
                                 <connections>
                                     <segue destination="bbH-Mf-h7v" kind="show" id="j91-Gr-9Oi"/>
                                 </connections>
@@ -1102,7 +1107,7 @@ Is Written Here</string>
             <objects>
                 <viewController id="bbH-Mf-h7v" customClass="ResetPasswordVC" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2bP-YD-Qry">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSD-MN-oe8">
@@ -1136,11 +1141,12 @@ Is Written Here</string>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zB1-nc-e0c">
                                 <rect key="frame" x="106" y="489" width="202" height="31"/>
+                                <color key="backgroundColor" name="Light Orange"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="202" id="mwE-cF-SzO"/>
                                 </constraints>
-                                <color key="tintColor" red="0.74901960779999999" green="0.3411764706" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Reset"/>
                                 <connections>
                                     <segue destination="aeV-X3-BA3" kind="show" id="Aaa-5i-WZ7"/>
                                 </connections>
@@ -1184,30 +1190,40 @@ Is Written Here</string>
             <objects>
                 <viewController id="eph-sv-mNT" customClass="RegisterPageVC" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1i4-Wx-3ML">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCg-ut-dxm">
-                                <rect key="frame" x="175.33333333333334" y="30" width="63.333333333333343" height="20.333333333333329"/>
+                                <rect key="frame" x="175.33333333333334" y="117.99999999999999" width="63.333333333333343" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="HTd-zi-lwa">
-                                <rect key="frame" x="184" y="537.33333333333337" width="46" height="170.66666666666663"/>
+                                <rect key="frame" x="184" y="625.33333333333337" width="46" height="136.66666666666663"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmc-cO-LTk">
-                                        <rect key="frame" x="0.0" y="0.0" width="46" height="126.66666666666667"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmc-cO-LTk">
+                                        <rect key="frame" x="0.0" y="29" width="46" height="42"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Create Account"/>
                                         <connections>
                                             <segue destination="aeV-X3-BA3" kind="show" id="xDp-zE-3L8"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oz5-MM-Kxr">
-                                        <rect key="frame" x="0.0" y="140.66666666666663" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oz5-MM-Kxr">
+                                        <rect key="frame" x="0.0" y="106.66666666666663" width="46" height="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="You run an org?">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
                                         <connections>
                                             <segue destination="IAK-Ma-YyD" kind="show" id="0Q9-CC-5ow"/>
                                         </connections>
@@ -1215,7 +1231,7 @@ Is Written Here</string>
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Po6-Na-lJk">
-                                <rect key="frame" x="20" y="80.333333333333314" width="374" height="427"/>
+                                <rect key="frame" x="20" y="168.33333333333337" width="374" height="427"/>
                                 <color key="backgroundColor" red="0.74901960779999999" green="0.3411764706" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1285,32 +1301,32 @@ Is Written Here</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0L-Cv-VDC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3757" y="-1004"/>
+            <point key="canvasLocation" x="-3757.971014492754" y="-1004.4642857142857"/>
         </scene>
         <!--Tmp Admim RegisterVC-->
         <scene sceneID="X7d-TU-Yll">
             <objects>
                 <viewController id="IAK-Ma-YyD" customClass="TmpAdmimRegisterVC" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ic9-ul-3ig">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admin Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5t-1w-yxJ">
-                                <rect key="frame" x="149" y="30" width="116" height="20.333333333333329"/>
+                                <rect key="frame" x="149" y="117.99999999999999" width="116" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="7HJ-CI-Bda">
-                                <rect key="frame" x="108.66666666666669" y="537.33333333333337" width="197" height="170.66666666666663"/>
+                                <rect key="frame" x="108.66666666666669" y="625.33333333333337" width="197" height="136.66666666666663"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wyw-u9-STX">
-                                        <rect key="frame" x="0.0" y="0.0" width="197" height="170.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="197" height="136.66666666666666"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="197" id="mUZ-NL-XtI"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Apply"/>
                                         <connections>
                                             <segue destination="aeV-X3-BA3" kind="show" id="zyO-WO-2Mb"/>
                                         </connections>
@@ -1318,7 +1334,7 @@ Is Written Here</string>
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FW7-dR-9S1">
-                                <rect key="frame" x="20" y="80.333333333333314" width="374" height="427"/>
+                                <rect key="frame" x="20" y="168.33333333333337" width="374" height="427"/>
                                 <color key="backgroundColor" red="0.74901960779999999" green="0.3411764706" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1415,7 +1431,7 @@ Is Written Here</string>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nIl-z9-WgA"/>
+        <segue reference="xDp-zE-3L8"/>
         <segue reference="Wam-tx-ANT"/>
         <segue reference="vhY-yc-Cr2"/>
         <segue reference="b4K-ym-n02"/>
