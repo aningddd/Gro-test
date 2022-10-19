@@ -18,6 +18,8 @@ class TabBarController: UITabBarController {
         // Set item colour
         tabBar.tintColor = .white
         tabBar.unselectedItemTintColor = UIColor(named: "Grey 1")
+        // Remove registration navigation bar
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
 
