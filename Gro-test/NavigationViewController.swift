@@ -12,6 +12,7 @@ class NavigationViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Set colour and layout of nav bar
         navigationBar.barTintColor = UIColor(named: "Burnt Orange")
         navigationBar.isTranslucent = false
         navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]

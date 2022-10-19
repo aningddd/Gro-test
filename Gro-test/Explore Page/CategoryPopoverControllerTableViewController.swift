@@ -33,8 +33,6 @@ class CategoryPopoverControllerTableViewController: UITableViewController {
 
         return cell!
     }
-
-
 }
 
 class CheckableTableViewCell: UITableViewCell {

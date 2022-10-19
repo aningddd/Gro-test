@@ -19,6 +19,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Set layout of user information
         userCardView.layer.cornerRadius = 10
         settingsButton.layer.cornerRadius = 5
         switchAccountButton.layer.cornerRadius = 5

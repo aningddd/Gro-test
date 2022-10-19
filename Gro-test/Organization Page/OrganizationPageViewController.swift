@@ -8,57 +8,24 @@
 
 import UIKit
 
-extension UIColor {
-    convenience init(hexString: String, alpha: CGFloat = 1.0) {
-        let hexString: String = hexString.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-        let scanner = Scanner(string: hexString)
-        if (hexString.hasPrefix("#")) {
-            scanner.currentIndex = scanner.string.index(after: scanner.currentIndex)
-        }
-        var color: UInt64 = 0
-        scanner.scanHexInt64(&color)
-        let mask = 0x000000FF
-        let r = Int(color >> 16) & mask
-        let g = Int(color >> 8) & mask
-        let b = Int(color) & mask
-        let red   = CGFloat(r) / 255.0
-        let green = CGFloat(g) / 255.0
-        let blue  = CGFloat(b) / 255.0
-        self.init(red:red, green:green, blue:blue, alpha:alpha)
-    }
-    func toHexString() -> String {
-        var r:CGFloat = 0
-        var g:CGFloat = 0
-        var b:CGFloat = 0
-        var a:CGFloat = 0
-        getRed(&r, green: &g, blue: &b, alpha: &a)
-        let rgb:Int = (Int)(r*255)<<16 | (Int)(g*255)<<8 | (Int)(b*255)<<0
-        return String(format:"#%06x", rgb)
-    }
-}
-
 class OrganizationPageViewController: UIViewController {
 
     @IBOutlet weak var organizationImageView: UIImageView!
-    
     @IBOutlet weak var upcomingEventsCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 90, height: 90)
         
+        // Set up org page collection layout
         upcomingEventsCollectionView.collectionViewLayout = layout
         upcomingEventsCollectionView.delegate = self
         upcomingEventsCollectionView.dataSource = self
         upcomingEventsCollectionView.register(UpcomingEventsCollectionViewCell.nib(), forCellWithReuseIdentifier: "UpcomingEventsCollectionViewCell")
 
-        // Do any additional setup after loading the view.
-        self.navigationController?.navigationBar.backgroundColor = UIColor(hexString: "BF5700")
-        self.navigationController?.navigationBar.standardAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        self.tabBarController?.tabBar.backgroundColor = UIColor(hexString: "BF5700")
+        // Set org logo layout
         organizationImageView.backgroundColor = UIColor.gray
         organizationImageView.layer.masksToBounds = true
         organizationImageView.layer.cornerRadius = organizationImageView.frame.height / 2

@@ -11,10 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
+        // Load main view
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
-
 }
-

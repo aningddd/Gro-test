@@ -11,7 +11,6 @@ import UIKit
 class UnderlineTextField: UITextField {
     required init?(coder aDecorder: NSCoder) {
         super.init(coder: aDecorder)
-        // Add custom code here
             setUnderLine()
         }
     
@@ -21,8 +20,5 @@ class UnderlineTextField: UITextField {
         bottomLine.backgroundColor = UIColor.black.cgColor
         self.borderStyle = UITextField.BorderStyle.none
         self.layer.addSublayer(bottomLine)
-
-        
     }
-
 }
