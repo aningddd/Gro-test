@@ -39,9 +39,13 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if (indexPath.row == 0) {
             let cell = settingTable.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as! SettingTopTableViewCell
+            cell.contentView.backgroundColor = UIColor(named: "Grey E")
+            cell.view.layer.cornerRadius = 10
             return cell
         } else {
-            let cell = settingTable.dequeueReusableCell(withIdentifier: "BottomCell", for: indexPath)
+            let cell = settingTable.dequeueReusableCell(withIdentifier: "BottomCell", for: indexPath) as! SettingBottomTableViewCell
+            cell.contentView.backgroundColor = UIColor(named: "Grey E")
+            cell.view.layer.cornerRadius = 10
             return cell
         }
     }

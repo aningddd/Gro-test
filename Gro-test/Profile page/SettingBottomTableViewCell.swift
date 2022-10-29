@@ -1,5 +1,5 @@
 //
-//  SettingTopTableViewCell.swift
+//  SettingBottomTableViewCell.swift
 //  Gro-test
 //
 //  Created by Luo, Shu Tong on 10/28/22.
@@ -8,22 +8,20 @@
 
 import UIKit
 
-class SettingTopTableViewCell: UITableViewCell {
+class SettingBottomTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var pencilBtn: UIButton!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var view: UIView!
+    @IBOutlet weak var logOutBtn: UIButton!
+    @IBOutlet weak var notifSwitch: UISwitch!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        pencilBtn.setImage(UIImage(systemName: "pencil"), for: .normal)
-        pencilBtn.setTitle("", for: .normal)
+        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+
         // Configure the view for the selected state
     }
 
