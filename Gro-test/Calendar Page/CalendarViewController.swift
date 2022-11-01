@@ -80,26 +80,32 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
         let date = totalSquares[indexPath.item]
         cell.dayOfMonthLabel.text = String(CalendarHelper().dayOfMonth(date: date))
         
-//        var format = current.split(separator: " ")[0]
-//
-//        if(format == dateFormatter.string(from: selectedDate).split(separator: " ")[0]) {
-//            cell.dayOfMonthLabel.backgroundColor = UIColor.systemRed
-//            cell.dayOfMonthLabel.layer.masksToBounds = true
-//            cell.dayOfMonthLabel.layer.cornerRadius = cell.dayOfMonthLabel.frame.height / 2
-//        }
-                
-        if(date == selectedDate)
-        {
-            cell.dayOfMonthLabel.backgroundColor = UIColor.systemGreen
+        if(currentDate == date) {
+            cell.dayOfMonthLabel.backgroundColor = UIColor.red
             cell.dayOfMonthLabel.layer.masksToBounds = true
             cell.dayOfMonthLabel.layer.cornerRadius = cell.dayOfMonthLabel.frame.height / 2
-            cell.markingLabel.text = "*"
+            cell.dayOfMonthLabel.layer.borderWidth = 1
+            cell.dayOfMonthLabel.layer.borderColor = UIColor.red.cgColor
         }
-        else
-        {
-            // cell.backgroundColor = UIColor.white
-            cell.dayOfMonthLabel.backgroundColor = UIColor.white
-            cell.markingLabel.text = ""
+        else {
+            if(date == selectedDate)
+            {
+                // cell.dayOfMonthLabel.backgroundColor = UIColor.systemGreen
+                cell.dayOfMonthLabel.backgroundColor = UIColor.white
+                cell.dayOfMonthLabel.layer.masksToBounds = true
+                cell.dayOfMonthLabel.layer.cornerRadius = cell.dayOfMonthLabel.frame.height / 2
+                cell.dayOfMonthLabel.layer.borderWidth = 1
+                cell.dayOfMonthLabel.layer.borderColor = UIColor.red.cgColor
+                cell.markingLabel.text = "*"
+            }
+            else
+            {
+                // cell.backgroundColor = UIColor.white
+                cell.dayOfMonthLabel.backgroundColor = UIColor.white
+                cell.dayOfMonthLabel.layer.borderWidth = 1
+                cell.dayOfMonthLabel.layer.borderColor = UIColor.white.cgColor
+                cell.markingLabel.text = ""
+            }
         }
         
         return cell
