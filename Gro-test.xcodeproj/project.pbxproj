@@ -37,6 +37,7 @@
 		94BE423728FF1DB5009153E5 /* OrganizationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE423628FF1DB5009153E5 /* OrganizationPageViewController.swift */; };
 		94BE423A28FF21EE009153E5 /* UpcomingEventsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE423828FF21EE009153E5 /* UpcomingEventsCollectionViewCell.swift */; };
 		94BE423B28FF21EE009153E5 /* UpcomingEventsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94BE423928FF21EE009153E5 /* UpcomingEventsCollectionViewCell.xib */; };
+		94D252522910BF9300DFEDF3 /* EditEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D252512910BF9300DFEDF3 /* EditEventViewController.swift */; };
 		94F7CF1B290F62B900F3D60A /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F7CF1A290F62B900F3D60A /* CalendarCollectionViewCell.swift */; };
 		94F7CF1D290F62FD00F3D60A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F7CF1C290F62FD00F3D60A /* CalendarViewController.swift */; };
 		94F7CF1F290F673400F3D60A /* CalendarUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F7CF1E290F673400F3D60A /* CalendarUtils.swift */; };
@@ -77,6 +78,7 @@
 		94BE423628FF1DB5009153E5 /* OrganizationPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationPageViewController.swift; sourceTree = "<group>"; };
 		94BE423828FF21EE009153E5 /* UpcomingEventsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingEventsCollectionViewCell.swift; sourceTree = "<group>"; };
 		94BE423928FF21EE009153E5 /* UpcomingEventsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingEventsCollectionViewCell.xib; sourceTree = "<group>"; };
+		94D252512910BF9300DFEDF3 /* EditEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventViewController.swift; sourceTree = "<group>"; };
 		94F7CF1A290F62B900F3D60A /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		94F7CF1C290F62FD00F3D60A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		94F7CF1E290F673400F3D60A /* CalendarUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarUtils.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 		6F8616D228FB5A960012FBB0 /* Gro-test */ = {
 			isa = PBXGroup;
 			children = (
+				94D252502910BF6B00DFEDF3 /* Edit Event Page */,
 				94F7CF19290F62A100F3D60A /* Calendar Page */,
 				14F65EA128FF5CF200EF92D0 /* Register Login1 */,
 				14F65E9E28FF5CA100EF92D0 /* Styling Objects1 */,
@@ -197,6 +200,14 @@
 				94BE423928FF21EE009153E5 /* UpcomingEventsCollectionViewCell.xib */,
 			);
 			path = "Organization Page";
+			sourceTree = "<group>";
+		};
+		94D252502910BF6B00DFEDF3 /* Edit Event Page */ = {
+			isa = PBXGroup;
+			children = (
+				94D252512910BF9300DFEDF3 /* EditEventViewController.swift */,
+			);
+			path = "Edit Event Page";
 			sourceTree = "<group>";
 		};
 		94F7CF19290F62A100F3D60A /* Calendar Page */ = {
@@ -314,6 +325,7 @@
 				94F7CF1B290F62B900F3D60A /* CalendarCollectionViewCell.swift in Sources */,
 				14F65EA228FF5D6700EF92D0 /* LabelTextFieldCell.swift in Sources */,
 				6F8616D628FB5A960012FBB0 /* SceneDelegate.swift in Sources */,
+				94D252522910BF9300DFEDF3 /* EditEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
