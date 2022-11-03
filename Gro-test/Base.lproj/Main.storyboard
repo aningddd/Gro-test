@@ -39,6 +39,7 @@
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="Qfg-3p-nOx"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="IoT-Kj-1Bn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="Burnt Orange"/>
                     </navigationBar>
@@ -55,7 +56,7 @@
             <objects>
                 <viewController id="3M1-M4-zYm" customClass="OrganizationPageViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k0i-27-mId">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="j54-sV-Qju">
@@ -201,11 +202,11 @@
             <objects>
                 <viewController id="Eps-vE-UOJ" customClass="EventViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7zt-gx-b66">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wdM-33-LtJ">
-                                <rect key="frame" x="0.0" y="87" width="414" height="670"/>
+                                <rect key="frame" x="0.0" y="55" width="414" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="670" id="ttd-fY-Yha"/>
@@ -336,7 +337,7 @@
             <objects>
                 <tableViewController id="dNb-FQ-DMg" customClass="CategoryPopoverControllerTableViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="50" sectionFooterHeight="50" id="dXY-yX-9Z0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -364,7 +365,7 @@
             <objects>
                 <viewController id="4gp-rV-B8K" customClass="SingleEventViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Hc-9X-k71">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0p-XM-ntM">
@@ -535,7 +536,7 @@ Is Written Here</string>
             <objects>
                 <viewController id="Acz-Ze-WV3" customClass="EditEventViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xMR-d8-Bbc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7lr-AW-ig5">
@@ -848,7 +849,7 @@ Is Written Here</string>
             <objects>
                 <viewController id="q9E-ke-TVD" customClass="HomeViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vwl-dl-juQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your subscribed organizations:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFA-7B-ELy">
@@ -972,6 +973,7 @@ Is Written Here</string>
                 <navigationController id="xlg-eM-aYi" customClass="NavigationViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" id="0nF-zd-wGd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TBw-bJ-08l">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="Burnt Orange"/>
                     </navigationBar>
@@ -989,6 +991,7 @@ Is Written Here</string>
                 <navigationController id="G7G-al-QrJ" customClass="NavigationViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" id="BwH-2L-BEm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gMU-PZ-EF7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="Burnt Orange"/>
                     </navigationBar>
@@ -1006,6 +1009,7 @@ Is Written Here</string>
                 <navigationController id="y1h-Qo-vch" customClass="NavigationViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle.fill" catalog="system" id="Sgo-O1-bmt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3H8-QH-GLR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="Burnt Orange"/>
                     </navigationBar>
@@ -1765,6 +1769,7 @@ Is Written Here</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RgU-si-FJL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7bX-LO-J0W">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.74901960779999999" green="0.3411764706" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1783,7 +1788,7 @@ Is Written Here</string>
             <objects>
                 <viewController id="mHI-4a-ezc" customClass="forgetPasswordVC" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xy0-Kk-l07">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWf-uq-BnF">
@@ -1849,7 +1854,7 @@ Is Written Here</string>
             <objects>
                 <viewController id="bbH-Mf-h7v" customClass="ResetPasswordVC" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2bP-YD-Qry">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSD-MN-oe8">
@@ -1934,7 +1939,7 @@ Is Written Here</string>
             <objects>
                 <viewController id="eph-sv-mNT" customClass="RegisterPageVC" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1i4-Wx-3ML">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCg-ut-dxm">
@@ -2039,6 +2044,18 @@ Is Written Here</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEr-8z-LZv">
+                                <rect key="frame" x="20.333333333333336" y="365.33333333333331" width="82.333333333333314" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pke-oI-eYJ">
+                                <rect key="frame" x="20.333333333333336" y="440.33333333333331" width="81.666666666666657" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="D0O-Gj-dmA"/>
                         <color key="backgroundColor" red="0.74901960779999999" green="0.3411764706" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2049,13 +2066,17 @@ Is Written Here</string>
                             <constraint firstItem="6z5-wV-84l" firstAttribute="centerX" secondItem="1i4-Wx-3ML" secondAttribute="centerX" constant="78" id="3yt-QG-jY6"/>
                             <constraint firstItem="vUC-Om-rtj" firstAttribute="centerX" secondItem="1i4-Wx-3ML" secondAttribute="centerX" constant="78" id="5ZZ-yq-9yt"/>
                             <constraint firstItem="qu9-tg-Eac" firstAttribute="centerX" secondItem="1i4-Wx-3ML" secondAttribute="centerX" constant="-150" id="Gu3-IN-fCc"/>
+                            <constraint firstItem="pke-oI-eYJ" firstAttribute="centerY" secondItem="1i4-Wx-3ML" secondAttribute="centerY" constant="29.5" id="I47-E8-kld"/>
+                            <constraint firstItem="pke-oI-eYJ" firstAttribute="centerX" secondItem="1i4-Wx-3ML" secondAttribute="centerX" constant="-146" id="KLf-vL-Wf9"/>
                             <constraint firstItem="yCg-ut-dxm" firstAttribute="top" secondItem="D0O-Gj-dmA" secondAttribute="top" constant="30" id="OrR-UX-pJQ"/>
                             <constraint firstItem="HTd-zi-lwa" firstAttribute="centerX" secondItem="1i4-Wx-3ML" secondAttribute="centerX" constant="8.8300000000000001" id="Pmv-2r-r8V"/>
                             <constraint firstItem="ShP-Ky-hEy" firstAttribute="centerY" secondItem="1i4-Wx-3ML" secondAttribute="centerY" constant="-118" id="Qtc-zF-aiC"/>
                             <constraint firstItem="6z5-wV-84l" firstAttribute="centerY" secondItem="1i4-Wx-3ML" secondAttribute="centerY" constant="-255" id="Tna-fu-sLI"/>
                             <constraint firstItem="qu9-tg-Eac" firstAttribute="centerY" secondItem="1i4-Wx-3ML" secondAttribute="centerY" constant="-186.5" id="Upi-pp-T3j"/>
                             <constraint firstItem="Ytz-tO-Kd3" firstAttribute="centerX" secondItem="1i4-Wx-3ML" secondAttribute="centerX" constant="77" id="Vp8-qB-gh7"/>
+                            <constraint firstItem="XEr-8z-LZv" firstAttribute="centerY" secondItem="1i4-Wx-3ML" secondAttribute="centerY" constant="-45.5" id="Waw-5w-W9R"/>
                             <constraint firstItem="Ytz-tO-Kd3" firstAttribute="centerY" secondItem="1i4-Wx-3ML" secondAttribute="centerY" constant="29" id="XJb-5T-bAR"/>
+                            <constraint firstItem="XEr-8z-LZv" firstAttribute="centerX" secondItem="1i4-Wx-3ML" secondAttribute="centerX" constant="-145.5" id="XtP-vs-ymb"/>
                             <constraint firstItem="ShP-Ky-hEy" firstAttribute="centerX" secondItem="1i4-Wx-3ML" secondAttribute="centerX" constant="77" id="a3p-ox-g9y"/>
                             <constraint firstItem="1Ax-ym-iW9" firstAttribute="centerY" secondItem="1i4-Wx-3ML" secondAttribute="centerY" constant="-117.5" id="cec-Gg-yF3"/>
                             <constraint firstItem="jtK-3y-e7e" firstAttribute="centerX" secondItem="1i4-Wx-3ML" secondAttribute="centerX" constant="-133" id="dpX-xf-sd1"/>
@@ -2089,7 +2110,7 @@ Is Written Here</string>
             <objects>
                 <viewController id="IAK-Ma-YyD" customClass="TmpAdmimRegisterVC" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ic9-ul-3ig">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admin Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5t-1w-yxJ">
