@@ -17,6 +17,7 @@
 		6B3577CD29146357003FEFA7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B3577CC29146357003FEFA7 /* GoogleService-Info.plist */; };
 		6B3577D8291466EB003FEFA7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6B3577D7291466EB003FEFA7 /* FirebaseAnalytics */; };
 		6B3577DA291466EB003FEFA7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6B3577D9291466EB003FEFA7 /* FirebaseAuth */; };
+		6B4310C52918690C009595F3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B4310C42918690C009595F3 /* MapKit.framework */; };
 		6B6E58BB290CBBA8003D0833 /* SettingBottomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6E58BA290CBBA8003D0833 /* SettingBottomTableViewCell.swift */; };
 		6B8FAB17290CB1BC00BFA171 /* SettingTopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8FAB16290CB1BC00BFA171 /* SettingTopTableViewCell.swift */; };
 		6B8FAB19290CB23600BFA171 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8FAB18290CB23600BFA171 /* SettingsViewController.swift */; };
@@ -58,6 +59,7 @@
 		14F65EA028FF5CAD00EF92D0 /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UnderlineTextField.swift; path = "Gro-test/Styling Objects1/UnderlineTextField.swift"; sourceTree = SOURCE_ROOT; };
 		6B3577CC29146357003FEFA7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6B3577DB2914677A003FEFA7 /* Gro-test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Gro-test.entitlements"; sourceTree = "<group>"; };
+		6B4310C42918690C009595F3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		6B6E58BA290CBBA8003D0833 /* SettingBottomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingBottomTableViewCell.swift; sourceTree = "<group>"; };
 		6B8FAB16290CB1BC00BFA171 /* SettingTopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTopTableViewCell.swift; sourceTree = "<group>"; };
 		6B8FAB18290CB23600BFA171 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B3577D8291466EB003FEFA7 /* FirebaseAnalytics in Frameworks */,
+				6B4310C52918690C009595F3 /* MapKit.framework in Frameworks */,
 				6B3577DA291466EB003FEFA7 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +127,14 @@
 				14F65E8D28FF4F5900EF92D0 /* RegisterPageVC.swift */,
 			);
 			path = "Register Login1";
+			sourceTree = "<group>";
+		};
+		6B4310C32918690C009595F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B4310C42918690C009595F3 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		6B8FAB15290CB17E00BFA171 /* Profile page */ = {
@@ -163,6 +174,7 @@
 			children = (
 				6F8616D228FB5A960012FBB0 /* Gro-test */,
 				6F8616D128FB5A960012FBB0 /* Products */,
+				6B4310C32918690C009595F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

@@ -31,7 +31,7 @@ class SingleEventViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        displayMap()
         // Make all blocks rounded
         RSVPButton.layer.cornerRadius = 5
         contactButton.layer.cornerRadius = 5
@@ -40,6 +40,42 @@ class SingleEventViewController: UIViewController {
         descriptionView.layer.cornerRadius = 10
         infoView.layer.cornerRadius = 10
         eventMap.layer.cornerRadius = 10
+    }
+    
+    func displayMap(){
+        //GDC location - be sure to change this later to the actual location string
+        let testAddress: String = "2317 Speedway, Austin, TX 78712"
+        getCoordinate(addressString: testAddress, completionHandler: { location, error in
+            if error == nil{
+                let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+                let coordinates = MKCoordinateRegion(center: location, span: span)
+                self.eventMap.setRegion(coordinates, animated: true)
+                let pin = MKPointAnnotation()
+                pin.coordinate = location
+                self.eventMap.addAnnotation(pin)
+            }
+            else{
+                print(error!.localizedDescription)
+            }
+            
+        })
+    }
+    
+    func getCoordinate( addressString : String,
+            completionHandler: @escaping(CLLocationCoordinate2D, NSError?) -> Void ) {
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(addressString) { (placemarks, error) in
+            if error == nil {
+                if let placemark = placemarks?[0] {
+                    let location = placemark.location!
+                        
+                    completionHandler(location.coordinate, nil)
+                    return
+                }
+            }
+                
+            completionHandler(kCLLocationCoordinate2DInvalid, error as NSError?)
+        }
     }
 
 }
