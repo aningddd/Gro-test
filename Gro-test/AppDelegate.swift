@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        DataManager.app.UploadUserData(userName: "test1", orgAvatar: UIImage(named: "Image")!, orgDescription: "none", type: "orgData")
         return true
     }
 
