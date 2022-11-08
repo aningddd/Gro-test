@@ -10,13 +10,20 @@ import UIKit
 
 class EditEventViewController: UIViewController {
 
-    
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var imageBlock: UIView!
+    @IBOutlet weak var descrBlock: UIView!
+    @IBOutlet weak var detailBlock: UIView!
+    @IBOutlet weak var descrTextField: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        topView.layer.cornerRadius = 10
+        imageBlock.layer.cornerRadius = 10
+        descrBlock.layer.cornerRadius = 10
+        detailBlock.layer.cornerRadius = 10
+        descrTextField.layer.cornerRadius = 5
     }
 
     @IBAction func uploadButtonPressed(_ sender: Any) {
@@ -41,5 +48,4 @@ extension EditEventViewController: UIImagePickerControllerDelegate, UINavigation
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true)
     }
-    
 }

@@ -12,6 +12,10 @@ class OrganizationPageViewController: UIViewController {
 
     @IBOutlet weak var organizationImageView: UIImageView!
     @IBOutlet weak var upcomingEventsCollectionView: UICollectionView!
+    @IBOutlet weak var contactButton: UIButton!
+    @IBOutlet weak var eventsButton: UIButton!
+    @IBOutlet weak var subscribeButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +33,11 @@ class OrganizationPageViewController: UIViewController {
         organizationImageView.backgroundColor = UIColor.gray
         organizationImageView.layer.masksToBounds = true
         organizationImageView.layer.cornerRadius = organizationImageView.frame.height / 2
+        
+        // Set button layout
+        contactButton.layer.cornerRadius = 5
+        eventsButton.layer.cornerRadius = 5
+        subscribeButton.layer.cornerRadius = 5
     }
 }
 
