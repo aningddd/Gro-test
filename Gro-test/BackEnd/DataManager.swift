@@ -17,6 +17,7 @@ class DataManager{
     }()
     // Upload Data for Orgs
 
+    //function for UploadEvent
     func UploadEvent(orgName: String, eventDescription: String, eventPicture: UIImage, position_x: Float, position_y: Float, eventName: String){
         let storageRef = Storage.storage().reference()
         let inputPath = "orgData/\(orgName)/images/\(UUID().uuidString)"
