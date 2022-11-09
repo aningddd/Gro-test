@@ -40,6 +40,8 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Allow Access to Photo</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Allow Access to Camera!</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

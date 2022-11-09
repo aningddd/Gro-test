@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RgU-si-FJL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RgU-si-FJL">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -217,7 +217,7 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventCell" rowHeight="135" id="Mxc-Xs-YKd" customClass="EventTableViewCell" customModule="Gro_test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="135"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="135"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mxc-Xs-YKd" id="Akj-b6-riO">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
@@ -348,7 +348,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="3uQ-Uu-dTl" customClass="CheckableTableViewCell" customModule="Gro_test" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="414" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3uQ-Uu-dTl" id="Mc2-F5-0oT">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
@@ -866,7 +866,7 @@ Is Written Here</string>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrgCell" rowHeight="135" id="L6h-4Y-Src" customClass="OrgTableViewCell" customModule="Gro_test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="135"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="135"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L6h-4Y-Src" id="h8I-y3-vOY">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
@@ -1161,15 +1161,15 @@ Is Written Here</string>
             <objects>
                 <viewController id="3m0-T0-Q5B" customClass="SettingsViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5QM-03-GhF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rRg-j2-roG">
-                                <rect key="frame" x="0.0" y="98" width="414" height="715"/>
+                                <rect key="frame" x="0.0" y="54" width="414" height="788"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserCell" rowHeight="180" id="33S-No-bsM" customClass="SettingTopTableViewCell" customModule="Gro_test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="180"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="33S-No-bsM" id="fWI-FP-5Ry">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
@@ -1179,7 +1179,7 @@ Is Written Here</string>
                                                     <rect key="frame" x="14.666666666666657" y="2.6666666666666714" width="385" height="175"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIR-Tf-p9E">
-                                                            <rect key="frame" x="32" y="130" width="160.66666666666666" height="34.333333333333343"/>
+                                                            <rect key="frame" x="32" y="130" width="139.66666666666666" height="31"/>
                                                             <color key="tintColor" name="Grey A"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" title="Change Password"/>
@@ -1254,7 +1254,7 @@ Is Written Here</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BottomCell" rowHeight="130" id="zHG-GQ-Wvt" customClass="SettingBottomTableViewCell" customModule="Gro_test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="230" width="414" height="130"/>
+                                        <rect key="frame" x="0.0" y="224.66666603088379" width="414" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zHG-GQ-Wvt" id="rrB-dR-TPj">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
@@ -1283,7 +1283,7 @@ Is Written Here</string>
                                                             <color key="onTintColor" name="Burnt Orange"/>
                                                         </switch>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BG3-Qu-b02">
-                                                            <rect key="frame" x="31.000000000000007" y="70.666666666666671" width="84.666666666666686" height="34.333333333333329"/>
+                                                            <rect key="frame" x="31.000000000000007" y="74" width="75.666666666666686" height="31"/>
                                                             <color key="tintColor" name="Burnt Orange"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
@@ -1345,18 +1345,18 @@ Is Written Here</string>
             <objects>
                 <viewController id="xrC-U0-ntO" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fjm-gP-oIU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJ2-za-dLd">
-                                <rect key="frame" x="0.0" y="88" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="N9H-iR-Fdd"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="xfE-Kc-HMz">
-                                <rect key="frame" x="20" y="88" width="374" height="60"/>
+                                <rect key="frame" x="20" y="44" width="374" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1541,7 +1541,7 @@ Is Written Here</string>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="eventCell" rowHeight="130" id="I59-ew-Du6" customClass="EventCell" customModule="Gro_test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="374" height="130"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="374" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I59-ew-Du6" id="29S-aw-S9u">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="130"/>
@@ -1709,7 +1709,7 @@ Is Written Here</string>
             <objects>
                 <viewController id="aeV-X3-BA3" customClass="LoginVC" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EhB-4c-UMe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FV9-Oa-Rnh">
@@ -2013,10 +2013,10 @@ Is Written Here</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="HTd-zi-lwa">
-                                <rect key="frame" x="144.66666666666663" y="665" width="142.33333333333337" height="77"/>
+                                <rect key="frame" x="153.66666666666666" y="668.33333333333337" width="124.33333333333334" height="73.666666666666629"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKs-Wn-TN8">
-                                        <rect key="frame" x="0.0" y="0.0" width="142.33333333333334" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="124.33333333333333" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Create Account"/>
                                         <connections>
@@ -2024,7 +2024,7 @@ Is Written Here</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oz5-MM-Kxr">
-                                        <rect key="frame" x="0.0" y="48.333333333333371" width="142.33333333333334" height="28.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="45" width="124.33333333333333" height="28.666666666666671"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
@@ -2208,7 +2208,7 @@ Is Written Here</string>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="registerTC" rowHeight="116" id="tqf-YC-HXd" customClass="LabelTextFieldCell" customModule="Gro_test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="374" height="116"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="374" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tqf-YC-HXd" id="bzA-OX-D5Q">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="116"/>
@@ -2295,7 +2295,7 @@ Is Written Here</string>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="Aaa-5i-WZ7"/>
+        <segue reference="xhQ-qM-lRO"/>
         <segue reference="Wam-tx-ANT"/>
         <segue reference="vhY-yc-Cr2"/>
         <segue reference="b4K-ym-n02"/>
@@ -2303,19 +2303,19 @@ Is Written Here</string>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="Image" width="1200" height="1200"/>
-        <image name="arrow.right.circle" catalog="system" width="128" height="123"/>
-        <image name="arrowshape.turn.up.backward" catalog="system" width="128" height="104"/>
-        <image name="arrowshape.turn.up.right" catalog="system" width="128" height="104"/>
-        <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="arrow.right.circle" catalog="system" width="128" height="121"/>
+        <image name="arrowshape.turn.up.backward" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.right" catalog="system" width="128" height="106"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
-        <image name="house.fill" catalog="system" width="128" height="104"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
-        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
-        <image name="square.stack.3d.down.right" catalog="system" width="123" height="128"/>
+        <image name="square.stack.3d.down.right" catalog="system" width="124" height="128"/>
         <image name="utcsLogo" width="5987" height="1362"/>
         <namedColor name="Burnt Orange">
             <color red="0.74901960784313726" green="0.3411764705882353" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2333,7 +2333,7 @@ Is Written Here</string>
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

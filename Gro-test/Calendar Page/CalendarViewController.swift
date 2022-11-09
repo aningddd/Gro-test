@@ -118,7 +118,7 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         for event in events {
             if #available(iOS 16.0, *) {
-                var arr = event.getTime().split(separator: " | ")
+                var arr = event.getTime().split(separator: (" | " as? String.Element)!)
                 
                 if(arr[1] == temp1) {
                     selectedDateEvents.append(event)
