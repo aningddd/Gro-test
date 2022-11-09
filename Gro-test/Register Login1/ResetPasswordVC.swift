@@ -8,16 +8,32 @@
 
 import UIKit
 
-class ResetPasswordVC: UIViewController {
+class ResetPasswordVC: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var resetPasswordTitleLabel: UILabel!
+    
+    
+    @IBOutlet weak var newPassTextField: UnderlineTextField!
+    
+    @IBOutlet weak var reEnterPassTextField: UnderlineTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         resetPasswordTitleLabel.font = UIFont(name:"ArialRoundedMTBold",size:30.0)
         // Do any additional setup after loading the view.
+        newPassTextField.delegate = self
+        reEnterPassTextField.delegate = self
     }
     
+    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    // Called when the user clicks on the view outside of the UITextField
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
 }

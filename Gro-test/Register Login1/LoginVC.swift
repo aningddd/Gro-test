@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var LoginTitleLabel: UILabel!
     @IBOutlet weak var emailField: UnderlineTextField!
@@ -24,6 +24,8 @@ class LoginVC: UIViewController {
         passwordField.isSecureTextEntry = true
         navigationController?.setNavigationBarHidden(false, animated: false)
         LoginTitleLabel.font = UIFont(name:"ArialRoundedMTBold",size:30.0)
+        passwordField.delegate = self
+        emailField.delegate = self
     }
     @IBAction func loginButtonPressed(_ sender: Any) {
         //handling the case to login the user to the app
@@ -48,6 +50,17 @@ class LoginVC: UIViewController {
             }
         }
         
+    }
+    
+    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    // Called when the user clicks on the view outside of the UITextField
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
 }
