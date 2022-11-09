@@ -8,11 +8,24 @@
 
 import UIKit
 
-class forgetPasswordVC: UIViewController {
+class forgetPasswordVC: UIViewController, UITextFieldDelegate {
  
+    @IBOutlet weak var emailTextField: UnderlineTextField!
     @IBOutlet weak var ForgetPasswordTitleLable: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         ForgetPasswordTitleLable.font = UIFont(name:"ArialRoundedMTBold",size:30.0)
+        emailTextField.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    // Called when the user clicks on the view outside of the UITextField
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }

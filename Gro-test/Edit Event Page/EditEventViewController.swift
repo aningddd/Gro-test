@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditEventViewController: UIViewController {
+class EditEventViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var topView: UIView!
@@ -17,6 +17,15 @@ class EditEventViewController: UIViewController {
     @IBOutlet weak var detailBlock: UIView!
     @IBOutlet weak var descrTextField: UITextView!
     
+    @IBOutlet weak var eventNameTextField: UITextField!
+    @IBOutlet weak var topMessageTextField: UITextField!
+    @IBOutlet weak var headingTextField: UITextField!
+    @IBOutlet weak var timeTextField: UITextField!
+    @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var contactEmailTextField: UITextField!
+    @IBOutlet weak var contactPhoneTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         topView.layer.cornerRadius = 10
@@ -24,6 +33,14 @@ class EditEventViewController: UIViewController {
         descrBlock.layer.cornerRadius = 10
         detailBlock.layer.cornerRadius = 10
         descrTextField.layer.cornerRadius = 5
+        eventNameTextField.delegate = self
+        topMessageTextField.delegate = self
+        headingTextField.delegate = self
+        timeTextField.delegate = self
+        dateTextField.delegate = self
+        addressTextField.delegate = self
+        contactEmailTextField.delegate = self
+        contactPhoneTextField.delegate = self
     }
 
     @IBAction func uploadButtonPressed(_ sender: Any) {
@@ -32,6 +49,17 @@ class EditEventViewController: UIViewController {
         vc.delegate = self
         vc.allowsEditing = true
         present(vc, animated: true)
+    }
+    
+    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    // Called when the user clicks on the view outside of the UITextField
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
 
