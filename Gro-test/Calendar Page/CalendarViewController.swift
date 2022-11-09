@@ -16,11 +16,12 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
 
     @IBOutlet weak var tableView: UITableView!
     
-    var events:[Event] = [Event(eventName: "Pinic Social", orgName: "Foodie Fridge Club", time: "12:00 pm | Oct 4 2022"),Event(eventName: "General Meeting #1", orgName: "Competitive Computing Club", time: "6:00 pm | Oct 4 2022")]
+    var events:[Event] = [Event(eventName: "Pinic Social", orgName: "Foodie Fridge Club", time: "12:00 pm | Nov 9 2022"),Event(eventName: "General Meeting #1", orgName: "Competitive Computing Club", time: "6:00 pm | Nov 8 2022"), Event(eventName: "General Meeting #2", orgName: "Competitive Computing Club", time: "6:00 pm | Nov 9 2022")]
     var totalSquares = [Date]()
     var selectedDate = Date()
     var currentDate = Date()
     let dateFormatter = DateFormatter()
+    var selectedDateEvents:[Event] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +87,7 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
             cell.dayOfMonthLabel.layer.cornerRadius = cell.dayOfMonthLabel.frame.height / 2
             cell.dayOfMonthLabel.layer.borderWidth = 1
             cell.dayOfMonthLabel.layer.borderColor = UIColor.red.cgColor
+            cell.markingLabel.text = ""
         }
         else {
             if(date == selectedDate)
@@ -96,7 +98,7 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
                 cell.dayOfMonthLabel.layer.cornerRadius = cell.dayOfMonthLabel.frame.height / 2
                 cell.dayOfMonthLabel.layer.borderWidth = 1
                 cell.dayOfMonthLabel.layer.borderColor = UIColor.red.cgColor
-                cell.markingLabel.text = "*"
+                cell.markingLabel.text = ""
             }
             else
             {
@@ -108,6 +110,28 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
             }
         }
         
+        selectedDateEvents = []
+        
+        dateFormatter.dateFormat = "MMM d YYYY"
+        var temp1:String = dateFormatter.string(from: selectedDate)
+        var temp2:String = dateFormatter.string(from: date)
+        
+        for event in events {
+            if #available(iOS 16.0, *) {
+                var arr = event.getTime().split(separator: " | ")
+                
+                if(arr[1] == temp1) {
+                    selectedDateEvents.append(event)
+                }
+                
+                if(arr[1] == temp2) {
+                    cell.markingLabel.text = "*"
+                }
+            }
+        }
+        
+        tableView.reloadData()
+        
         return cell
     }
     
@@ -118,12 +142,12 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return events.count
+        return selectedDateEvents.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell") as! EventCell
-        let event = events[indexPath.row]
+        let event = selectedDateEvents[indexPath.row]
         cell.eventNameLabel.text = event.getEventName()
         cell.orgNameLabel.text = event.getOrgName()
         cell.timeLabel.text = event.getTime()
