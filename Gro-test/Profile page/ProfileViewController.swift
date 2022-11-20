@@ -27,6 +27,22 @@ class ProfileViewController: UIViewController {
         profileImage.layer.cornerRadius = 85
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        DispatchQueue.global(qos: .userInteractive).async {
+            DataManager.app.retrieveUserData(userName: "BowenYang"){
+                result in
+                
+                DispatchQueue.main.async {
+                    var user = result[0] as! UserData
+                    self.profileImage.image = user.avatar
+                    self.userNameLabel.text = user.userName
+                }
+                
+            }
+        }
+    }
+
+    
     @IBAction func pressedProfilePictureButton(_ sender: Any) {
         let vc = UIImagePickerController()
         vc.delegate = self
