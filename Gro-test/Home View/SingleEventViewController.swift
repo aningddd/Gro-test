@@ -10,6 +10,9 @@ import UIKit
 import MapKit
 
 class SingleEventViewController: UIViewController {
+    
+    var event:EventData?
+    var delegate: UIViewController!
 
     // Event information
     @IBOutlet weak var topSloganLabel: UILabel!
@@ -40,6 +43,10 @@ class SingleEventViewController: UIViewController {
         descriptionView.layer.cornerRadius = 10
         infoView.layer.cornerRadius = 10
         eventMap.layer.cornerRadius = 10
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        eventImage.image = event?.image
     }
     
     func displayMap(){
