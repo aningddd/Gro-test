@@ -84,6 +84,11 @@ class DataManager{
                                                        "type": type,
                                                        "description": orgDescription
                                                       ])
+            if(type == "orgData"){
+                db.collection("UserName_Meta_main_keyset_Org").document().setData(["userName": userName, "type": type])
+            }else{
+                db.collection("UserName_Meta_main_keyset_User").document().setData(["userName": userName, "type": type])
+            }
             
           // Metadata contains file metadata such as size, content-type.
           let size = metadata.size
@@ -94,6 +99,41 @@ class DataManager{
               return
             }
           }
+        }
+    }
+    
+    func retrieveAllUser(type: String, completion: @escaping ([String]) -> Void){
+        var userList = [String]()
+        let db = Firestore.firestore()
+        if(type == "orgData"){
+            db.collection("UserName_Meta_main_keyset_Org").getDocuments{snapshot, error in
+                if error == nil && snapshot != nil {
+                    for doc in snapshot!.documents {
+                        let curUserData:String = doc["userName"] as! String
+                        userList.append(curUserData)
+                    }
+
+                    completion(userList)
+                }else{
+                    print("we are in error or nil")
+                    print(error)
+                    print(snapshot)
+                }
+            }
+        }else{
+            db.collection("UserName_Meta_main_keyset_User").getDocuments{snapshot, error in
+                if error == nil && snapshot != nil {
+                    for doc in snapshot!.documents {
+                        let curUserData:String = doc["userName"] as! String
+                        userList.append(curUserData)
+                    }
+                    completion(userList)
+                }else{
+                    print("we are in error or nil")
+                    print(error)
+                    print(snapshot)
+                }
+            }
         }
     }
 
