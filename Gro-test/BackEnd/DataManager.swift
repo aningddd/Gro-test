@@ -18,7 +18,7 @@ class DataManager{
     // Upload Data for Orgs
 
     //function for UploadEvent
-    func UploadEvent(orgName: String, eventDescription: String, eventPicture: UIImage, position_x: Float, position_y: Float, eventName: String){
+    func UploadEvent(orgName: String, eventDescription: String, eventPicture: UIImage, position_x: Float, position_y: Float, eventName: String,eventYear: String ,eventMonth: String, eventDate:String, eventTime: String, eventLocationName: String){
         let storageRef = Storage.storage().reference()
         let inputPath = "orgData/\(orgName)/images/\(UUID().uuidString)"
         let imagesRef = storageRef.child(inputPath)
@@ -38,7 +38,12 @@ class DataManager{
                                                        "position_x": position_x,
                                                        "position_y": position_y,
                                                        "description": eventDescription,
-                                                       "eventName": eventName
+                                                       "eventName": eventName,
+                                                       "eventLoactionName": eventLocationName,
+                                                       "eventYear": eventYear,
+                                                       "eventMonth":eventMonth,
+                                                       "eventDate": eventDate,
+                                                       "eventTime": eventTime
                                                       ])
             
           // Metadata contains file metadata such as size, content-type.
@@ -135,7 +140,8 @@ class DataManager{
         db.collection(orgName).getDocuments{snapshot, error in
             if error == nil && snapshot != nil {
                 for doc in snapshot!.documents {
-                    let curEventData = EventData(orgName: orgName, eventName: doc["eventName"] as! String, description: doc["description"] as! String, image: UIImage(), position_x: doc["position_x"] as! Float, position_y: doc["position_y"] as! Float, url: doc["eventPicPath"] as! String)
+                    let curEventData = EventData(orgName: orgName, eventName: doc["eventName"] as! String, description: doc["description"] as! String, image: UIImage(), position_x: doc["position_x"] as! Float, position_y: doc["position_y"] as! Float, url: doc["eventPicPath"] as! String, eventLocation: doc["eventLoactionName"] as! String, year: doc["eventYear"] as! String, month: doc["eventMonth"] as! String, date: doc["eventDate"] as! String, time: doc["eventTime"] as! String)
+                    
                     result.append(curEventData)
                 }
 

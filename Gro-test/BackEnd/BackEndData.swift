@@ -23,5 +23,10 @@ struct EventData {
     var position_x: Float
     var position_y: Float
     var url:String
+    var eventLocation: String
+    var year: String
+    var month:String
+    var date:String
+    var time: String
 }
 
