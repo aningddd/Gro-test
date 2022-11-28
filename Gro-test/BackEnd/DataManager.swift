@@ -34,7 +34,7 @@ class DataManager{
             return
           }
             let db = Firestore.firestore()
-            db.collection(orgName).document().setData(["eventPicPath":inputPath,
+            db.collection(orgName).document(eventName).setData(["eventPicPath":inputPath,
                                                        "position_x": position_x,
                                                        "position_y": position_y,
                                                        "description": eventDescription,
@@ -102,6 +102,25 @@ class DataManager{
               return
             }
           }
+        }
+    }
+    
+    func retrieveUserEmail(userName: String,type:String, completion: @escaping (userName_email) -> Void){
+        let db = Firestore.firestore()
+        //UserName_Meta_main_keyset_Org
+        
+        var docRefC = db.collection("UserName_Meta_main_keyset_User")
+        if(type == "orgData"){
+            print("find correct")
+            docRefC = db.collection("UserName_Meta_main_keyset_Org")
+        }
+        let docRef = docRefC.document(userName)
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                completion(userName_email(userName: document["userName"] as! String, email: document["email"] as! String))
+            } else {
+                print("Document does not exist")
+            }
         }
     }
     
