@@ -23,6 +23,7 @@ class RegisterPageVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var errorMessage: UILabel!
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
+    let loginSegueIdentifier = "registerToMainSegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +49,24 @@ class RegisterPageVC: UIViewController, UITextFieldDelegate {
                 }
                 else{
                     self.errorMessage.text = "Success"
+                    //creating user info in the firebase database NOT for authentication
+                    let defaultImage = UIImage(named: "Image")
+                    DispatchQueue.global(qos: .userInteractive).async {
+                        DataManager.app.UploadUserData(userName: self.emailTextField.text!, orgAvatar: defaultImage!, orgDescription: "Basic User", type: "userData")
+                    }
+                    //segue into regular org page immediately after registering
+                    Auth.auth().addStateDidChangeListener(){
+                        auth, user in
+                        print(user!)
+                        if user != nil{
+                            self.performSegue(withIdentifier: self.loginSegueIdentifier, sender: nil)
+                            self.emailTextField.text = nil
+                            self.passwordField.text = nil
+                            self.confirmPasswordField.text = nil
+                            self.firstNameField.text = nil
+                            self.lastNameField.text = nil
+                        }
+                    }
                 }
             }
         }
