@@ -59,13 +59,13 @@ class DataManager{
     }
 
     
-    func UploadUserData(userName: String, orgAvatar: UIImage, orgDescription: String, type:String){
+    func UploadUserData(email: String, orgAvatar: UIImage, orgDescription: String, type:String, userName: String){
         guard type == "orgData" || type == "userData" else {
             print("input data type wrong, only option is orgData or userData")
             return
         }
         let storageRef = Storage.storage().reference()
-        let inputPath = "\(type)/\(userName)/images/\(UUID().uuidString)"
+        let inputPath = "\(type)/\(email)/images/\(UUID().uuidString)"
         let imagesRef = storageRef.child(inputPath)
         
         let imageData = orgAvatar.jpegData(compressionQuality: 0.8)
@@ -80,15 +80,18 @@ class DataManager{
             return
           }
             let db = Firestore.firestore()
-            db.collection(userName + "_meta").document().setData(["avatarURL":inputPath,
+            db.collection(email + "_meta").document().setData(["avatarURL":inputPath,
                                                        "type": type,
-                                                       "description": orgDescription
+                                                       "description": orgDescription,
+                                                               "userName": userName
                                                       ])
             if(type == "orgData"){
-                db.collection("UserName_Meta_main_keyset_Org").document().setData(["userName": userName, "type": type])
+                db.collection("UserName_Meta_main_keyset_Org").document().setData(["email": email, "type": type, "userName": userName])
             }else{
-                db.collection("UserName_Meta_main_keyset_User").document().setData(["userName": userName, "type": type])
+                db.collection("UserName_Meta_main_keyset_User").document().setData(["email": email ,"type": type, "userName": userName])
             }
+            
+
             
           // Metadata contains file metadata such as size, content-type.
           let size = metadata.size
@@ -102,14 +105,14 @@ class DataManager{
         }
     }
     
-    func retrieveAllUser(type: String, completion: @escaping ([String]) -> Void){
-        var userList = [String]()
+    func retrieveAllUser(type: String, completion: @escaping ([userName_email]) -> Void){
+        var userList = [userName_email]()
         let db = Firestore.firestore()
         if(type == "orgData"){
             db.collection("UserName_Meta_main_keyset_Org").getDocuments{snapshot, error in
                 if error == nil && snapshot != nil {
                     for doc in snapshot!.documents {
-                        let curUserData:String = doc["userName"] as! String
+                        let curUserData:userName_email = userName_email(userName: doc["userName"] as! String, email: doc["email"] as! String)
                         userList.append(curUserData)
                     }
 
@@ -124,7 +127,7 @@ class DataManager{
             db.collection("UserName_Meta_main_keyset_User").getDocuments{snapshot, error in
                 if error == nil && snapshot != nil {
                     for doc in snapshot!.documents {
-                        let curUserData:String = doc["userName"] as! String
+                        let curUserData:userName_email = userName_email(userName: doc["userName"] as! String, email: doc["email"] as! String)
                         userList.append(curUserData)
                     }
                     completion(userList)
@@ -137,7 +140,7 @@ class DataManager{
         }
     }
 
-    func retrieveEventData(eventName:String,OrgName:String, completion: @escaping ([EventData]) -> Void){
+    func retrieveEventData(OrgName:String, completion: @escaping ([EventData]) -> Void){
         var result_I = [EventData]()
         let stRef = Storage.storage().reference()
         let myGroup = DispatchGroup()
@@ -194,11 +197,11 @@ class DataManager{
         }
 
     }
-    func retrieveUserData(userName:String, completion: @escaping ([UserData]) -> Void){
+    func retrieveUserData(email:String, completion: @escaping ([UserData]) -> Void){
         var result_I = [UserData]()
         let stRef = Storage.storage().reference()
         let myGroup = DispatchGroup()
-        self.retrieveUserPath(userName:userName) {results in
+        self.retrieveUserPath(email:email) {results in
             for result in results{
                 var curResult = result
                 myGroup.enter()
@@ -225,20 +228,20 @@ class DataManager{
     }
     
     // Retrieve user path helper
-    func retrieveUserPath(userName:String ,completion: @escaping ([UserData]) -> Void){
+    func retrieveUserPath(email:String ,completion: @escaping ([UserData]) -> Void){
         let db = Firestore.firestore()
         
         var result = [UserData]()
 //        var imagePaths = [String]()
 //        var images = [UIImage]()
-        let userNameM = userName + "_meta"
+        let userNameM = email + "_meta"
         db.collection(userNameM).getDocuments{snapshot, error in
             print("at least we are in here")
             if error == nil && snapshot != nil {
                 print(" we retrived data from snapshot")
                 for doc in snapshot!.documents {
                     print(" we actually got snapshot with here ")
-                    let curUserData = UserData(type: doc["type"] as! String, description: doc["description"] as! String, avatar: UIImage(), userName: userName as! String, url: doc["avatarURL"] as! String)
+                    let curUserData = UserData(type: doc["type"] as! String, description: doc["description"] as! String, avatar: UIImage(), userName: doc["userName"] as! String, url: doc["avatarURL"] as! String, email: email)
                     result.append(curUserData)
                 }
 

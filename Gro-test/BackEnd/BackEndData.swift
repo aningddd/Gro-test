@@ -13,6 +13,7 @@ struct UserData {
     var avatar: UIImage
     var userName: String
     var url:String
+    var email: String
 }
 
 struct EventData {
@@ -28,5 +29,10 @@ struct EventData {
     var month:String
     var date:String
     var time: String
+}
+
+struct userName_email{
+    var userName: String
+    var email: String
 }
 
