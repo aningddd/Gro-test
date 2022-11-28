@@ -44,7 +44,7 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func getData() {
         DispatchQueue.global(qos: .userInteractive).async {
-            DataManager.app.retrieveEventData(eventName: "testevent", OrgName: "Gro") {
+            DataManager.app.retrieveEventData(OrgName: "Gro") {
                 result in
                 for each in result {
                     self.events.append(each as! EventData)

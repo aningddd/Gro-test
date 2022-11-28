@@ -80,15 +80,15 @@ class DataManager{
             return
           }
             let db = Firestore.firestore()
-            db.collection(email + "_meta").document().setData(["avatarURL":inputPath,
+            db.collection(email + "_meta").document("userMeta").setData(["avatarURL":inputPath,
                                                        "type": type,
                                                        "description": orgDescription,
                                                                "userName": userName
                                                       ])
             if(type == "orgData"){
-                db.collection("UserName_Meta_main_keyset_Org").document().setData(["email": email, "type": type, "userName": userName])
+                db.collection("UserName_Meta_main_keyset_Org").document(userName).setData(["email": email, "type": type, "userName": userName])
             }else{
-                db.collection("UserName_Meta_main_keyset_User").document().setData(["email": email ,"type": type, "userName": userName])
+                db.collection("UserName_Meta_main_keyset_User").document(userName).setData(["email": email ,"type": type, "userName": userName])
             }
             
 

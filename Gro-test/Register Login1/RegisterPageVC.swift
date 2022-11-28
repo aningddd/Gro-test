@@ -52,7 +52,7 @@ class RegisterPageVC: UIViewController, UITextFieldDelegate {
                     //creating user info in the firebase database NOT for authentication
                     let defaultImage = UIImage(named: "Image")
                     DispatchQueue.global(qos: .userInteractive).async {
-                        DataManager.app.UploadUserData(userName: self.emailTextField.text!, orgAvatar: defaultImage!, orgDescription: "Basic User", type: "userData")
+                        DataManager.app.UploadUserData(email: self.emailTextField.text!, orgAvatar: defaultImage!, orgDescription: "Basic User", type: "userData", userName: "\(self.firstNameField.text!) \(self.lastNameField.text!)")
                     }
                     //segue into regular org page immediately after registering
                     Auth.auth().addStateDidChangeListener(){

@@ -83,4 +83,10 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier = loginSegue, let nextVC = segue.destination as? {
+            nextVC.delegate = self
+        }
+    }
+    
 }

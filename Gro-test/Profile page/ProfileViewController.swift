@@ -29,7 +29,7 @@ class ProfileViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         DispatchQueue.global(qos: .userInteractive).async {
-            DataManager.app.retrieveUserData(userName: "BowenYang"){
+            DataManager.app.retrieveUserData(email: "BowenYang"){
                 result in
                 
                 DispatchQueue.main.async {
