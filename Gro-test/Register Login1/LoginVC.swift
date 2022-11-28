@@ -17,6 +17,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var errorMessage: UILabel!
     let loginSegue = "loginSegueIdentifier"
+    let adminSegue = "adminSegueIdentifier"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +43,28 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                     auth, user in
                     print(user!)
                     if user != nil{
-                        self.performSegue(withIdentifier: self.loginSegue, sender: nil)
-                        self.emailField.text = nil
-                        self.passwordField.text = nil
+                        //determine if this is a basic user or an organziation admin
+                        DispatchQueue.global(qos: .userInteractive).async {
+                            DataManager.app.retrieveUserData(email: self.emailField.text!){
+                                result in
+                                
+                                DispatchQueue.main.async {
+                                    var user = result[0] as! UserData
+                                    if(user.type == "userData"){
+                                        self.performSegue(withIdentifier: self.loginSegue, sender: nil)
+                                    }
+                                    else{
+                                        self.performSegue(withIdentifier: self.adminSegue, sender: nil)
+                                    }
+                                    self.emailField.text = nil
+                                    self.passwordField.text = nil
+                                }
+                                
+                            }
+                        }
+                        
+                        
+                        
                     }
                 }
             }
