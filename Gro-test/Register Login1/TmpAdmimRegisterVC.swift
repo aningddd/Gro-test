@@ -40,25 +40,30 @@ class TmpAdmimRegisterVC: UIViewController, UITextFieldDelegate {
                 self.errorMessage.isHidden = false
                 if let error = error as NSError?{
                     self.errorMessage.text = "\(error.localizedDescription)"
+                    print("There was an error creating the account \(error.localizedDescription)")
                 }
                 else{
                     self.errorMessage.text = "Success"
+                    print("success creating the organization via authentication")
                     //creating user info in the firebase database NOT for authentication
                     let defaultImage = UIImage(named: "Image")
                     DispatchQueue.global(qos: .userInteractive).async {
-                        DataManager.app.UploadUserData(email: self.emailField.text!, orgAvatar: defaultImage!, orgDescription: "A simple organization", type: "orgData", userName: "\(self.organizationName.text!)")
+                        DataManager.app.UploadUserData(email: "\(self.emailField.text!)", orgAvatar: defaultImage!, orgDescription: "A simple organization", type: "orgData", userName: "\(self.organizationName.text!)")
+                        print("organizaation successfully created in firestore")
                     }
                     //segue into regular org page immediately after registering
-                    Auth.auth().addStateDidChangeListener(){
-                        auth, user in
-                        if user != nil{
-                            self.performSegue(withIdentifier: self.orgRegisterSegueIdentifier, sender: nil)
-                            self.emailField.text = nil
-                            self.passwordField.text = nil
-                            self.confirmPasswordField.text = nil
-                            self.organizationName.text = nil
-                        }
-                    }
+                    self.performSegue(withIdentifier: self.orgRegisterSegueIdentifier, sender: nil)
+                    self.emailField.text = nil
+                    self.passwordField.text = nil
+                    self.confirmPasswordField.text = nil
+                    self.organizationName.text = nil
+                    
+//                    Auth.auth().addStateDidChangeListener(){
+//                        auth, user in
+//                        if user != nil{
+//
+//                        }
+//                    }
                 }
             }
         }

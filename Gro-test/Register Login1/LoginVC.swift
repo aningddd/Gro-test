@@ -30,7 +30,6 @@ class LoginVC: UIViewController, UITextFieldDelegate, UITabBarControllerDelegate
     }
     @IBAction func loginButtonPressed(_ sender: Any) {
         //handling the case to login the user to the app
-        print("Got here")
         Auth.auth().signIn(withEmail: emailField.text!, password: passwordField.text!){
             authResult, error in
             self.errorMessage.isHidden = false
@@ -41,16 +40,12 @@ class LoginVC: UIViewController, UITextFieldDelegate, UITabBarControllerDelegate
                 self.errorMessage.text = "Success"
                 Auth.auth().addStateDidChangeListener(){
                     auth, user in
-                    print(user!)
                     if user != nil{
                         //determine if this is a basic user or an organziation admin
                         DataManager.app.retrieveUserData(email: self.emailField.text!){
                             result in
-                            
                             var user = result[0] as! UserData
-                            print(user.email)
                             if(user.type == "userData"){
-                                print(self.loginSegue)
                                 self.performSegue(withIdentifier: self.loginSegue, sender: nil)
                             }
                             else{
