@@ -19,6 +19,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var changeProfilePictureButton: UIButton!
     
     var userEmail = ""
+    let profileToSettingsSegue = "profileToSettingsSegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,6 +99,12 @@ class ProfileViewController: UIViewController {
     @IBAction func switchAccount(_ sender: Any) { self.navigationController?.navigationController?.popToRootViewController(animated: true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == self.profileToSettingsSegue, let settingsVC = segue.destination as? SettingsViewController{
+            settingsVC.userEmail = self.userEmail
+        }
+    }
+    
 }
 
 extension ProfileViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
@@ -105,6 +112,7 @@ extension ProfileViewController : UIImagePickerControllerDelegate, UINavigationC
         
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage{
             profileImage.image = image
+            DataManager.app.UploadUserData(email: "\(self.userEmailLabel.text!)", orgAvatar: image, orgDescription: "Basic User", type: "userData", userName: "\(self.userNameLabel.text!)")
         }
         
         picker.dismiss(animated: true, completion: nil)
