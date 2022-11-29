@@ -43,6 +43,8 @@ class SingleEventViewController: UIViewController {
         descriptionView.layer.cornerRadius = 10
         infoView.layer.cornerRadius = 10
         eventMap.layer.cornerRadius = 10
+        topSloganLabel.text = events[selectedEventIndex!].orgName
+        headingLabel.text = events[selectedEventIndex!].eventName
         eventImage.image = events[selectedEventIndex!].image
         eventTextView.text = events[selectedEventIndex!].description
         timeLabel.text = events[selectedEventIndex!].time
