@@ -446,7 +446,7 @@ Is Written Here</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oct 18 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1U-rp-RLv">
-                                        <rect key="frame" x="21" y="41" width="88" height="20"/>
+                                        <rect key="frame" x="21" y="41" width="161" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -529,7 +529,7 @@ Is Written Here</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gN-wd-28W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1749" y="2157"/>
+            <point key="canvasLocation" x="-1749.2753623188407" y="2156.9196428571427"/>
         </scene>
         <!--Edit Event View Controller-->
         <scene sceneID="gvP-bL-XGt">
