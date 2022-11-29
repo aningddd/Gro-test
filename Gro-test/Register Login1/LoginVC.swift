@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class LoginVC: UIViewController, UITextFieldDelegate {
+class LoginVC: UIViewController, UITextFieldDelegate, UITabBarControllerDelegate {
 
     @IBOutlet weak var LoginTitleLabel: UILabel!
     @IBOutlet weak var emailField: UnderlineTextField!
@@ -17,7 +17,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var errorMessage: UILabel!
     let loginSegue = "loginSegueIdentifier"
-    let adminSegue = "adminSegueIdentifier"
+    let adminSegue = "adminLoginSegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,10 +83,11 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier = loginSegue, let nextVC = segue.destination as? {
-            nextVC.delegate = self
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == loginSegue, let tabBarNavigation = segue.destination as? HomeViewController{
+////            tabBarNavigation.delegate = self
+////            tabBarNavigation.userEmail = emailField.text!
+//        }
+//    }
     
 }
