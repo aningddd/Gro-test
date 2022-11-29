@@ -11,6 +11,7 @@ import UIKit
 class EditNameViewController: UIViewController {
     @IBOutlet weak var newUserNameField: UITextField!
     @IBOutlet weak var statusLabel: UILabel!
+    //grab these from the previous view controller
     var emailField = ""
     var image = UIImage()
     var delegate : UIViewController!
@@ -21,22 +22,12 @@ class EditNameViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func nameDoneButtonPressed(_ sender: Any) {
+        //push to database with the new username
         DataManager.app.UploadUserData(email: "\(self.emailField)", orgAvatar: self.image, orgDescription: "Basic User", type: "userData", userName: newUserNameField.text!)
         statusLabel.isHidden = false
+        //refresh the table and inform the username has changed
         let otherVC = delegate as! TableRefresher
         otherVC.updateTable()
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
