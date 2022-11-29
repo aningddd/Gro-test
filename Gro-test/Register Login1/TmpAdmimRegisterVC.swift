@@ -47,10 +47,9 @@ class TmpAdmimRegisterVC: UIViewController, UITextFieldDelegate {
                     print("success creating the organization via authentication")
                     //creating user info in the firebase database NOT for authentication
                     let defaultImage = UIImage(named: "Image")
-                    DispatchQueue.global(qos: .userInteractive).async {
-                        DataManager.app.UploadUserData(email: "\(self.emailField.text!)", orgAvatar: defaultImage!, orgDescription: "A simple organization", type: "orgData", userName: "\(self.organizationName.text!)")
-                        print("organizaation successfully created in firestore")
-                    }
+                    DataManager.app.UploadUserData(email: "\(self.emailField.text!)", orgAvatar: defaultImage!, orgDescription: "A simple organization", type: "orgData", userName: "\(self.organizationName.text!)")
+                    print("organizaation successfully created in firestore")
+                    
                     //segue into regular org page immediately after registering
                     self.performSegue(withIdentifier: self.orgRegisterSegueIdentifier, sender: nil)
                     self.emailField.text = nil
