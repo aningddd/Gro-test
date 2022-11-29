@@ -26,6 +26,7 @@ class RegisterPageVC: UIViewController, UITextFieldDelegate {
     let loginSegueIdentifier = "registerToMainSegue"
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         passwordField.isSecureTextEntry = true
         confirmPasswordField.isSecureTextEntry = true
@@ -36,7 +37,6 @@ class RegisterPageVC: UIViewController, UITextFieldDelegate {
         confirmPasswordField.delegate = self
         firstNameField.delegate = self
         lastNameField.delegate = self
-        
     }
     //create the new account with the user login credentials
     @IBAction func createAccountButtonPressed(_ sender: Any) {

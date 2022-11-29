@@ -27,7 +27,7 @@ class EditEventViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var contactPhoneTextField: UITextField!
     
     @IBAction func saveButtonPressed(_ sender: Any) {
-        
+        DataManager.app.UploadEvent(orgName: selectedOrg ?? "none", eventDescription: descrTextField.text!, eventPicture: imageView.image!, position_x: 0.0, position_y: 0.0, eventName: eventNameTextField.text ?? "none", eventYear: "2022", eventMonth: "12", eventDate: dateTextField.text!, eventTime: timeTextField.text!, eventLocationName: addressTextField.text!)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
