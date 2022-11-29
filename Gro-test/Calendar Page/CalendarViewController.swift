@@ -15,13 +15,14 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var monthLabel: UILabel!
 
     @IBOutlet weak var tableView: UITableView!
+    var allEvents:[EventData] = []
     
     var events:[Event] = [Event(eventName: "Pinic Social", orgName: "Foodie Fridge Club", time: "12:00 pm | Nov 9 2022"),Event(eventName: "General Meeting #1", orgName: "Competitive Computing Club", time: "6:00 pm | Nov 8 2022"), Event(eventName: "General Meeting #2", orgName: "Competitive Computing Club", time: "6:00 pm | Nov 9 2022")]
     var totalSquares = [Date]()
     var selectedDate = Date()
     var currentDate = Date()
     let dateFormatter = DateFormatter()
-    var selectedDateEvents:[Event] = []
+    var selectedDateEvents:[EventData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,19 +117,33 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
         var temp1:String = dateFormatter.string(from: selectedDate)
         var temp2:String = dateFormatter.string(from: date)
         
-        for event in events {
+        for event in allEvents {
             if #available(iOS 16.0, *) {
-                var arr = event.getTime().split(separator: (" | "))
-                
-                if(arr[1] == temp1) {
+                var date = event.month + " " + event.date + " " + event.year
+
+                if(date == temp1) {
                     selectedDateEvents.append(event)
                 }
-                
-                if(arr[1] == temp2) {
+
+                if(date == temp2) {
                     cell.markingLabel.text = "*"
                 }
             }
         }
+        
+//        for event in events {
+//            if #available(iOS 16.0, *) {
+//                var arr = event.getTime().split(separator: " | ")
+//
+//                if(arr[1] == temp1) {
+//                    selectedDateEvents.append(event)
+//                }
+//
+//                if(arr[1] == temp2) {
+//                    cell.markingLabel.text = "*"
+//                }
+//            }
+//        }
         
         tableView.reloadData()
         
@@ -148,14 +163,47 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell") as! EventCell
         let event = selectedDateEvents[indexPath.row]
-        cell.eventNameLabel.text = event.getEventName()
-        cell.orgNameLabel.text = event.getOrgName()
-        cell.timeLabel.text = event.getTime()
+        cell.eventNameLabel.text = event.eventName
+        cell.orgNameLabel.text = event.orgName
+        cell.timeLabel.text = event.time + " | " + event.month + " " + event.date + " " + event.year
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160.0
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.allEvents = []
+        DispatchQueue.global(qos: .userInteractive).async {
+            for org in allOrgs {
+                DataManager.app.retrieveEventData(OrgName: org) {
+                    result in
+                    
+                    for each in result {
+                        self.allEvents.append(each as! EventData)
+                    }
+                    
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                        self.collectionView.reloadData()
+                    }
+                }
+            }
+        }
+//        allOrgs = []
+//        DispatchQueue.global(qos: .userInteractive).async {
+//            DataManager.app.retrieveAllUser(type: "orgData") {
+//                result in
+//
+//                DispatchQueue.main.async {
+//                    for org in result {
+//                        allOrgs.append(org.userName)
+//                    }
+//                    self.tableView.reloadData()
+//                }
+//            }
+//        }
     }
 }

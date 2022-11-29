@@ -8,6 +8,10 @@
 
 import UIKit
 
+public var key:String?
+public var allOrgs:[String] = []
+public var selectedOrg:String?
+
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
@@ -20,8 +24,35 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.backgroundColor = UIColor(named: "Grey E")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        allOrgs = []
+        DispatchQueue.global(qos: .userInteractive).async {
+            DataManager.app.retrieveAllUser(type: "orgData") {
+                result in
+                
+                DispatchQueue.main.async {
+                    for org in result {
+                        allOrgs.append(org.userName)
+                    }
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
+    
+    func generateFakeData() {
+        DataManager.app.UploadUserData(email: "texashacs.corporate@gmail.com", orgAvatar: UIImage(named: "Image")!, orgDescription: "We're the Hispanic Association of Computer Scientists.", type: "orgData", userName: "HACS")
+         DataManager.app.UploadUserData(email: "pres@texasacm.org", orgAvatar: UIImage(named: "Image")!, orgDescription: "Our vision is to become the premier UTCS org by offering a welcoming community for success by offering transformative social, academic, and professional experiences.", type: "orgData", userName: "ACM")
+        DataManager.app.UploadEvent(orgName: "ACM", eventDescription: "Join ACM for an Arts and Crafts Night on the fifth floor atrium bridge!", eventPicture: UIImage(named: "Image")!, position_x: 0.01, position_y: 0.01, eventName: "Arts and Craft Night", eventYear: "2022", eventMonth: "Nov", eventDate: "30", eventTime: "6:00 pm", eventLocationName: "2317 Speedway, Austin, TX 78712")
+        DataManager.app.UploadEvent(orgName: "HACS", eventDescription: "General Meeting", eventPicture: UIImage(named: "Image")!, position_x: 0.01, position_y: 0.01, eventName: "General Meeting", eventYear: "2022", eventMonth: "Nov", eventDate: "29", eventTime: "6:00 pm", eventLocationName: "2317 Speedway, Austin, TX 78712")
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return allOrgs.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -33,8 +64,16 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         cell.contentView.backgroundColor = UIColor(named: "Grey E")
         cell.view.layer.cornerRadius = 10
+        cell.orgNameLabel.text = allOrgs[indexPath.row]
+        cell.toEventsButton.tag = indexPath.row
+        cell.toEventsButton.addTarget(self, action: #selector(eventButtonPressed), for: .touchUpInside)
         
         return cell
+    }
+    
+    @objc func eventButtonPressed(sender: UIButton) {
+        let index = IndexPath(row: sender.tag, section: 0)
+        selectedOrg = allOrgs[index.row]
     }
 
 }

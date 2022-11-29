@@ -8,10 +8,14 @@
 
 import UIKit
 
+public var events:[EventData] = []
+public var selectedEventIndex:Int?
+
 class EventViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var eventTableView: UITableView!
-    var events:[EventData] = []
+    
+    var org:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,13 +23,16 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
         eventTableView.dataSource = self
         eventTableView.rowHeight = 135
         eventTableView.backgroundColor = UIColor(named: "Grey E")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        org = selectedOrg!
+        events = []
         getData()
     }
-
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // return 10
-        return self.events.count
+        return events.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -37,22 +44,35 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         cell.contentView.backgroundColor = UIColor(named: "Grey E")
         cell.view.layer.cornerRadius = 10
-        cell.eventName.text = self.events[indexPath.row].eventName
+        cell.eventName.text = events[indexPath.row].eventName
+        cell.timeLabel.text = events[indexPath.row].time
+        cell.dateLabel.text = events[indexPath.row].month + " " + events[indexPath.row].date + " " + events[indexPath.row].year
+        cell.infoButton.tag = indexPath.row
+        cell.infoButton.addTarget(self, action: #selector(infoButtonPressed), for: .touchUpInside)
+        cell.infoArrow.tag = indexPath.row
+        cell.infoArrow.addTarget(self, action: #selector(infoButtonPressed), for: .touchUpInside)
         
         return cell
     }
     
+    @objc func infoButtonPressed(sender: UIButton) {
+        let index = IndexPath(row: sender.tag, section: 0)
+        selectedEventIndex = index.row
+//        print("==========")
+//        print(events[selectedEventIndex!])
+//        print("==========")
+    }
+    
     func getData() {
         DispatchQueue.global(qos: .userInteractive).async {
-            DataManager.app.retrieveEventData(OrgName: "Gro") {
+            DataManager.app.retrieveEventData(OrgName: self.org!) {
                 result in
                 for each in result {
-                    self.events.append(each as! EventData)
+                    events.append(each as! EventData)
                     print(each.image)
                 }
                 
                 DispatchQueue.main.async {
-                    print(self.events.count)
                     self.eventTableView.reloadData()
                 }
             }
@@ -64,7 +84,7 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
         let nextVC = segue.destination as? SingleEventViewController,
         let index = eventTableView.indexPathForSelectedRow?.row {
             nextVC.delegate = self
-            nextVC.event = self.events[index]
+            nextVC.event = events[index]
         }
 
     }

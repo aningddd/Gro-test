@@ -86,6 +86,7 @@ class LoginVC: UIViewController, UITextFieldDelegate, UITabBarControllerDelegate
             let profileVCNavigation = tabBarNavigation.viewControllers![3] as! UINavigationController
             let profileVC = profileVCNavigation.topViewController as! ProfileViewController
             profileVC.userEmail = self.emailField.text!
+            key = self.emailField.text!
         }
     }
     

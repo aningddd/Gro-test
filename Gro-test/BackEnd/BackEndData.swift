@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-struct UserData {
+public struct UserData {
     var type:String
     var description:String
     var avatar: UIImage
@@ -16,7 +16,7 @@ struct UserData {
     var email: String
 }
 
-struct EventData {
+public struct EventData {
     var orgName:String
     var eventName:String
     var description:String
@@ -31,7 +31,7 @@ struct EventData {
     var time: String
 }
 
-struct userName_email{
+public struct userName_email{
     var userName: String
     var email: String
 }

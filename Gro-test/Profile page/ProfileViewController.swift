@@ -33,6 +33,7 @@ class ProfileViewController: UIViewController {
         DispatchQueue.global(qos: .userInteractive).async {
             DataManager.app.retrieveUserData(email: self.userEmail){
                 result in
+                
                 DispatchQueue.main.async {
                     var user = result[0] as! UserData
                     self.profileImage.image = user.avatar

@@ -43,6 +43,11 @@ class SingleEventViewController: UIViewController {
         descriptionView.layer.cornerRadius = 10
         infoView.layer.cornerRadius = 10
         eventMap.layer.cornerRadius = 10
+        eventImage.image = events[selectedEventIndex!].image
+        eventTextView.text = events[selectedEventIndex!].description
+        timeLabel.text = events[selectedEventIndex!].time
+        dateLabel.text = events[selectedEventIndex!].month + " " + events[selectedEventIndex!].date + " " + events[selectedEventIndex!].year
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,21 +56,36 @@ class SingleEventViewController: UIViewController {
     
     func displayMap(){
         //GDC location - be sure to change this later to the actual location string
-        let testAddress: String = "2317 Speedway, Austin, TX 78712"
-        getCoordinate(addressString: testAddress, completionHandler: { location, error in
-            if error == nil{
-                let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-                let coordinates = MKCoordinateRegion(center: location, span: span)
-                self.eventMap.setRegion(coordinates, animated: true)
-                let pin = MKPointAnnotation()
-                pin.coordinate = location
-                self.eventMap.addAnnotation(pin)
-            }
-            else{
-                print(error!.localizedDescription)
-            }
-            
-        })
+        getCoordinate(addressString: events[selectedEventIndex!].eventLocation, completionHandler: { location, error in
+                    if error == nil{
+                        let span = MKCoordinateSpan(latitudeDelta: Double(events[selectedEventIndex!].position_x), longitudeDelta: Double(events[selectedEventIndex!].position_y))
+                        let coordinates = MKCoordinateRegion(center: location, span: span)
+                        self.eventMap.setRegion(coordinates, animated: true)
+                        let pin = MKPointAnnotation()
+                        pin.coordinate = location
+                        self.eventMap.addAnnotation(pin)
+                    }
+                    else{
+                        print(error!.localizedDescription)
+                    }
+        
+                })
+        
+//        let testAddress: String = "2317 Speedway, Austin, TX 78712"
+//        getCoordinate(addressString: testAddress, completionHandler: { location, error in
+//            if error == nil{
+//                let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+//                let coordinates = MKCoordinateRegion(center: location, span: span)
+//                self.eventMap.setRegion(coordinates, animated: true)
+//                let pin = MKPointAnnotation()
+//                pin.coordinate = location
+//                self.eventMap.addAnnotation(pin)
+//            }
+//            else{
+//                print(error!.localizedDescription)
+//            }
+//
+//        })
     }
     
     func getCoordinate( addressString : String,
