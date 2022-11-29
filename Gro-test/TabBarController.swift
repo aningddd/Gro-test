@@ -15,7 +15,7 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         // Set bar colour
         tabBar.barTintColor = UIColor(named: "Burnt Orange")
-        tabBar.isTranslucent = false
+        // tabBar.isTranslucent = false
         // Set item colour
         tabBar.tintColor = .white
         tabBar.unselectedItemTintColor = UIColor(named: "Grey 1")
