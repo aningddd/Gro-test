@@ -1765,7 +1765,6 @@ Is Written Here</string>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="aeV-X3-BA3" eventType="touchUpInside" id="qIx-KP-kH4"/>
-                                    <segue destination="NL7-Ht-kDX" kind="presentation" identifier="adminLoginSegue" modalPresentationStyle="fullScreen" id="mKy-dU-eew"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Status" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxe-oO-Psx">
@@ -1813,6 +1812,7 @@ Is Written Here</string>
                         <outlet property="loginButton" destination="5ao-Ww-tLm" id="z9a-hZ-PeJ"/>
                         <outlet property="passwordField" destination="bK7-sp-Zte" id="gi2-fj-l46"/>
                         <segue destination="jQZ-Tp-CtF" kind="presentation" identifier="loginSegueIdentifier" modalPresentationStyle="fullScreen" id="QtU-uU-7bS"/>
+                        <segue destination="NL7-Ht-kDX" kind="presentation" identifier="adminLoginSegue" modalPresentationStyle="fullScreen" id="ZHN-1x-OXt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmv-XZ-cxM" sceneMemberID="firstResponder"/>

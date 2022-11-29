@@ -10,7 +10,7 @@ import UIKit
 
 class TabBarController: UITabBarController {
 
-    var userEmail = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Set bar colour

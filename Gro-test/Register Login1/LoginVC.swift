@@ -44,23 +44,21 @@ class LoginVC: UIViewController, UITextFieldDelegate, UITabBarControllerDelegate
                     print(user!)
                     if user != nil{
                         //determine if this is a basic user or an organziation admin
-                        DispatchQueue.global(qos: .userInteractive).async {
-                            DataManager.app.retrieveUserData(email: self.emailField.text!){
-                                result in
-                                
-                                DispatchQueue.main.async {
-                                    var user = result[0] as! UserData
-                                    if(user.type == "userData"){
-                                        self.performSegue(withIdentifier: self.loginSegue, sender: nil)
-                                    }
-                                    else{
-                                        self.performSegue(withIdentifier: self.adminSegue, sender: nil)
-                                    }
-                                    self.emailField.text = nil
-                                    self.passwordField.text = nil
-                                }
-                                
+                        DataManager.app.retrieveUserData(email: self.emailField.text!){
+                            result in
+                            
+                            var user = result[0] as! UserData
+                            print(user.email)
+                            if(user.type == "userData"){
+                                print(self.loginSegue)
+                                self.performSegue(withIdentifier: self.loginSegue, sender: nil)
                             }
+                            else{
+                                self.performSegue(withIdentifier: self.adminSegue, sender: nil)
+                            }
+                            self.emailField.text = nil
+                            self.passwordField.text = nil
+                            
                         }
                         
                         
@@ -83,11 +81,12 @@ class LoginVC: UIViewController, UITextFieldDelegate, UITabBarControllerDelegate
         self.view.endEditing(true)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == loginSegue, let tabBarNavigation = segue.destination as? HomeViewController{
-////            tabBarNavigation.delegate = self
-////            tabBarNavigation.userEmail = emailField.text!
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == self.loginSegue, let tabBarNavigation = segue.destination as? TabBarController{
+            let profileVCNavigation = tabBarNavigation.viewControllers![3] as! UINavigationController
+            let profileVC = profileVCNavigation.topViewController as! ProfileViewController
+            profileVC.userEmail = self.emailField.text!
+        }
+    }
     
 }

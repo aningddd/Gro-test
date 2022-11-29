@@ -18,6 +18,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var switchAccountButton: UIButton!
     @IBOutlet weak var changeProfilePictureButton: UIButton!
     
+    var userEmail = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Set layout of user information
@@ -29,13 +31,14 @@ class ProfileViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         DispatchQueue.global(qos: .userInteractive).async {
-            DataManager.app.retrieveUserData(email: "BowenYang"){
+            DataManager.app.retrieveUserData(email: self.userEmail){
                 result in
                 
                 DispatchQueue.main.async {
                     var user = result[0] as! UserData
                     self.profileImage.image = user.avatar
                     self.userNameLabel.text = user.userName
+                    self.userEmailLabel.text = user.email
                 }
                 
             }
