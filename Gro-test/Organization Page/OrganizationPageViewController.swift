@@ -21,16 +21,18 @@ class OrganizationPageViewController: UIViewController {
     @IBOutlet weak var descriptionTextfield: UITextView!
     var userEmail = ""
     var orgAvartar:UIImage = UIImage()
-    
+    var runned = false
     @IBAction func updateInfoButton(_ sender: Any) {
-        DataManager.app.UploadUserData(email: self.userEmail, orgAvatar: orgAvartar, orgDescription: self.descriptionTextfield.text, type: "orgData", userName: self.OrgName.text as! String)
+        if(runned){
+            DataManager.app.UploadUserData(email: self.userEmail, orgAvatar: self.orgAvartar, orgDescription: self.descriptionTextfield.text, type: "orgData", userName: self.OrgName.text as! String)
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 90, height: 90)
-        
+        self.OrgName.text = "loading"
         // Set up org page collection layout
         upcomingEventsCollectionView.collectionViewLayout = layout
         upcomingEventsCollectionView.delegate = self
@@ -50,6 +52,7 @@ class OrganizationPageViewController: UIViewController {
         // Retrieving Data from backend
         DataManager.app.retrieveUserData(email: self.userEmail){
             result in
+            self.runned = true
             let curOrgData:UserData = result[0]
             self.OrgName.text = curOrgData.userName
             self.descriptionTextfield.text = curOrgData.description

@@ -85,8 +85,11 @@ class LoginVC: UIViewController, UITextFieldDelegate, UITabBarControllerDelegate
         }
         else if segue.identifier == self.adminSegue, let tabBarNavigation = segue.destination as? TabBarController{
             let profileVCNavigation = tabBarNavigation.viewControllers![2] as! UINavigationController
+            let orgDesNavigation = tabBarNavigation.viewControllers![0] as! UINavigationController
             let profileVC = profileVCNavigation.topViewController as! ProfileViewController
+            let orgDesVC = orgDesNavigation.topViewController as! OrganizationPageViewController
             profileVC.userEmail = self.emailField.text!
+            orgDesVC.userEmail = self.emailField.text!
         }
     }
     
