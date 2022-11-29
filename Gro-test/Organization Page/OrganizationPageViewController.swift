@@ -55,6 +55,7 @@ class OrganizationPageViewController: UIViewController {
             self.runned = true
             let curOrgData:UserData = result[0]
             self.OrgName.text = curOrgData.userName
+            selectedOrg = curOrgData.userName
             self.descriptionTextfield.text = curOrgData.description
             self.orgAvartar = curOrgData.avatar
             
