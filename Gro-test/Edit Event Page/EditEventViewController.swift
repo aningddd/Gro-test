@@ -26,6 +26,9 @@ class EditEventViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var contactEmailTextField: UITextField!
     @IBOutlet weak var contactPhoneTextField: UITextField!
     
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         topView.layer.cornerRadius = 10
