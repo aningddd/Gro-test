@@ -200,15 +200,15 @@
             </objects>
             <point key="canvasLocation" x="-2568.1159420289855" y="1428.3482142857142"/>
         </scene>
-        <!--Events-->
+        <!--Event View Controller-->
         <scene sceneID="EXF-Ax-GpQ">
             <objects>
                 <viewController id="Eps-vE-UOJ" customClass="EventViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7zt-gx-b66">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="7zt-gx-b66">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wdM-33-LtJ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wdM-33-LtJ">
                                 <rect key="frame" x="0.0" y="55" width="414" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -327,9 +327,8 @@
                             <constraint firstItem="ptM-TN-tN3" firstAttribute="centerX" secondItem="7zt-gx-b66" secondAttribute="centerX" id="zLz-0q-wHY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Events" id="1Fp-0E-9g7">
-                        <barButtonItem key="backBarButtonItem" title="Home" id="rfK-7R-TN5"/>
-                    </navigationItem>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="eventTableView" destination="wdM-33-LtJ" id="eOD-g8-L8N"/>
                     </connections>
@@ -370,7 +369,7 @@
         <scene sceneID="8Jf-Fw-6xZ">
             <objects>
                 <viewController id="4gp-rV-B8K" customClass="SingleEventViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1Hc-9X-k71">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="1Hc-9X-k71">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -407,7 +406,7 @@
                                     <constraint firstAttribute="height" constant="163" id="xME-N6-V6B"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wfh-l9-2vc">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wfh-l9-2vc">
                                 <rect key="frame" x="17" y="259" width="380" height="278"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxD-5M-dyD">
@@ -435,7 +434,7 @@ Is Written Here</string>
                                     <constraint firstAttribute="height" constant="278" id="eaD-F9-Tv9"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zop-45-Oup">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zop-45-Oup">
                                 <rect key="frame" x="207" y="545" width="190" height="171"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zn-AM-Lne">
@@ -484,7 +483,7 @@ Is Written Here</string>
                                     <constraint firstAttribute="width" constant="190" id="P01-6k-nzq"/>
                                 </constraints>
                             </view>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1Sg-yQ-tQD">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1Sg-yQ-tQD">
                                 <rect key="frame" x="17" y="545" width="182" height="171"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="171" id="gX7-cJ-Odg"/>
@@ -637,7 +636,7 @@ Is Written Here</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jge-ge-wNM">
-                                <rect key="frame" x="17" y="493" width="380" height="225"/>
+                                <rect key="frame" x="17" y="493" width="380" height="176"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yri-8Z-DND">
                                         <rect key="frame" x="146" y="170" width="209" height="34"/>
@@ -1155,11 +1154,11 @@ Is Written Here</string>
             <objects>
                 <viewController id="3m0-T0-Q5B" customClass="SettingsViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5QM-03-GhF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rRg-j2-roG">
-                                <rect key="frame" x="0.0" y="54" width="414" height="788"/>
+                                <rect key="frame" x="0.0" y="98" width="414" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserCell" rowHeight="180" id="33S-No-bsM" customClass="SettingTopTableViewCell" customModule="Gro_test" customModuleProvider="target">
@@ -1342,18 +1341,18 @@ Is Written Here</string>
             <objects>
                 <viewController id="xrC-U0-ntO" customClass="EditNameViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fjm-gP-oIU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJ2-za-dLd">
-                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="N9H-iR-Fdd"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="xfE-Kc-HMz">
-                                <rect key="frame" x="20" y="44" width="374" height="60"/>
+                                <rect key="frame" x="20" y="88" width="374" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -2607,15 +2606,15 @@ Is Written Here</string>
             </objects>
             <point key="canvasLocation" x="-5762.3188405797109" y="1295.7589285714284"/>
         </scene>
-        <!--Events-->
+        <!--Event View Controller-->
         <scene sceneID="6Z5-7m-0JF">
             <objects>
                 <viewController id="OV6-Ni-d4a" customClass="EventViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="07J-nj-aHt">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="07J-nj-aHt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WBM-hp-Wer">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WBM-hp-Wer">
                                 <rect key="frame" x="0.0" y="55" width="414" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -2734,9 +2733,10 @@ Is Written Here</string>
                             <constraint firstItem="962-Tn-qM3" firstAttribute="bottom" secondItem="WBM-hp-Wer" secondAttribute="bottom" id="xZw-rK-89v"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Events" id="EU5-iz-pzc">
-                        <barButtonItem key="backBarButtonItem" title="Home" id="nz1-Su-Cye"/>
-                    </navigationItem>
+                    <toolbarItems>
+                        <barButtonItem systemItem="add" id="t4w-8W-nd6"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="eventTableView" destination="WBM-hp-Wer" id="YX5-Qa-OYO"/>
                     </connections>
@@ -2749,7 +2749,7 @@ Is Written Here</string>
         <scene sceneID="SDr-ZD-NWA">
             <objects>
                 <viewController id="jQW-ZY-GoU" customClass="SingleEventViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Qc1-4t-eHM">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Qc1-4t-eHM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -2786,7 +2786,7 @@ Is Written Here</string>
                                     <constraint firstAttribute="height" constant="163" id="o2q-7w-Xkn"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1IE-yf-ppi">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1IE-yf-ppi">
                                 <rect key="frame" x="17" y="259" width="380" height="278"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMW-EP-Y8q">
@@ -2814,7 +2814,7 @@ Is Written Here</string>
                                     <constraint firstAttribute="width" constant="380" id="fhs-KT-UjB"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ABz-XD-vYZ">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ABz-XD-vYZ">
                                 <rect key="frame" x="207" y="545" width="190" height="171"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rI-HX-lUI">
@@ -2863,7 +2863,7 @@ Is Written Here</string>
                                     <constraint firstAttribute="height" constant="171" id="ILs-DI-cc1"/>
                                 </constraints>
                             </view>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Nth-Pt-0cj">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Nth-Pt-0cj">
                                 <rect key="frame" x="17" y="545" width="182" height="171"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="171" id="MtE-cx-FAz"/>
@@ -3004,6 +3004,7 @@ Is Written Here</string>
                                         <state key="normal" title="Switch Account"/>
                                         <connections>
                                             <action selector="switchAccount:" destination="MbO-dR-8n2" eventType="touchUpInside" id="Qma-DL-itF"/>
+                                            <segue destination="aeV-X3-BA3" kind="presentation" modalPresentationStyle="fullScreen" id="lqe-cQ-7nu"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -3052,11 +3053,11 @@ Is Written Here</string>
             <objects>
                 <viewController id="DAb-pf-6Mb" customClass="SettingsViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3lP-eF-mv7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NqP-0x-LBb">
-                                <rect key="frame" x="0.0" y="98" width="414" height="715"/>
+                                <rect key="frame" x="0.0" y="54" width="414" height="788"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserCell" rowHeight="180" id="7S7-5v-AUd" customClass="SettingTopTableViewCell" customModule="Gro_test" customModuleProvider="target">
@@ -3249,18 +3250,18 @@ Is Written Here</string>
             <objects>
                 <viewController id="XyG-u2-KQb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XtN-su-3qp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pxb-Ia-m3T">
-                                <rect key="frame" x="0.0" y="88" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="5nG-dx-c7v"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="8uc-BN-WIg">
-                                <rect key="frame" x="20" y="88" width="374" height="60"/>
+                                <rect key="frame" x="20" y="44" width="374" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -3295,18 +3296,18 @@ Is Written Here</string>
             <objects>
                 <viewController id="AsS-WE-zm1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hag-dJ-D0G">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KC8-8U-7wF">
-                                <rect key="frame" x="0.0" y="88" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="sFg-vL-rOj"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Org Description" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="VQ7-Wl-eaO">
-                                <rect key="frame" x="20" y="88" width="374" height="60"/>
+                                <rect key="frame" x="20" y="44" width="374" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -3357,8 +3358,8 @@ Is Written Here</string>
     <inferredMetricsTieBreakers>
         <segue reference="eFb-wp-F2u"/>
         <segue reference="ZHN-1x-OXt"/>
-        <segue reference="xhQ-qM-lRO"/>
-        <segue reference="UGi-on-sbA"/>
+        <segue reference="lqe-cQ-7nu"/>
+        <segue reference="Wam-tx-ANT"/>
         <segue reference="Cv4-91-diM"/>
         <segue reference="b4K-ym-n02"/>
         <segue reference="QtU-uU-7bS"/>
