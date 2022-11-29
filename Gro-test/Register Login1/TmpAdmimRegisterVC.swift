@@ -76,8 +76,12 @@ class TmpAdmimRegisterVC: UIViewController, UITextFieldDelegate {
         //update the profile view for the new organization
         if segue.identifier == self.orgRegisterSegueIdentifier, let tabBarNavigation = segue.destination as? TabBarController{
             let profileVCNavigation = tabBarNavigation.viewControllers![2] as! UINavigationController
+            let orgDesNavigation = tabBarNavigation.viewControllers![0] as! UINavigationController
             let profileVC = profileVCNavigation.topViewController as! ProfileViewController
+            let orgDesVC = orgDesNavigation.topViewController as! OrganizationPageViewController
+            
             profileVC.userEmail = self.emailField.text!
+            orgDesVC.userEmail = self.emailField.text!
         }
     }
     

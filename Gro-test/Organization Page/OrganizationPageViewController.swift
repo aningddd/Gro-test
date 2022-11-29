@@ -16,7 +16,15 @@ class OrganizationPageViewController: UIViewController {
     @IBOutlet weak var eventsButton: UIButton!
     @IBOutlet weak var subscribeButton: UIButton!
     
+    @IBOutlet weak var OrgName: UILabel!
+    @IBOutlet weak var updateButtont: UIButton!
+    @IBOutlet weak var descriptionTextfield: UITextView!
+    var userEmail = ""
+    var orgAvartar:UIImage = UIImage()
     
+    @IBAction func updateInfoButton(_ sender: Any) {
+        DataManager.app.UploadUserData(email: self.userEmail, orgAvatar: orgAvartar, orgDescription: self.descriptionTextfield.text, type: "orgData", userName: self.OrgName.text as! String)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,6 +46,16 @@ class OrganizationPageViewController: UIViewController {
         contactButton.layer.cornerRadius = 5
         eventsButton.layer.cornerRadius = 5
         subscribeButton.layer.cornerRadius = 5
+        
+        // Retrieving Data from backend
+        DataManager.app.retrieveUserData(email: self.userEmail){
+            result in
+            let curOrgData:UserData = result[0]
+            self.OrgName.text = curOrgData.userName
+            self.descriptionTextfield.text = curOrgData.description
+            self.orgAvartar = curOrgData.avatar
+            
+        }
     }
 }
 

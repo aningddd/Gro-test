@@ -2416,24 +2416,23 @@ Is Written Here</string>
                                     <constraint firstAttribute="height" constant="1" id="kAn-1a-mIp"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0vw-rv-YPw">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description not entered yet" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0vw-rv-YPw">
                                 <rect key="frame" x="20" y="211" width="374" height="97"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="XEs-Sy-Fsd"/>
                                     <constraint firstAttribute="height" constant="97" id="rOF-fw-tQ6"/>
                                 </constraints>
-                                <string key="text">The purpose of EHS is to foster and encourage the study of the English literature and language. Students are encouraged to actively partipicate in the club through volunteer opportunities aimed at increasing literacy and literary appreciation in the community.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="O3u-MK-Icn">
-                                <rect key="frame" x="20" y="325" width="374" height="400"/>
+                                <rect key="frame" x="20" y="325" width="374" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="JBj-qe-ag8"/>
-                                    <constraint firstAttribute="height" constant="400" id="iVl-0P-zxZ"/>
+                                    <constraint firstAttribute="height" constant="300" id="iVl-0P-zxZ"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0tw-aD-fhG">
                                     <size key="itemSize" width="128" height="128"/>
@@ -2493,10 +2492,21 @@ Is Written Here</string>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Subscribe"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWh-m6-n7W">
+                                <rect key="frame" x="157" y="655" width="100" height="30"/>
+                                <color key="backgroundColor" name="Light Orange"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Update Info"/>
+                                <connections>
+                                    <action selector="updateInfoButton:" destination="vPL-xW-2PZ" eventType="touchUpInside" id="xPw-Fh-x65"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8eb-jX-b6s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="jWh-m6-n7W" firstAttribute="top" secondItem="O3u-MK-Icn" secondAttribute="bottom" constant="108" id="3iP-TM-ptm"/>
                             <constraint firstItem="hvF-Eh-gOR" firstAttribute="top" secondItem="8eb-jX-b6s" secondAttribute="top" constant="143" id="62H-qO-qjW"/>
                             <constraint firstItem="HF9-J0-EwO" firstAttribute="top" secondItem="8eb-jX-b6s" secondAttribute="top" constant="143" id="At3-3S-eQc"/>
                             <constraint firstItem="8eb-jX-b6s" firstAttribute="trailing" secondItem="HF9-J0-EwO" secondAttribute="trailing" constant="20" id="B05-As-tLj"/>
@@ -2504,9 +2514,12 @@ Is Written Here</string>
                             <constraint firstItem="2aG-ac-sda" firstAttribute="top" secondItem="8eb-jX-b6s" secondAttribute="top" constant="10" id="C2y-JK-BPu"/>
                             <constraint firstItem="O3u-MK-Icn" firstAttribute="centerX" secondItem="gSw-fU-2q4" secondAttribute="centerX" id="E5Q-pA-9Fu"/>
                             <constraint firstItem="hvF-Eh-gOR" firstAttribute="leading" secondItem="TMq-XW-t0a" secondAttribute="trailing" constant="8" symbolic="YES" id="Fqe-ea-sAW"/>
+                            <constraint firstItem="jWh-m6-n7W" firstAttribute="top" secondItem="O3u-MK-Icn" secondAttribute="bottom" constant="30" id="FrB-9E-h0c"/>
                             <constraint firstItem="TMq-XW-t0a" firstAttribute="leading" secondItem="8eb-jX-b6s" secondAttribute="leading" constant="20" id="Fz6-5M-kaH"/>
                             <constraint firstItem="jMt-Bx-Q9s" firstAttribute="centerX" secondItem="gSw-fU-2q4" secondAttribute="centerX" id="IWL-ux-gku"/>
                             <constraint firstItem="2aG-ac-sda" firstAttribute="leading" secondItem="8eb-jX-b6s" secondAttribute="leading" constant="20" id="LNB-VC-x9D"/>
+                            <constraint firstItem="8eb-jX-b6s" firstAttribute="bottom" secondItem="jWh-m6-n7W" secondAttribute="bottom" constant="40" id="RH0-7n-fw1"/>
+                            <constraint firstItem="jWh-m6-n7W" firstAttribute="centerX" secondItem="8eb-jX-b6s" secondAttribute="centerX" id="WKM-ye-ml3"/>
                             <constraint firstItem="O3u-MK-Icn" firstAttribute="top" secondItem="i17-eq-gog" secondAttribute="bottom" constant="8" symbolic="YES" id="Wbk-yf-aDb"/>
                             <constraint firstItem="8eb-jX-b6s" firstAttribute="trailing" secondItem="kwM-bT-QXI" secondAttribute="trailing" constant="43" id="ZL0-cV-sj3"/>
                             <constraint firstItem="HF9-J0-EwO" firstAttribute="leading" secondItem="hvF-Eh-gOR" secondAttribute="trailing" constant="8" symbolic="YES" id="ZeK-Tc-ABY"/>
@@ -2521,11 +2534,14 @@ Is Written Here</string>
                     <navigationItem key="navigationItem" title="Organization Page" id="kxp-Vs-geO"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
+                        <outlet property="OrgName" destination="kwM-bT-QXI" id="flh-FQ-luL"/>
                         <outlet property="contactButton" destination="TMq-XW-t0a" id="tjz-5H-Lqm"/>
+                        <outlet property="descriptionTextfield" destination="0vw-rv-YPw" id="M8k-y5-acF"/>
                         <outlet property="eventsButton" destination="hvF-Eh-gOR" id="62R-Hd-2uM"/>
                         <outlet property="organizationImageView" destination="2aG-ac-sda" id="vbu-wt-2Ug"/>
                         <outlet property="subscribeButton" destination="HF9-J0-EwO" id="AJr-ps-p79"/>
                         <outlet property="upcomingEventsCollectionView" destination="O3u-MK-Icn" id="hkU-dP-BEk"/>
+                        <outlet property="updateButtont" destination="jWh-m6-n7W" id="l7I-FP-5bQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EE6-5Z-gT4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
