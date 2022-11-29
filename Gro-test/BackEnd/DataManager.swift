@@ -85,7 +85,7 @@ class DataManager{
                                                        "description": orgDescription,
                                                                "userName": userName
                                                       ])
-            if(type == "orgData"){
+            if(type == "orgData") {
                 db.collection("UserName_Meta_main_keyset_Org").document(userName).setData(["email": email, "type": type, "userName": userName])
             }else{
                 db.collection("UserName_Meta_main_keyset_User").document(userName).setData(["email": email ,"type": type, "userName": userName])
