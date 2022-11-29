@@ -83,6 +83,11 @@ class LoginVC: UIViewController, UITextFieldDelegate, UITabBarControllerDelegate
             profileVC.userEmail = self.emailField.text!
             key = self.emailField.text!
         }
+        else if segue.identifier == self.adminSegue, let tabBarNavigation = segue.destination as? TabBarController{
+            let profileVCNavigation = tabBarNavigation.viewControllers![2] as! UINavigationController
+            let profileVC = profileVCNavigation.topViewController as! ProfileViewController
+            profileVC.userEmail = self.emailField.text!
+        }
     }
     
 }
