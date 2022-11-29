@@ -52,7 +52,7 @@ class RegisterPageVC: UIViewController, UITextFieldDelegate {
                     //creating user info in the firebase database NOT for authentication
                     let defaultImage = UIImage(named: "Image")
                     DispatchQueue.global(qos: .userInteractive).async {
-                        DataManager.app.UploadUserData(email: self.emailTextField.text!, orgAvatar: defaultImage!, orgDescription: "Basic User", type: "userData", userName: "\(self.firstNameField.text!) \(self.lastNameField.text!)")
+                        DataManager.app.UploadUserData(email: "\(self.emailTextField.text!)", orgAvatar: defaultImage!, orgDescription: "Basic User", type: "userData", userName: "\(self.firstNameField.text!)  \(self.lastNameField.text!)")
                     }
                     //segue into regular org page immediately after registering
                     Auth.auth().addStateDidChangeListener(){
@@ -85,5 +85,13 @@ class RegisterPageVC: UIViewController, UITextFieldDelegate {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == self.loginSegueIdentifier, let tabBarNavigation = segue.destination as? TabBarController{
+            let profileVCNavigation = tabBarNavigation.viewControllers![3] as! UINavigationController
+            let profileVC = profileVCNavigation.topViewController as! ProfileViewController
+            profileVC.userEmail = self.emailTextField.text!
+        }
     }
 }

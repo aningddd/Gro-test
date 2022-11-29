@@ -7,31 +7,75 @@
 //
 
 import UIKit
-let registerContent1 = ["Email", "Password","Re-enter Password", "Orgname"]
-class TmpAdmimRegisterVC: UIViewController,UITableViewDelegate, UITableViewDataSource{
+import FirebaseAuth
+class TmpAdmimRegisterVC: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var tmpAdminRegisterMainTable: UITableView!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var confirmPasswordField: UITextField!
+    @IBOutlet weak var organizationName: UITextField!
     @IBOutlet weak var TmpAdminRegisterTitleLabel: UILabel!
+    @IBOutlet weak var errorMessage: UILabel!
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return registerContent1.count
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "registerTC", for: indexPath) as! LabelTextFieldCell
-        cell.titleLabelForCell.text = registerContent1[indexPath.row]
-        return cell
-    }
+    let orgRegisterSegueIdentifier = "orgRegisterSegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tmpAdminRegisterMainTable.delegate = self
-        tmpAdminRegisterMainTable.dataSource = self
-
+        passwordField.isSecureTextEntry = true
+        confirmPasswordField.isSecureTextEntry = true
+        errorMessage.isHidden = true
         TmpAdminRegisterTitleLabel.font = UIFont(name:"ArialRoundedMTBold",size:30.0)
         TmpAdminRegisterTitleLabel.text = "Admin Register"
+        emailField.delegate = self
+        passwordField.delegate = self
+        confirmPasswordField.delegate = self
+        organizationName.delegate = self
         
     }
-
+    @IBAction func registerButtonPressed(_ sender: Any) {
+        if(passwordField.text == confirmPasswordField.text){
+            Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!){
+                authResult, error in
+                self.errorMessage.isHidden = false
+                if let error = error as NSError?{
+                    self.errorMessage.text = "\(error.localizedDescription)"
+                }
+                else{
+                    self.errorMessage.text = "Success"
+                    //creating user info in the firebase database NOT for authentication
+                    let defaultImage = UIImage(named: "Image")
+                    DispatchQueue.global(qos: .userInteractive).async {
+                        DataManager.app.UploadUserData(email: self.emailField.text!, orgAvatar: defaultImage!, orgDescription: "A simple organization", type: "orgData", userName: "\(self.organizationName.text!)")
+                    }
+                    //segue into regular org page immediately after registering
+                    Auth.auth().addStateDidChangeListener(){
+                        auth, user in
+                        if user != nil{
+                            self.performSegue(withIdentifier: self.orgRegisterSegueIdentifier, sender: nil)
+                            self.emailField.text = nil
+                            self.passwordField.text = nil
+                            self.confirmPasswordField.text = nil
+                            self.organizationName.text = nil
+                        }
+                    }
+                }
+            }
+        }
+        else{
+            self.errorMessage.isHidden = false
+            self.errorMessage.text = "Error: passwords do not match"
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //update the profile view for the new organization
+        if segue.identifier == self.orgRegisterSegueIdentifier, let tabBarNavigation = segue.destination as? TabBarController{
+            let profileVCNavigation = tabBarNavigation.viewControllers![2] as! UINavigationController
+            let profileVC = profileVCNavigation.topViewController as! ProfileViewController
+            profileVC.userEmail = self.emailField.text!
+        }
+    }
+    
 
 }
