@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RgU-si-FJL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RgU-si-FJL">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -219,7 +219,7 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventCell" rowHeight="135" id="Mxc-Xs-YKd" customClass="EventTableViewCell" customModule="Gro_test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="135"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="135"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mxc-Xs-YKd" id="Akj-b6-riO">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
@@ -349,7 +349,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="3uQ-Uu-dTl" customClass="CheckableTableViewCell" customModule="Gro_test" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="50" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3uQ-Uu-dTl" id="Mc2-F5-0oT">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
@@ -584,15 +584,15 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="obu-HR-Bra">
-                                <rect key="frame" x="17" y="290" width="380" height="190"/>
+                                <rect key="frame" x="17" y="290" width="380" height="168.66666666666663"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Heading:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6U-2g-hMN">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Heading:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6U-2g-hMN">
                                         <rect key="frame" x="23" y="12" width="75" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mjc-aK-JP4">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mjc-aK-JP4">
                                         <rect key="frame" x="103" y="4.6666666666666856" width="250" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="RUI-zW-ZZj"/>
@@ -601,7 +601,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mOp-S1-MeD">
-                                        <rect key="frame" x="25" y="82" width="330" height="90"/>
+                                        <rect key="frame" x="25" y="60.666666666666686" width="330" height="90"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="330" id="JdD-Ye-0wS"/>
@@ -611,7 +611,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zad-AC-SIF">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zad-AC-SIF">
                                         <rect key="frame" x="23" y="48" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -634,7 +634,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jge-ge-wNM">
-                                <rect key="frame" x="17" y="493" width="380" height="176"/>
+                                <rect key="frame" x="17" y="471.66666666666663" width="380" height="225"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yri-8Z-DND">
                                         <rect key="frame" x="146" y="170" width="209" height="34"/>
@@ -693,7 +693,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Oy-K8-rLv">
-                                        <rect key="frame" x="179.33333333333334" y="27.666666666666629" width="38.666666666666657" height="21"/>
+                                        <rect key="frame" x="179.33333333333334" y="27.666666666666742" width="38.666666666666657" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -861,7 +861,7 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrgCell" rowHeight="135" id="L6h-4Y-Src" customClass="OrgTableViewCell" customModule="Gro_test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="135"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="135"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L6h-4Y-Src" id="h8I-y3-vOY">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
@@ -1164,7 +1164,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserCell" rowHeight="180" id="33S-No-bsM" customClass="SettingTopTableViewCell" customModule="Gro_test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="180"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="33S-No-bsM" id="fWI-FP-5Ry">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
@@ -1174,14 +1174,17 @@
                                                     <rect key="frame" x="14.666666666666657" y="2.6666666666666714" width="385" height="175"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIR-Tf-p9E">
-                                                            <rect key="frame" x="32" y="130" width="139.66666666666666" height="31"/>
-                                                            <color key="tintColor" name="Grey A"/>
+                                                            <rect key="frame" x="32" y="130" width="165.66666666666666" height="34.333333333333343"/>
+                                                            <color key="tintColor" systemColor="linkColor"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" title="Change Password"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="Change Username"/>
+                                                            <connections>
+                                                                <segue destination="xrC-U0-ntO" kind="show" identifier="editNameSegue" id="m0a-Sc-ZHm"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yy-Lv-sfr">
-                                                            <rect key="frame" x="166" y="41" width="109" height="27"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                                            <rect key="frame" x="166" y="41" width="211" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -1192,9 +1195,9 @@
                                                                 <constraint firstAttribute="height" constant="85" id="rCN-mL-IiP"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user@utexas.edu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSc-dZ-a6m">
-                                                            <rect key="frame" x="166" y="68" width="132" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="user@utexas.edu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSc-dZ-a6m">
+                                                            <rect key="frame" x="166" y="65" width="219" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" name="Grey A"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -1206,19 +1209,9 @@
                                                                 <constraint firstAttribute="height" constant="1" id="nDe-6U-QFU"/>
                                                             </constraints>
                                                         </view>
-                                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLD-uv-Eog">
-                                                            <rect key="frame" x="283" y="37" width="28" height="35"/>
-                                                            <color key="tintColor" name="Grey A"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system"/>
-                                                            <connections>
-                                                                <segue destination="xrC-U0-ntO" kind="show" identifier="editNameSegue" id="amR-Dp-mFa"/>
-                                                            </connections>
-                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstItem="gLD-uv-Eog" firstAttribute="leading" secondItem="1yy-Lv-sfr" secondAttribute="trailing" constant="-5" id="1ht-Y1-j8R"/>
                                                         <constraint firstAttribute="bottom" secondItem="1PK-iv-xYR" secondAttribute="bottom" constant="53" id="7sP-t9-ThL"/>
                                                         <constraint firstItem="1yy-Lv-sfr" firstAttribute="top" secondItem="q6o-Yh-DWj" secondAttribute="top" constant="41" id="HY3-Q7-2th"/>
                                                         <constraint firstItem="apc-2Q-eak" firstAttribute="leading" secondItem="q6o-Yh-DWj" secondAttribute="leading" constant="43" id="VYE-G4-Obi"/>
@@ -1228,8 +1221,8 @@
                                                         <constraint firstItem="1yy-Lv-sfr" firstAttribute="leading" secondItem="QSc-dZ-a6m" secondAttribute="leading" id="m7O-ej-et4"/>
                                                         <constraint firstItem="vIR-Tf-p9E" firstAttribute="top" secondItem="1PK-iv-xYR" secondAttribute="bottom" constant="8" symbolic="YES" id="mk2-BS-ujH"/>
                                                         <constraint firstAttribute="height" constant="175" id="mtQ-Ia-m3s"/>
+                                                        <constraint firstAttribute="trailing" secondItem="1yy-Lv-sfr" secondAttribute="trailing" constant="8" id="pzc-qW-mex"/>
                                                         <constraint firstItem="1yy-Lv-sfr" firstAttribute="leading" secondItem="apc-2Q-eak" secondAttribute="trailing" constant="38" id="sHg-du-gZX"/>
-                                                        <constraint firstItem="gLD-uv-Eog" firstAttribute="top" secondItem="q6o-Yh-DWj" secondAttribute="top" constant="37" id="uF9-7h-CvF"/>
                                                         <constraint firstItem="vIR-Tf-p9E" firstAttribute="leading" secondItem="q6o-Yh-DWj" secondAttribute="leading" constant="32" id="yEQ-0N-WNY"/>
                                                         <constraint firstItem="1PK-iv-xYR" firstAttribute="centerX" secondItem="q6o-Yh-DWj" secondAttribute="centerX" id="zW6-aj-D2d"/>
                                                     </constraints>
@@ -1242,14 +1235,13 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="emailLabel" destination="QSc-dZ-a6m" id="oCd-M4-KX5"/>
-                                            <outlet property="pencilBtn" destination="gLD-uv-Eog" id="oWE-LD-mam"/>
                                             <outlet property="profileImage" destination="apc-2Q-eak" id="OUb-bR-Riz"/>
                                             <outlet property="userName" destination="1yy-Lv-sfr" id="aat-eP-Hjd"/>
                                             <outlet property="view" destination="q6o-Yh-DWj" id="isS-mK-kvf"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BottomCell" rowHeight="130" id="zHG-GQ-Wvt" customClass="SettingBottomTableViewCell" customModule="Gro_test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="224.66666603088379" width="414" height="130"/>
+                                        <rect key="frame" x="0.0" y="230" width="414" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zHG-GQ-Wvt" id="rrB-dR-TPj">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
@@ -1281,7 +1273,7 @@
                                                             </connections>
                                                         </switch>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BG3-Qu-b02">
-                                                            <rect key="frame" x="31.000000000000007" y="74" width="75.666666666666686" height="31"/>
+                                                            <rect key="frame" x="31.000000000000007" y="70.666666666666671" width="84.666666666666686" height="34.333333333333329"/>
                                                             <color key="tintColor" name="Burnt Orange"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
@@ -1343,18 +1335,18 @@
             <objects>
                 <viewController id="xrC-U0-ntO" customClass="EditNameViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fjm-gP-oIU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJ2-za-dLd">
-                                <rect key="frame" x="0.0" y="88" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="N9H-iR-Fdd"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="xfE-Kc-HMz">
-                                <rect key="frame" x="20" y="88" width="374" height="60"/>
+                                <rect key="frame" x="20" y="44" width="374" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1554,7 +1546,7 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="eventCell" rowHeight="130" id="I59-ew-Du6" customClass="EventCell" customModule="Gro_test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="374" height="130"/>
+                                        <rect key="frame" x="0.0" y="50" width="374" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I59-ew-Du6" id="29S-aw-S9u">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="130"/>
@@ -1700,7 +1692,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableCell" id="nAU-Xh-d25">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="374" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="374" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nAU-Xh-d25" id="bpB-CJ-cqS">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.666667938232422"/>
@@ -2093,10 +2085,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="HTd-zi-lwa">
-                                <rect key="frame" x="153.66666666666666" y="668.33333333333337" width="124.33333333333334" height="73.666666666666629"/>
+                                <rect key="frame" x="144.66666666666663" y="665" width="142.33333333333337" height="77"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKs-Wn-TN8">
-                                        <rect key="frame" x="0.0" y="0.0" width="124.33333333333333" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="142.33333333333334" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Create Account"/>
                                         <connections>
@@ -2104,7 +2096,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oz5-MM-Kxr">
-                                        <rect key="frame" x="0.0" y="45" width="124.33333333333333" height="28.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="48.333333333333371" width="142.33333333333334" height="28.666666666666671"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
@@ -2535,7 +2527,7 @@
                                 <state key="normal" title="Subscribe"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWh-m6-n7W">
-                                <rect key="frame" x="157" y="655" width="100" height="30"/>
+                                <rect key="frame" x="150.66666666666666" y="655" width="112.99999999999997" height="30"/>
                                 <color key="backgroundColor" name="Light Orange"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -2671,7 +2663,7 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventCell" rowHeight="135" id="cR5-hG-h4u" customClass="EventTableViewCell" customModule="Gro_test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="135"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="135"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cR5-hG-h4u" id="Vn7-dE-HDh">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
@@ -3102,15 +3094,15 @@
             <objects>
                 <viewController id="DAb-pf-6Mb" customClass="SettingsViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3lP-eF-mv7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NqP-0x-LBb">
-                                <rect key="frame" x="0.0" y="54" width="414" height="788"/>
+                                <rect key="frame" x="0.0" y="98" width="414" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserCell" rowHeight="180" id="7S7-5v-AUd" customClass="SettingTopTableViewCell" customModule="Gro_test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="180"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7S7-5v-AUd" id="j0m-mF-vKf">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
@@ -3120,7 +3112,7 @@
                                                     <rect key="frame" x="14.666666666666657" y="2.6666666666666714" width="385" height="175"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUu-nF-8B9">
-                                                            <rect key="frame" x="32" y="130" width="139.66666666666666" height="31"/>
+                                                            <rect key="frame" x="32" y="130" width="160.66666666666666" height="34.333333333333343"/>
                                                             <color key="tintColor" name="Grey A"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" title="Change Password"/>
@@ -3183,7 +3175,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BottomCell" rowHeight="150" id="0Np-gP-WBu" customClass="SettingBottomTableViewCell" customModule="Gro_test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="224.66666603088379" width="414" height="150"/>
+                                        <rect key="frame" x="0.0" y="230" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Np-gP-WBu" id="jt7-X0-0pf">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
@@ -3285,7 +3277,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="eFb-wp-F2u"/>
         <segue reference="ZHN-1x-OXt"/>
-        <segue reference="lqe-cQ-7nu"/>
+        <segue reference="eHx-9j-7bT"/>
         <segue reference="kro-JV-7GL"/>
         <segue reference="Wam-tx-ANT"/>
         <segue reference="Cv4-91-diM"/>
@@ -3295,20 +3287,20 @@
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="Image" width="1200" height="1200"/>
-        <image name="arrow.right.circle" catalog="system" width="128" height="121"/>
-        <image name="arrowshape.turn.up.backward" catalog="system" width="128" height="106"/>
-        <image name="arrowshape.turn.up.right" catalog="system" width="128" height="106"/>
-        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="arrow.right.circle" catalog="system" width="128" height="123"/>
+        <image name="arrowshape.turn.up.backward" catalog="system" width="128" height="104"/>
+        <image name="arrowshape.turn.up.right" catalog="system" width="128" height="104"/>
+        <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="chart.bar.doc.horizontal" catalog="system" width="115" height="128"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
-        <image name="house.fill" catalog="system" width="128" height="106"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
-        <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
-        <image name="square.stack.3d.down.right" catalog="system" width="124" height="128"/>
+        <image name="square.stack.3d.down.right" catalog="system" width="123" height="128"/>
         <image name="utcsLogo" width="5987" height="1362"/>
         <namedColor name="Burnt Orange">
             <color red="0.74901960784313726" green="0.3411764705882353" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3326,7 +3318,10 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

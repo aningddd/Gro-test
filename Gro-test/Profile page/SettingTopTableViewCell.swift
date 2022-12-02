@@ -11,15 +11,12 @@ import UIKit
 class SettingTopTableViewCell: UITableViewCell {
 
     @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var pencilBtn: UIButton!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var view: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        pencilBtn.setImage(UIImage(systemName: "pencil"), for: .normal)
-        pencilBtn.setTitle("", for: .normal)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
