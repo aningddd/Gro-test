@@ -8,26 +8,25 @@
 
 import UIKit
 
-let categories = ["Academic", "Greek Life", "Volunteering", "Sports", "Culture"]
-
-class ResultsVC : UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemBlue
-    }
+protocol TextChanger{
+    func changeText()
 }
+let categories = ["Academic", "Greek Life", "Volunteering", "Sports", "Culture"]
+public var selected_categories : [String] = []
 
-class ExploreViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+
+class ExploreViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, TextChanger {
     
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var categoryView: UIView!
     @IBOutlet weak var plusButton: UIButton!
-    var filtered:[String] = []
+    @IBOutlet weak var categoryList: UILabel!
     var filteredData: [String]!
-    
-    //var allOrgs:[String] = []
+    let categorySegue = "categoryPopoverSegue"
+    //for testing purposes
+    var newAllOrgs:[String] = []
     
     
     override func viewDidLoad() {
@@ -39,7 +38,30 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
         plusButton.tintColor = .black
         tableView.dataSource = self
         searchBar.delegate = self
-        filteredData = allOrgs
+        //for testing purposes
+        newAllOrgs = allOrgs
+        newAllOrgs.append("academic test org")
+        newAllOrgs.append("greek life test org")
+        newAllOrgs.append("volunteering test org")
+        newAllOrgs.append("sports test org")
+        newAllOrgs.append("culture test org")
+        filteredData = newAllOrgs
+    }
+    //change the label of the selected categories once the popover table is dismissed
+    func changeText() {
+        super.viewWillAppear(true)
+        if(selected_categories.count == 0){
+            categoryList.text = "Categories selected: None"
+        }
+        else{
+            var categoriesString = ""
+            for category in selected_categories {
+                categoriesString += "\(category), "
+            }
+            //for tidying up purposes (removing last comma and space)
+            let mySubstring = categoriesString.prefix(categoriesString.count - 2)
+            categoryList.text = "Categories selected: \(String(mySubstring))"
+        }
     }
     
 
@@ -60,13 +82,28 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
         // Use the filter method to iterate over all items in the data array
         // For each item, return true if the item should be included and false if the
         // item should NOT be included
-        filteredData = searchText.isEmpty ? allOrgs : allOrgs.filter { (item: String) -> Bool in
-            // If dataItem matches the searchText, return true to include it
+        filteredData = searchText.isEmpty ? newAllOrgs : newAllOrgs.filter { (item: String) -> Bool in
+            // If dataItem matches the searchText or the categories, return true to include it
+            var containsCategory : Bool = false
+            for category in selected_categories{
+                if(item.range(of: category, options: .caseInsensitive, range: nil, locale: nil) != nil){
+                    containsCategory = true
+                }
+            }
+            if selected_categories.count > 0 && !containsCategory{
+                return false
+            }
             return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
         }
         
         tableView.reloadData()
     }
-
+    //clear selected categories every time we trigger the popover table
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == self.categorySegue, let nextVC = segue.destination as? CategoryPopoverControllerTableViewController {
+            nextVC.delegate = self
+            selected_categories.removeAll()
+        }
+    }
 }
 

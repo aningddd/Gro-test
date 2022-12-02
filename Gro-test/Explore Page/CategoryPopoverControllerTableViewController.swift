@@ -10,11 +10,20 @@ import UIKit
 
 class CategoryPopoverControllerTableViewController: UITableViewController {
 
+    var delegate: UIViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
         self.tableView.allowsMultipleSelection = true
         self.tableView.allowsMultipleSelectionDuringEditing = true
+    }
+    //make sure to update the label from the previous view controller with the selected categories
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if isBeingDismissed{
+            let otherVC = delegate as! TextChanger
+            otherVC.changeText()
+        }
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -22,7 +31,7 @@ class CategoryPopoverControllerTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return categories.count
     }
 
     
@@ -33,8 +42,20 @@ class CategoryPopoverControllerTableViewController: UITableViewController {
 
         return cell!
     }
+    //appending to selected categories if not already added
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("selectting this row at index path \(indexPath.row)")
+        if(!selected_categories.contains(categories[indexPath.row])){
+            selected_categories.append(categories[indexPath.row])
+        }
+    }
+    //removing from selected categories in case we deselect a row
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let indexToRemove = selected_categories.firstIndex(of: categories[indexPath.row])
+        selected_categories.remove(at: indexToRemove!)
+    }
 }
-
+//checkable class to enable multiple selection of categories
 class CheckableTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

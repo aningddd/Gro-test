@@ -28,6 +28,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         settingTable.backgroundColor = UIColor(named: "Grey E")
         // Do any additional setup after loading the view.
     }
+    //conforming to protocol
     func updateTable(){
         settingTable.reloadData()
     }
@@ -47,10 +48,11 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         return height
     }
-    
+    //load the two cells in dynamically
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if (indexPath.row == 0) {
             let cell = settingTable.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as! SettingTopTableViewCell
+            //retrieve the user data using the user email passed from the profile VC to display on the settings page
             DataManager.app.retrieveUserData(email: self.userEmail){
                 result in
                 var user = result[0] as! UserData
@@ -71,7 +73,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
             return cell
         }
     }
-    
+    //for editing name VC, need to pass the email field again in order to update on that page
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == self.editNameSegueIdentifier, let editNameVC = segue.destination as? EditNameViewController{
             editNameVC.emailField = self.userEmail

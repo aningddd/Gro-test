@@ -41,6 +41,7 @@ class SettingBottomTableViewCell: UITableViewCell {
                     }
                 }
             )
+            //confirmation for notifications turned on
             let controller = UIAlertController(
                 title: "Confirmed!",
                 message: "Notifications are now turned on",
@@ -49,6 +50,7 @@ class SettingBottomTableViewCell: UITableViewCell {
                                                style: .default))
             self.parentVC.present(controller, animated: true)
         }
+        //confirmation for notifications turned off
         else{
             let controller = UIAlertController(
                 title: "Confirmed!",
