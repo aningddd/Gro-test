@@ -47,6 +47,7 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
         newAllOrgs.append("culture test org")
         filteredData = newAllOrgs
     }
+    
     //change the label of the selected categories once the popover table is dismissed
     func changeText() {
         super.viewWillAppear(true)
