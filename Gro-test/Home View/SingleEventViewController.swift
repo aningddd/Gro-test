@@ -43,17 +43,21 @@ class SingleEventViewController: UIViewController {
         descriptionView.layer.cornerRadius = 10
         infoView.layer.cornerRadius = 10
         eventMap.layer.cornerRadius = 10
-        topSloganLabel.text = events[selectedEventIndex!].orgName
-        headingLabel.text = events[selectedEventIndex!].eventName
+        self.title = events[selectedEventIndex!].orgName
+        topSloganLabel.text = events[selectedEventIndex!].eventName
+        //headingLabel.text = events[selectedEventIndex!].eventName
+        print(events[selectedEventIndex!].image)
         eventImage.image = events[selectedEventIndex!].image
         eventTextView.text = events[selectedEventIndex!].description
-        timeLabel.text = events[selectedEventIndex!].time
-        dateLabel.text = events[selectedEventIndex!].month + " " + events[selectedEventIndex!].date + " " + events[selectedEventIndex!].year
+        timeLabel.text = "Time: \(events[selectedEventIndex!].time)"
+        dateLabel.text = "Date: \(events[selectedEventIndex!].month) \(events[selectedEventIndex!].date), \(events[selectedEventIndex!].year)"
+        locationLabel.text = "Location: \(events[selectedEventIndex!].eventLocation)"
+        locationLabel.sizeToFit()
+        RSVPButton.layer.borderWidth = 1
+        RSVPButton.layer.borderColor = UIColor.black.cgColor
+        contactButton.layer.borderWidth = 1
+        contactButton.layer.borderColor = UIColor.black.cgColor
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        eventImage.image = event?.image
     }
     
     func displayMap(){
