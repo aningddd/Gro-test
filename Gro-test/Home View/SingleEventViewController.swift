@@ -118,7 +118,7 @@ class SingleEventViewController: UIViewController, MFMailComposeViewControllerDe
     //provide email functionality to contact the organization owners
     @IBAction func contactButtonPressed(_ sender: Any) {
         if MFMailComposeViewController.canSendMail(){
-            //create the email view controller and present it
+            //create the email view controller and present itct 
             let vc = MFMailComposeViewController()
             vc.mailComposeDelegate = self
             vc.setSubject("Contact us")
