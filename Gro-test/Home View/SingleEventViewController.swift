@@ -139,8 +139,9 @@ class SingleEventViewController: UIViewController, MFMailComposeViewControllerDe
         
     }
     
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true)
-    }
+    @objc(mailComposeController:didFinishWithResult:error:)
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult,error: Error?) {
+            controller.dismiss(animated: true)
+        }
     
 }
