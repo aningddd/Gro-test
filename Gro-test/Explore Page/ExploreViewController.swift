@@ -38,7 +38,7 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
         plusButton.tintColor = .black
         tableView.dataSource = self
         searchBar.delegate = self
-        //for testing purposes
+        //for testing purposes - in the future, show all possible organizations that the user is NOT subscribed to
         newAllOrgs = allOrgs
         newAllOrgs.append("academic test org")
         newAllOrgs.append("greek life test org")
@@ -46,6 +46,7 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
         newAllOrgs.append("sports test org")
         newAllOrgs.append("culture test org")
         filteredData = newAllOrgs
+        tableView.rowHeight = 135
     }
     
     //change the label of the selected categories once the popover table is dismissed
@@ -65,15 +66,30 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
     
-
+    //displaying each result as an org table cell to view more info about
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath) as UITableViewCell
-        cell.textLabel?.text = filteredData[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OrgCell", for: indexPath) as! OrgTableViewCell
+        
+        cell.contentView.backgroundColor = UIColor(named: "Grey E")
+        cell.view.layer.cornerRadius = 10
+        cell.orgNameLabel.text = filteredData[indexPath.row]
+        cell.toEventsButton.tag = indexPath.row
+        cell.toEventsButton.addTarget(self, action: #selector(eventButtonPressed), for: .touchUpInside)
+        
         return cell
+    }
+    
+    @objc func eventButtonPressed(sender: UIButton) {
+        let index = IndexPath(row: sender.tag, section: 0)
+        selectedOrg = filteredData[index.row]
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredData.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     // This method updates filteredData based on the text in the Search Box

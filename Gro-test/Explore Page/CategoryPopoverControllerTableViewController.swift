@@ -44,7 +44,6 @@ class CategoryPopoverControllerTableViewController: UITableViewController {
     }
     //appending to selected categories if not already added
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("selectting this row at index path \(indexPath.row)")
         if(!selected_categories.contains(categories[indexPath.row])){
             selected_categories.append(categories[indexPath.row])
         }
