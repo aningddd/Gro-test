@@ -46,23 +46,24 @@ class SingleEventViewController: UIViewController, MFMailComposeViewControllerDe
         descriptionView.layer.cornerRadius = 10
         infoView.layer.cornerRadius = 10
         eventMap.layer.cornerRadius = 10
+        //set the title of the view controller to the org name
         self.title = events[selectedEventIndex!].orgName
+        //set the event information
         topSloganLabel.text = events[selectedEventIndex!].eventName
-        //headingLabel.text = events[selectedEventIndex!].eventName
-        print(events[selectedEventIndex!].image)
         eventImage.image = events[selectedEventIndex!].image
         eventTextView.text = events[selectedEventIndex!].description
         timeLabel.text = "Time: \(events[selectedEventIndex!].time)"
         dateLabel.text = "Date: \(events[selectedEventIndex!].month) \(events[selectedEventIndex!].date), \(events[selectedEventIndex!].year)"
         locationLabel.text = "Location: \(events[selectedEventIndex!].eventLocation)"
         locationLabel.sizeToFit()
+        //configure the buttons to make them more visible
         RSVPButton.layer.borderWidth = 1
         RSVPButton.layer.borderColor = UIColor.black.cgColor
         contactButton.layer.borderWidth = 1
         contactButton.layer.borderColor = UIColor.black.cgColor
         
     }
-    
+    //show the location of the event on the map
     func displayMap(){
         //GDC location - be sure to change this later to the actual location string
         getCoordinate(addressString: events[selectedEventIndex!].eventLocation, completionHandler: { location, error in
@@ -97,6 +98,7 @@ class SingleEventViewController: UIViewController, MFMailComposeViewControllerDe
 //        })
     }
     
+    //turn the address as a string into geocoordinates that can be mapped using mapkit
     func getCoordinate( addressString : String,
             completionHandler: @escaping(CLLocationCoordinate2D, NSError?) -> Void ) {
         let geocoder = CLGeocoder()
@@ -113,8 +115,10 @@ class SingleEventViewController: UIViewController, MFMailComposeViewControllerDe
             completionHandler(kCLLocationCoordinate2DInvalid, error as NSError?)
         }
     }
+    //provide email functionality to contact the organization owners
     @IBAction func contactButtonPressed(_ sender: Any) {
         if MFMailComposeViewController.canSendMail(){
+            //create the email view controller and present it
             let vc = MFMailComposeViewController()
             vc.mailComposeDelegate = self
             vc.setSubject("Contact us")
@@ -128,6 +132,7 @@ class SingleEventViewController: UIViewController, MFMailComposeViewControllerDe
         }
         else{
             //in case the mail app is not available (on simulators!)
+            //display an alert instead
             let emailAlertController = UIAlertController(
                 title: "Email/Mail not available",
                 message: "Unable to send an email on this device",
