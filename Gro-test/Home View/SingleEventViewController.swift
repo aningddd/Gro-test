@@ -8,10 +8,13 @@
 
 import UIKit
 import MapKit
+import MessageUI
+import SafariServices
 
-class SingleEventViewController: UIViewController {
+class SingleEventViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     var event:EventData?
+    var organizationEmail = ""
     var delegate: UIViewController!
 
     // Event information
@@ -110,5 +113,34 @@ class SingleEventViewController: UIViewController {
             completionHandler(kCLLocationCoordinate2DInvalid, error as NSError?)
         }
     }
-
+    @IBAction func contactButtonPressed(_ sender: Any) {
+        if MFMailComposeViewController.canSendMail(){
+            let vc = MFMailComposeViewController()
+            vc.mailComposeDelegate = self
+            vc.setSubject("Contact us")
+            DataManager.app.retrieveUserEmail(userName: events[selectedEventIndex!].orgName, type: "orgData"){
+                result in
+                self.organizationEmail = result.email
+            }
+            vc.setToRecipients([self.organizationEmail])
+            vc.setMessageBody("<h1>Enter your message here!</h1>", isHTML: true)
+            present(vc, animated: true)
+        }
+        else{
+            //in case the mail app is not available (on simulators!)
+            let emailAlertController = UIAlertController(
+                title: "Email/Mail not available",
+                message: "Unable to send an email on this device",
+                preferredStyle: .alert)
+            emailAlertController.addAction(UIAlertAction(title: "OK",
+                                               style: .default))
+            self.present(emailAlertController, animated: true)
+        }
+        
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+    
 }
