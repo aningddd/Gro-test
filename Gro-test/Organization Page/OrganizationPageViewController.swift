@@ -94,6 +94,7 @@ class OrganizationPageViewController: UIViewController {
                         // Retrieve event images from backend
                         DataManager.app.retrieveEventData(OrgName: self.OrgName.text!) {
                             result in
+                            self.eventImages = []
                             for each in result {
                                 self.eventImages.append(each.image)
                             }

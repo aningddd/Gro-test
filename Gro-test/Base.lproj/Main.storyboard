@@ -2142,7 +2142,7 @@
             <objects>
                 <navigationController id="4nK-Zb-qJe" customClass="NavigationViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Org Home" selectedImage="house.fill" catalog="system" id="qrh-vP-ECt">
-                        <color key="badgeColor" name="Burnt Orange"/>
+                        <color key="badgeColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -2471,7 +2471,7 @@
             <objects>
                 <navigationController id="cUh-yL-yqL" customClass="NavigationViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" selectedImage="person.crop.circle.fill" catalog="system" id="OHc-jr-OFz">
-                        <color key="badgeColor" name="Burnt Orange"/>
+                        <color key="badgeColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NXm-8k-NfW">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -2491,7 +2491,7 @@
             <objects>
                 <navigationController id="3kI-Gg-VW7" customClass="NavigationViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Logistics" selectedImage="chart.bar.doc.horizontal" catalog="system" id="txb-Gr-5Ae">
-                        <color key="badgeColor" name="Burnt Orange"/>
+                        <color key="badgeColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ICh-bE-R5t">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -3395,6 +3395,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
+        <segue reference="pQG-YM-rA0"/>
         <segue reference="eFb-wp-F2u"/>
         <segue reference="jSg-18-HlM"/>
         <segue reference="lqe-cQ-7nu"/>
