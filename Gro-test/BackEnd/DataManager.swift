@@ -58,6 +58,71 @@ class DataManager{
         }
     }
 
+    // Become a member of an org
+    // for user's meta collection if it is started with subscribed@@@_, it is the organization they subscribe to
+    // if it is email + eventName: Should be event they subscribe to
+    func subscribeToOrg(orgName: String, orgEmail: String, userEmail: String){
+        let db = Firestore.firestore()
+        db.collection(orgEmail + "_meta").document(userEmail).setData(["Subscribe": userEmail])
+        db.collection(userEmail + "_meta").document("subscribed@@@_" + orgEmail).setData(["orgName": orgName, "orgEmail": orgEmail, "recordType": "subscribedOrg", "EventName": nil])
+        let docRef = db.collection(orgEmail + "_meta").document("userMeta")
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                 
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
+    
+    
+    // retrieve list of user's subscribed organization
+    func retrieveSubScribed(userEmail: String, completion: @escaping ([userName_email]) -> Void){
+        var userList = [userName_email]()
+        let db = Firestore.firestore()
+        db.collection(userEmail + "_meta").getDocuments{snapshot, error in
+            if error == nil && snapshot != nil {
+                for doc in snapshot!.documents {
+                    if(doc["recordType"] != nil && doc["recordType"] as! String == "subscribedOrg"){
+                        let curOrgData:userName_email = userName_email(userName: doc["orgName"] as! String, email: doc["orgEmail"] as! String)
+                        userList.append(curOrgData)
+                    }
+                }
+                completion(userList)
+            }else{
+                print("we are in error or nil")
+                print(error)
+                print(snapshot)
+            }
+        }
+    }
+    
+    // Cancel subscription
+    
+    func cancelSubScription(userEmail: String, orgEmail: String){
+        let db = Firestore.firestore()
+        db.collection(userEmail + "_meta").document("subscribed@@@_" + orgEmail).delete(){
+            err in
+            if let err = err{
+                print("error occur")
+            }else{
+                db.collection(orgEmail + "_meta").document(userEmail).delete(){
+                    err in
+                    
+                }
+            }
+        }
+    }
+    
+    
+    
+    // check membership of an org
+    
+    
+    // register for event
+    
+    // orgnization event should consist of emaillist of people joinining this event
+    
     
     func UploadUserData(email: String, orgAvatar: UIImage, orgDescription: String, type:String, userName: String){
         guard type == "orgData" || type == "userData" else {
@@ -83,7 +148,8 @@ class DataManager{
             db.collection(email + "_meta").document("userMeta").setData(["avatarURL":inputPath,
                                                        "type": type,
                                                        "description": orgDescription,
-                                                               "userName": userName
+                                                               "userName": userName,
+                                                                         "recordType": "metaData"
                                                       ])
             if(type == "orgData") {
                 db.collection("UserName_Meta_main_keyset_Org").document(userName).setData(["email": email, "type": type, "userName": userName])
@@ -216,6 +282,10 @@ class DataManager{
         }
 
     }
+    
+    
+    
+    
     func retrieveUserData(email:String, completion: @escaping ([UserData]) -> Void){
         var result_I = [UserData]()
         let stRef = Storage.storage().reference()
@@ -254,22 +324,24 @@ class DataManager{
 //        var imagePaths = [String]()
 //        var images = [UIImage]()
         let userNameM = email + "_meta"
-        db.collection(userNameM).getDocuments{snapshot, error in
-            print("at least we are in here")
-            if error == nil && snapshot != nil {
-                print(" we retrived data from snapshot")
-                for doc in snapshot!.documents {
-                    print(" we actually got snapshot with here ")
+//
+//        let docRef = docRefC.document(userName)
+//        docRef.getDocument { (document, error) in
+//            if let document = document, document.exists {
+//                completion(userName_email(userName: document["userName"] as! String, email: document["email"] as! String))
+//            } else {
+//                print("Document does not exist")
+//            }
+//        }
+        let docRef = db.collection(userNameM).document("userMeta")
+        docRef.getDocument { (document, error) in
+            if let doc = document, doc.exists {
                     let curUserData = UserData(type: doc["type"] as! String, description: doc["description"] as! String, avatar: UIImage(), userName: doc["userName"] as! String, url: doc["avatarURL"] as! String, email: email)
-                    result.append(curUserData)
-                }
-
-                completion(result)
-            }else{
-                print("we are in error or nil")
-                print(error)
-                print(snapshot)
-            }
+                        result.append(curUserData)
+                        completion(result)
+                    } else {
+                        print("Document does not exist")
+                    }
         }
 
     }
