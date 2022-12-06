@@ -56,8 +56,6 @@ class LoginVC: UIViewController, UITextFieldDelegate, UITabBarControllerDelegate
                             
                         }
                         
-                        
-                        
                     }
                 }
             }

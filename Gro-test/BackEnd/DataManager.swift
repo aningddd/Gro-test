@@ -113,7 +113,22 @@ class DataManager{
         }
     }
     
-    
+    func retrieveSubScriptionAmount(orgEmail: String, completion: @escaping (Int) -> Void) {
+        let db = Firestore.firestore()
+        var count = 0
+        db.collection(orgEmail + "_meta").getDocuments {snapshot, error in
+            if error == nil && snapshot != nil {
+                for doc in snapshot!.documents {
+                    count += 1
+                }
+                completion(count - 1)
+            } else {
+                print("we are in error or nil")
+                print(error)
+                print(snapshot)
+            }
+        }
+    }
     
     // check membership of an org
     

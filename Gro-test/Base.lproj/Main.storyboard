@@ -209,12 +209,12 @@
         <scene sceneID="EXF-Ax-GpQ">
             <objects>
                 <viewController id="Eps-vE-UOJ" customClass="EventViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="7zt-gx-b66">
+                    <view key="view" contentMode="scaleToFill" id="7zt-gx-b66">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wdM-33-LtJ">
-                                <rect key="frame" x="0.0" y="143" width="414" height="621"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wdM-33-LtJ">
+                                <rect key="frame" x="0.0" y="55" width="414" height="621"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="670" id="ttd-fY-Yha"/>
@@ -2672,62 +2672,93 @@
         <!--Org Logistics-->
         <scene sceneID="ZPu-WZ-Oxz">
             <objects>
-                <viewController id="Qde-eW-Wkg" sceneMemberID="viewController">
+                <viewController id="Qde-eW-Wkg" customClass="OrgLogisticsViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hSa-ZO-dDB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rri-iR-Qzu">
-                                <rect key="frame" x="17" y="107" width="380" height="680"/>
+                                <rect key="frame" x="82" y="141" width="250" height="200"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscribers:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bc-9q-0T9">
-                                        <rect key="frame" x="83" y="93" width="96" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bc-9q-0T9">
+                                        <rect key="frame" x="38" y="51" width="174" height="28"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Subscribers:">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="24" name="Menlo-Regular"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTy-ji-gNH">
-                                        <rect key="frame" x="254" y="93" width="28" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Events:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aA-lf-hER">
-                                        <rect key="frame" x="61" y="203" width="141" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubj-ld-VCW">
-                                        <rect key="frame" x="263" y="203" width="11" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTy-ji-gNH">
+                                        <rect key="frame" x="81.666666666666657" y="95" width="87" height="56"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="48"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="Burnt Orange"/>
                                 <constraints>
-                                    <constraint firstItem="3aA-lf-hER" firstAttribute="top" secondItem="1Bc-9q-0T9" secondAttribute="bottom" constant="89" id="4eW-Am-ZOR"/>
-                                    <constraint firstItem="1Bc-9q-0T9" firstAttribute="leading" secondItem="Rri-iR-Qzu" secondAttribute="leading" constant="83" id="EdO-cU-pCr"/>
-                                    <constraint firstItem="3aA-lf-hER" firstAttribute="centerY" secondItem="ubj-ld-VCW" secondAttribute="centerY" id="F12-VA-J6w"/>
-                                    <constraint firstItem="hTy-ji-gNH" firstAttribute="leading" secondItem="1Bc-9q-0T9" secondAttribute="trailing" constant="75" id="H5U-PQ-cV3"/>
-                                    <constraint firstAttribute="height" constant="680" id="HYC-zg-iNY"/>
-                                    <constraint firstItem="ubj-ld-VCW" firstAttribute="leading" secondItem="3aA-lf-hER" secondAttribute="trailing" constant="61" id="IG9-s1-kh3"/>
-                                    <constraint firstItem="3aA-lf-hER" firstAttribute="leading" secondItem="Rri-iR-Qzu" secondAttribute="leading" constant="61" id="M1u-9x-dTU"/>
-                                    <constraint firstItem="1Bc-9q-0T9" firstAttribute="centerY" secondItem="hTy-ji-gNH" secondAttribute="centerY" id="Th0-sw-c2W"/>
-                                    <constraint firstAttribute="width" constant="380" id="Umq-oW-P51"/>
+                                    <constraint firstItem="hTy-ji-gNH" firstAttribute="centerX" secondItem="Rri-iR-Qzu" secondAttribute="centerX" id="GcZ-Pe-4tU"/>
+                                    <constraint firstAttribute="height" constant="200" id="HYC-zg-iNY"/>
+                                    <constraint firstItem="hTy-ji-gNH" firstAttribute="top" secondItem="1Bc-9q-0T9" secondAttribute="bottom" constant="16" id="LXg-cU-g5b"/>
+                                    <constraint firstItem="1Bc-9q-0T9" firstAttribute="top" secondItem="Rri-iR-Qzu" secondAttribute="top" constant="51" id="UG6-26-2Q7"/>
+                                    <constraint firstAttribute="width" constant="250" id="Umq-oW-P51"/>
+                                    <constraint firstItem="1Bc-9q-0T9" firstAttribute="centerX" secondItem="Rri-iR-Qzu" secondAttribute="centerX" id="VDG-B8-Rvn"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bi5-b7-XA0">
+                                <rect key="frame" x="82" y="419" width="250" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pf3-yz-cXE">
+                                        <rect key="frame" x="110.66666666666666" y="95" width="29" height="56"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="48"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yk2-17-atG">
+                                        <rect key="frame" x="59.666666666666657" y="49" width="131" height="28"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="# Events:">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="24" name="Menlo-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="Burnt Orange"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="3Mh-do-HeI"/>
+                                    <constraint firstItem="Pf3-yz-cXE" firstAttribute="centerX" secondItem="Bi5-b7-XA0" secondAttribute="centerX" id="9H8-KO-SKY"/>
+                                    <constraint firstItem="yk2-17-atG" firstAttribute="top" secondItem="Bi5-b7-XA0" secondAttribute="top" constant="49" id="I0X-tm-Jfx"/>
+                                    <constraint firstItem="Pf3-yz-cXE" firstAttribute="top" secondItem="yk2-17-atG" secondAttribute="bottom" constant="18" id="Ig8-Rc-NvH"/>
+                                    <constraint firstAttribute="width" constant="250" id="ZdW-tg-OhI"/>
+                                    <constraint firstItem="yk2-17-atG" firstAttribute="centerX" secondItem="Bi5-b7-XA0" secondAttribute="centerX" id="qhi-Hx-hFu"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xhC-gN-9vg"/>
                         <color key="backgroundColor" name="Grey E"/>
                         <constraints>
-                            <constraint firstItem="Rri-iR-Qzu" firstAttribute="top" secondItem="xhC-gN-9vg" secondAttribute="top" constant="19" id="XpS-n0-uVA"/>
-                            <constraint firstItem="1Bc-9q-0T9" firstAttribute="top" secondItem="xhC-gN-9vg" secondAttribute="top" constant="112" id="ifb-cb-TEv"/>
+                            <constraint firstItem="Bi5-b7-XA0" firstAttribute="centerX" secondItem="hSa-ZO-dDB" secondAttribute="centerX" id="BUl-tB-deL"/>
+                            <constraint firstItem="Rri-iR-Qzu" firstAttribute="top" secondItem="xhC-gN-9vg" secondAttribute="top" constant="53" id="L1j-zJ-wHs"/>
+                            <constraint firstItem="Bi5-b7-XA0" firstAttribute="top" secondItem="Rri-iR-Qzu" secondAttribute="bottom" constant="78" id="dsU-Wn-8qU"/>
                             <constraint firstItem="Rri-iR-Qzu" firstAttribute="centerX" secondItem="hSa-ZO-dDB" secondAttribute="centerX" id="sB2-DF-UEx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Org Logistics" id="90z-II-E2p"/>
+                    <connections>
+                        <outlet property="bottomView" destination="Bi5-b7-XA0" id="WbO-ty-iqi"/>
+                        <outlet property="eventsLabel" destination="Pf3-yz-cXE" id="TPr-p3-pcC"/>
+                        <outlet property="subscribersLabel" destination="hTy-ji-gNH" id="mlb-9H-IXK"/>
+                        <outlet property="topView" destination="Rri-iR-Qzu" id="IFR-dC-Taf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8do-fD-MSO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3363,8 +3394,8 @@
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="eFb-wp-F2u"/>
-        <segue reference="ZHN-1x-OXt"/>
-        <segue reference="eHx-9j-7bT"/>
+        <segue reference="jSg-18-HlM"/>
+        <segue reference="lqe-cQ-7nu"/>
         <segue reference="kro-JV-7GL"/>
         <segue reference="Wam-tx-ANT"/>
         <segue reference="vhY-yc-Cr2"/>
