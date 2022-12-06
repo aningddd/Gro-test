@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import MessageUI
+import SafariServices
 
-class OrganizationPageViewController: UIViewController {
+class OrganizationPageViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
     @IBOutlet weak var organizationImageView: UIImageView!
     @IBOutlet weak var upcomingEventsCollectionView: UICollectionView!
@@ -117,6 +119,34 @@ class OrganizationPageViewController: UIViewController {
         DataManager.app.subscribeToOrg(orgName: OrgName.text!, orgEmail: userEmail, userEmail: myEmail)
         print("subscribed")
     }
+    @IBAction func contactButtonPressed(_ sender: Any) {
+        if MFMailComposeViewController.canSendMail(){
+            //create the email view controller and present itct
+            let vc = MFMailComposeViewController()
+            vc.mailComposeDelegate = self
+            vc.setSubject("Contact us")
+            vc.setToRecipients([self.userEmail])
+            vc.setMessageBody("<h1>Enter your message here!</h1>", isHTML: true)
+            present(vc, animated: true)
+        }
+        else{
+            //in case the mail app is not available (on simulators!)
+            //display an alert instead
+            let emailAlertController = UIAlertController(
+                title: "Email/Mail not available",
+                message: "Unable to send an email on this device",
+                preferredStyle: .alert)
+            emailAlertController.addAction(UIAlertAction(title: "OK",
+                                               style: .default))
+            self.present(emailAlertController, animated: true)
+        }
+        
+    }
+    
+    @objc(mailComposeController:didFinishWithResult:error:)
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult,error: Error?) {
+            controller.dismiss(animated: true)
+        }
     
 }
 
