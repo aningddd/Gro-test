@@ -87,7 +87,7 @@ class LoginVC: UIViewController, UITextFieldDelegate, UITabBarControllerDelegate
             let orgDesVC = orgDesNavigation.topViewController as! OrganizationPageViewController
             profileVC.userEmail = self.emailField.text!
             orgDesVC.userEmail = self.emailField.text!
+            myEmail = self.emailField.text!
         }
     }
-    
 }

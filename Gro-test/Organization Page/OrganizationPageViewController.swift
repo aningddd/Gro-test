@@ -50,35 +50,60 @@ class OrganizationPageViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-        DispatchQueue.global(qos: .userInteractive).async {
-            DataManager.app.retrieveUserEmail(userName: selectedOrg as! String, type: "orgData") {
-                result in
+        
+        if (selectedOrg == nil) {
+            DispatchQueue.global(qos: .userInteractive).async {
+                // Retrieving Data from backend
+                DataManager.app.retrieveUserData(email: self.userEmail){
+                    result in
+                    self.runned = true
+                    let curOrgData:UserData = result[0]
+                    self.OrgName.text = curOrgData.userName
+                    selectedOrg = curOrgData.userName
+                    self.descriptionTextfield.text = curOrgData.description
+                    self.orgAvartar = curOrgData.avatar
+                }
                 
-                DispatchQueue.main.async {
-                    self.userEmail = result.email
-                    
-                    // Retrieving Data from backend
-                    DataManager.app.retrieveUserData(email: self.userEmail){
-                        result in
-                        self.runned = true
-                        let curOrgData:UserData = result[0]
-                        self.OrgName.text = curOrgData.userName
-                        selectedOrg = curOrgData.userName
-                        self.descriptionTextfield.text = curOrgData.description
-                        self.orgAvartar = curOrgData.avatar
+                // Retrieve event images from backend
+                DataManager.app.retrieveEventData(OrgName: self.OrgName.text!) {
+                    result in
+                    for each in result {
+                        self.eventImages.append(each.image)
                     }
+                }
+            }
+        } else {
+            DispatchQueue.global(qos: .userInteractive).async {
+                DataManager.app.retrieveUserEmail(userName: selectedOrg as! String, type: "orgData") {
+                    result in
                     
-                    // Retrieve event images from backend
-                    DataManager.app.retrieveEventData(OrgName: self.OrgName.text!) {
-                        result in
-                        for each in result {
-                            self.eventImages.append(each.image)
+                    DispatchQueue.main.async {
+                        self.userEmail = result.email
+                        
+                        // Retrieving Data from backend
+                        DataManager.app.retrieveUserData(email: self.userEmail){
+                            result in
+                            self.runned = true
+                            let curOrgData:UserData = result[0]
+                            self.OrgName.text = curOrgData.userName
+                            selectedOrg = curOrgData.userName
+                            self.descriptionTextfield.text = curOrgData.description
+                            self.orgAvartar = curOrgData.avatar
                         }
+                        
+                        // Retrieve event images from backend
+                        DataManager.app.retrieveEventData(OrgName: self.OrgName.text!) {
+                            result in
+                            for each in result {
+                                self.eventImages.append(each.image)
+                            }
+                        }
+                        upcomingEventsCollectionView.reloadData()
                     }
                 }
             }
         }
+        
     }
     
     @IBAction func updateInfoButton(_ sender: Any) {
