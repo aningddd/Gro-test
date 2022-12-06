@@ -24,12 +24,6 @@ class OrganizationPageViewController: UIViewController {
     var runned = false
     var eventImages: [UIImage] = []
     
-    @IBAction func updateInfoButton(_ sender: Any) {
-        if(runned){
-            DataManager.app.UploadUserData(email: self.userEmail, orgAvatar: self.orgAvartar, orgDescription: self.descriptionTextfield.text, type: "orgData", userName: self.OrgName.text as! String)
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("start of view did load - useremail is: \(userEmail)")
@@ -56,9 +50,7 @@ class OrganizationPageViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        print("=============")
-//        print(selectedOrg)
-//        print("=============")
+
         DispatchQueue.global(qos: .userInteractive).async {
             DataManager.app.retrieveUserEmail(userName: selectedOrg as! String, type: "orgData") {
                 result in
@@ -88,6 +80,18 @@ class OrganizationPageViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func updateInfoButton(_ sender: Any) {
+        if (runned) {
+            DataManager.app.UploadUserData(email: self.userEmail, orgAvatar: self.orgAvartar, orgDescription: self.descriptionTextfield.text, type: "orgData", userName: self.OrgName.text as! String)
+        }
+    }
+    
+    @IBAction func subscribeButtonPressed(_ sender: Any) {
+        DataManager.app.subscribeToOrg(orgName: OrgName.text!, orgEmail: userEmail, userEmail: myEmail)
+        print("subscribed")
+    }
+    
 }
 
 extension OrganizationPageViewController: UICollectionViewDataSource {

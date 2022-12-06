@@ -8,6 +8,9 @@
 
 import UIKit
 
+public var myUserName: String = ""
+public var myEmail: String = ""
+
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var userCardView: UIView!
@@ -39,6 +42,8 @@ class ProfileViewController: UIViewController {
                     self.profileImage.image = user.avatar
                     self.userNameLabel.text = user.userName
                     self.userEmailLabel.text = user.email
+                    myUserName = user.userName
+                    myEmail = user.email
                 }
                 
             }

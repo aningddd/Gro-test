@@ -25,6 +25,7 @@ class EditNameViewController: UIViewController {
         //push to database with the new username
         DataManager.app.UploadUserData(email: "\(self.emailField)", orgAvatar: self.image, orgDescription: "Basic User", type: "userData", userName: newUserNameField.text!)
         statusLabel.isHidden = false
+        myUserName = newUserNameField.text!
         //refresh the table and inform the username has changed
         let otherVC = delegate as! TableRefresher
         otherVC.updateTable()

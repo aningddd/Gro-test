@@ -75,7 +75,6 @@ class DataManager{
         }
     }
     
-    
     // retrieve list of user's subscribed organization
     func retrieveSubScribed(userEmail: String, completion: @escaping ([userName_email]) -> Void){
         var userList = [userName_email]()
@@ -151,13 +150,11 @@ class DataManager{
                                                                "userName": userName,
                                                                          "recordType": "metaData"
                                                       ])
-            if(type == "orgData") {
+            if (type == "orgData") {
                 db.collection("UserName_Meta_main_keyset_Org").document(userName).setData(["email": email, "type": type, "userName": userName])
-            }else{
+            } else {
                 db.collection("UserName_Meta_main_keyset_User").document(userName).setData(["email": email ,"type": type, "userName": userName])
             }
-            
-
             
           // Metadata contains file metadata such as size, content-type.
           let size = metadata.size
@@ -193,7 +190,7 @@ class DataManager{
     func retrieveAllUser(type: String, completion: @escaping ([userName_email]) -> Void){
         var userList = [userName_email]()
         let db = Firestore.firestore()
-        if(type == "orgData"){
+        if (type == "orgData") {
             db.collection("UserName_Meta_main_keyset_Org").getDocuments{snapshot, error in
                 if error == nil && snapshot != nil {
                     for doc in snapshot!.documents {
@@ -202,13 +199,13 @@ class DataManager{
                     }
 
                     completion(userList)
-                }else{
+                } else {
                     print("we are in error or nil")
                     print(error)
                     print(snapshot)
                 }
             }
-        }else{
+        } else {
             db.collection("UserName_Meta_main_keyset_User").getDocuments{snapshot, error in
                 if error == nil && snapshot != nil {
                     for doc in snapshot!.documents {
@@ -216,7 +213,7 @@ class DataManager{
                         userList.append(curUserData)
                     }
                     completion(userList)
-                }else{
+                } else {
                     print("we are in error or nil")
                     print(error)
                     print(snapshot)
@@ -272,7 +269,6 @@ class DataManager{
                     
                     result.append(curEventData)
                 }
-
                 completion(result)
             }else{
                 print("we are in error or nil")
@@ -280,11 +276,7 @@ class DataManager{
                 print(snapshot)
             }
         }
-
     }
-    
-    
-    
     
     func retrieveUserData(email:String, completion: @escaping ([UserData]) -> Void){
         var result_I = [UserData]()

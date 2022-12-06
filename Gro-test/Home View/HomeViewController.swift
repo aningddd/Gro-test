@@ -10,6 +10,7 @@ import UIKit
 
 public var key:String?
 public var allOrgs:[String] = []
+public var myOrgs:[String] = []
 public var selectedOrg:String?
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -25,14 +26,30 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        allOrgs = []
         DispatchQueue.global(qos: .userInteractive).async {
             DataManager.app.retrieveAllUser(type: "orgData") {
                 result in
                 
                 DispatchQueue.main.async {
                     for org in result {
-                        allOrgs.append(org.userName)
+                        if (!allOrgs.contains(org.userName)) {
+                            allOrgs.append(org.userName)
+                        }
+                    }
+                    self.tableView.reloadData()
+                }
+            }
+        }
+        
+        DispatchQueue.global(qos: .userInteractive).async {
+            DataManager.app.retrieveSubScribed(userEmail: myEmail) {
+                result in
+                
+                DispatchQueue.main.async {
+                    for org in result {
+                        if (!myOrgs.contains(org.userName)) {
+                            myOrgs.append(org.userName)
+                        }
                     }
                     self.tableView.reloadData()
                 }
@@ -52,7 +69,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allOrgs.count
+        return myOrgs.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -64,7 +81,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         cell.contentView.backgroundColor = UIColor(named: "Grey E")
         cell.view.layer.cornerRadius = 10
-        cell.orgNameLabel.text = allOrgs[indexPath.row]
+        cell.orgNameLabel.text = myOrgs[indexPath.row]
         cell.toEventsButton.tag = indexPath.row
         cell.toEventsButton.addTarget(self, action: #selector(eventButtonPressed), for: .touchUpInside)
         cell.orgInfoButton.tag = indexPath.row
@@ -77,7 +94,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @objc func eventButtonPressed(sender: UIButton) {
         let index = IndexPath(row: sender.tag, section: 0)
-        selectedOrg = allOrgs[index.row]
+        selectedOrg = myOrgs[index.row]
     }
 
 }

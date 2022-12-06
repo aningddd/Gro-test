@@ -33,6 +33,7 @@ class TmpAdmimRegisterVC: UIViewController, UITextFieldDelegate {
         organizationName.delegate = self
         
     }
+    
     @IBAction func registerButtonPressed(_ sender: Any) {
         if(passwordField.text == confirmPasswordField.text){
             Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!){
@@ -57,12 +58,6 @@ class TmpAdmimRegisterVC: UIViewController, UITextFieldDelegate {
                     self.confirmPasswordField.text = nil
                     self.organizationName.text = nil
                     
-//                    Auth.auth().addStateDidChangeListener(){
-//                        auth, user in
-//                        if user != nil{
-//
-//                        }
-//                    }
                 }
             }
         }
@@ -85,5 +80,13 @@ class TmpAdmimRegisterVC: UIViewController, UITextFieldDelegate {
         }
     }
     
-
+    // Called when the user clicks on the view outside of the UITextField
+    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }

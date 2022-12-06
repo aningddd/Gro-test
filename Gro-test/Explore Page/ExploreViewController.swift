@@ -28,7 +28,6 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
     //for testing purposes
     var newAllOrgs:[String] = []
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self

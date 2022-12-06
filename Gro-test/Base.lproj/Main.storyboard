@@ -160,6 +160,9 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Subscribe"/>
+                                <connections>
+                                    <action selector="subscribeButtonPressed:" destination="3M1-M4-zYm" eventType="touchUpInside" id="oDl-OE-RIb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eZa-vq-d87"/>
@@ -207,11 +210,11 @@
             <objects>
                 <viewController id="Eps-vE-UOJ" customClass="EventViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="7zt-gx-b66">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wdM-33-LtJ">
-                                <rect key="frame" x="0.0" y="55" width="414" height="621"/>
+                                <rect key="frame" x="0.0" y="143" width="414" height="621"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="670" id="ttd-fY-Yha"/>
@@ -310,7 +313,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Club Events:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptM-TN-tN3">
-                                <rect key="frame" x="118.33333333333333" y="105" width="177.66666666666669" height="21"/>
+                                <rect key="frame" x="118.33333333333333" y="17" width="177.66666666666669" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -374,11 +377,11 @@
             <objects>
                 <viewController id="4gp-rV-B8K" customClass="SingleEventViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="1Hc-9X-k71">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0p-XM-ntM">
-                                <rect key="frame" x="17" y="98" width="380" height="70"/>
+                                <rect key="frame" x="17" y="10" width="380" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqi-a6-hEL">
                                         <rect key="frame" x="40" y="11" width="293" height="49"/>
@@ -395,7 +398,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hIu-S1-olQ">
-                                <rect key="frame" x="17" y="176" width="380" height="163"/>
+                                <rect key="frame" x="17" y="88" width="380" height="163"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="utcsLogo" translatesAutoresizingMaskIntoConstraints="NO" id="eD0-8I-9r5">
                                         <rect key="frame" x="70" y="17" width="240" height="128"/>
@@ -1340,18 +1343,18 @@
             <objects>
                 <viewController id="xrC-U0-ntO" customClass="EditNameViewController" customModule="Gro_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fjm-gP-oIU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJ2-za-dLd">
-                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="N9H-iR-Fdd"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="xfE-Kc-HMz">
-                                <rect key="frame" x="20" y="44" width="374" height="60"/>
+                                <rect key="frame" x="20" y="88" width="374" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -2617,7 +2620,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Update Info"/>
                                 <connections>
-                                    <action selector="updateInfoButton:" destination="vPL-xW-2PZ" eventType="touchUpInside" id="xPw-Fh-x65"/>
+                                    <action selector="updateInfoButton:" destination="vPL-xW-2PZ" eventType="touchUpInside" id="8Tv-m8-ICd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -3364,7 +3367,7 @@
         <segue reference="eHx-9j-7bT"/>
         <segue reference="kro-JV-7GL"/>
         <segue reference="Wam-tx-ANT"/>
-        <segue reference="ytm-83-MzF"/>
+        <segue reference="vhY-yc-Cr2"/>
         <segue reference="vX6-Iq-9aP"/>
         <segue reference="QtU-uU-7bS"/>
     </inferredMetricsTieBreakers>
