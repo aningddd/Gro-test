@@ -98,7 +98,7 @@ class OrganizationPageViewController: UIViewController {
                                 self.eventImages.append(each.image)
                             }
                         }
-                        upcomingEventsCollectionView.reloadData()
+                        self.upcomingEventsCollectionView.reloadData()
                     }
                 }
             }
