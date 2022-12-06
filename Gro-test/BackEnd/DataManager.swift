@@ -75,6 +75,26 @@ class DataManager{
         }
     }
     
+    func retrieveSubScriptionAmount(orgEmail: String, completion: @escaping (Int) -> Void){
+        let db = Firestore.firestore()
+        var count = 0
+        db.collection(orgEmail + "_meta").getDocuments{snapshot, error in
+            if error == nil && snapshot != nil {
+                for doc in snapshot!.documents {
+                    count += 1
+                }
+                completion(count - 1)
+            }else{
+                print("we are in error or nil")
+                print(error)
+                print(snapshot)
+                completion(-1)
+            }
+        }
+        
+    }
+    
+    
     // retrieve list of user's subscribed organization
     func retrieveSubScribed(userEmail: String, completion: @escaping ([userName_email]) -> Void){
         var userList = [userName_email]()
@@ -113,22 +133,7 @@ class DataManager{
         }
     }
     
-    func retrieveSubScriptionAmount(orgEmail: String, completion: @escaping (Int) -> Void) {
-        let db = Firestore.firestore()
-        var count = 0
-        db.collection(orgEmail + "_meta").getDocuments {snapshot, error in
-            if error == nil && snapshot != nil {
-                for doc in snapshot!.documents {
-                    count += 1
-                }
-                completion(count - 1)
-            } else {
-                print("we are in error or nil")
-                print(error)
-                print(snapshot)
-            }
-        }
-    }
+    
     
     // check membership of an org
     
@@ -165,11 +170,13 @@ class DataManager{
                                                                "userName": userName,
                                                                          "recordType": "metaData"
                                                       ])
-            if (type == "orgData") {
+            if(type == "orgData") {
                 db.collection("UserName_Meta_main_keyset_Org").document(userName).setData(["email": email, "type": type, "userName": userName])
-            } else {
+            }else{
                 db.collection("UserName_Meta_main_keyset_User").document(userName).setData(["email": email ,"type": type, "userName": userName])
             }
+            
+
             
           // Metadata contains file metadata such as size, content-type.
           let size = metadata.size
@@ -198,6 +205,7 @@ class DataManager{
                 completion(userName_email(userName: document["userName"] as! String, email: document["email"] as! String))
             } else {
                 print("Document does not exist")
+                completion(userName_email(userName: userName, email: "NotYetLoaded@NotYetLoaded.com"))
             }
         }
     }
@@ -205,7 +213,7 @@ class DataManager{
     func retrieveAllUser(type: String, completion: @escaping ([userName_email]) -> Void){
         var userList = [userName_email]()
         let db = Firestore.firestore()
-        if (type == "orgData") {
+        if(type == "orgData"){
             db.collection("UserName_Meta_main_keyset_Org").getDocuments{snapshot, error in
                 if error == nil && snapshot != nil {
                     for doc in snapshot!.documents {
@@ -214,13 +222,13 @@ class DataManager{
                     }
 
                     completion(userList)
-                } else {
+                }else{
                     print("we are in error or nil")
                     print(error)
                     print(snapshot)
                 }
             }
-        } else {
+        }else{
             db.collection("UserName_Meta_main_keyset_User").getDocuments{snapshot, error in
                 if error == nil && snapshot != nil {
                     for doc in snapshot!.documents {
@@ -228,7 +236,7 @@ class DataManager{
                         userList.append(curUserData)
                     }
                     completion(userList)
-                } else {
+                }else{
                     print("we are in error or nil")
                     print(error)
                     print(snapshot)
@@ -242,27 +250,33 @@ class DataManager{
         let stRef = Storage.storage().reference()
         let myGroup = DispatchGroup()
         self.retrieveEventPath(orgName: OrgName) {results in
-            for result in results{
-                var curResult = result
-                myGroup.enter()
-                print("we are attaching image path here")
-                let fileRef = stRef.child(result.url)
-                fileRef.getData(maxSize:5*1024*1024){
-                    data, error in
-                    print(" here is error: ", error)
-                    print("here is data: ", data)
-                    if error == nil && data != nil{
-                        print("attached")
-                        curResult.image = UIImage(data: data!)!
-                        result_I.append(curResult as! EventData)
-                    }else{
-                        print(error)
-                    }
-                    myGroup.leave()
+            if(results.count == 0){
+                myGroup.notify(queue:.main){
+                    completion([EventData(orgName: OrgName, eventName: "Not Yet Loaded", description: "Not Yet Loaded", image: UIImage(), position_x: 0, position_y: 0, url: "None", eventLocation: "Not Yet Loaded", year: "9999", month: "12", date: "31", time: "12")])
                 }
-            }
-            myGroup.notify(queue:.main){
-                completion(result_I)
+            }else{
+                for result in results{
+                    var curResult = result
+                    myGroup.enter()
+                    print("we are attaching image path here")
+                    let fileRef = stRef.child(result.url)
+                    fileRef.getData(maxSize:5*1024*1024){
+                        data, error in
+                        print(" here is error: ", error)
+                        print("here is data: ", data)
+                        if error == nil && data != nil{
+                            print("attached")
+                            curResult.image = UIImage(data: data!)!
+                            result_I.append(curResult as! EventData)
+                        }else{
+                            print(error)
+                        }
+                        myGroup.leave()
+                    }
+                }
+                myGroup.notify(queue:.main){
+                    completion(result_I)
+                }
             }
         }
     }
@@ -284,41 +298,51 @@ class DataManager{
                     
                     result.append(curEventData)
                 }
+
                 completion(result)
             }else{
-                print("we are in error or nil")
-                print(error)
-                print(snapshot)
+                completion([])
             }
         }
+
     }
+    
+    
+    
     
     func retrieveUserData(email:String, completion: @escaping ([UserData]) -> Void){
         var result_I = [UserData]()
         let stRef = Storage.storage().reference()
         let myGroup = DispatchGroup()
         self.retrieveUserPath(email:email) {results in
-            for result in results{
-                var curResult = result
-                myGroup.enter()
-                print("we are attaching image path here")
-                let fileRef = stRef.child(result.url)
-                fileRef.getData(maxSize:5*1024*1024){
-                    data, error in
-                    print(" here is error: ", error)
-                    print("here is data: ", data)
-                    if error == nil && data != nil{
-                        print("attached")
-                        curResult.avatar = UIImage(data: data!)!
-                        result_I.append(curResult as! UserData)
-                    }else{
-                        print(error)
-                    }
-                    myGroup.leave()
+            if(results.count == 0){
+                myGroup.notify(queue:.main){
+                    completion([UserData(type: "userData", description: "Not yet Registered", avatar: UIImage(), userName: "Not Yet Registered", url: "None", email: email)])
                 }
-            }
-            myGroup.notify(queue:.main){
-                completion(result_I)
+            }else{
+                for result in results{
+                    
+                    var curResult = result
+                    myGroup.enter()
+                    print("we are attaching image path here")
+                    let fileRef = stRef.child(result.url)
+                    fileRef.getData(maxSize:5*1024*1024){
+                        data, error in
+                        print(" here is error: ", error)
+                        print("here is data: ", data)
+                        if error == nil && data != nil{
+                            print("attached")
+                            curResult.avatar = UIImage(data: data!)!
+                            result_I.append(curResult as! UserData)
+                        }else{
+                            print(error)
+                        }
+                        myGroup.leave()
+                    }
+                }
+                myGroup.notify(queue:.main){
+                    completion(result_I)
+                }
             }
         }
     }
@@ -348,6 +372,7 @@ class DataManager{
                         completion(result)
                     } else {
                         print("Document does not exist")
+                        completion([])
                     }
         }
 
