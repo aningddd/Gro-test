@@ -67,6 +67,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.orgNameLabel.text = allOrgs[indexPath.row]
         cell.toEventsButton.tag = indexPath.row
         cell.toEventsButton.addTarget(self, action: #selector(eventButtonPressed), for: .touchUpInside)
+        cell.orgInfoButton.tag = indexPath.row
+        cell.orgInfoButton.addTarget(self, action: #selector(eventButtonPressed), for: .touchUpInside)
+        cell.orgInfoTextButton.tag = indexPath.row
+        cell.orgInfoTextButton.addTarget(self, action: #selector(eventButtonPressed), for: .touchUpInside)
         
         return cell
     }

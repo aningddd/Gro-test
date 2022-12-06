@@ -75,6 +75,10 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.orgNameLabel.text = filteredData[indexPath.row]
         cell.toEventsButton.tag = indexPath.row
         cell.toEventsButton.addTarget(self, action: #selector(eventButtonPressed), for: .touchUpInside)
+        cell.orgInfoButton.tag = indexPath.row
+        cell.orgInfoButton.addTarget(self, action: #selector(eventButtonPressed), for: .touchUpInside)
+        cell.orgInfoTextButton.tag = indexPath.row
+        cell.orgInfoTextButton.addTarget(self, action: #selector(eventButtonPressed), for: .touchUpInside)
         
         return cell
     }
@@ -121,6 +125,16 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
             nextVC.delegate = self
             selected_categories.removeAll()
         }
+    }
+    
+    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    // Called when the user clicks on the view outside of the UITextField
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
 

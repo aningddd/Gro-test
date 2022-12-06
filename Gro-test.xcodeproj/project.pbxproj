@@ -50,6 +50,8 @@
 		6F8616EB28FB62DC0012FBB0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8616EA28FB62DC0012FBB0 /* TabBarController.swift */; };
 		6F8616ED28FB6CF30012FBB0 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8616EC28FB6CF30012FBB0 /* NavigationViewController.swift */; };
 		6F8616EF28FB84670012FBB0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8616EE28FB84670012FBB0 /* HomeViewController.swift */; };
+		87B50BBB293EB3C800D1B616 /* OrgLogisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B50BBA293EB3C800D1B616 /* OrgLogisticsViewController.swift */; };
+		87B50BBD293EC8E000D1B616 /* RecipientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B50BBC293EC8E000D1B616 /* RecipientButton.swift */; };
 		94BE423728FF1DB5009153E5 /* OrganizationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE423628FF1DB5009153E5 /* OrganizationPageViewController.swift */; };
 		94BE423A28FF21EE009153E5 /* UpcomingEventsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE423828FF21EE009153E5 /* UpcomingEventsCollectionViewCell.swift */; };
 		94BE423B28FF21EE009153E5 /* UpcomingEventsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94BE423928FF21EE009153E5 /* UpcomingEventsCollectionViewCell.xib */; };
@@ -97,6 +99,8 @@
 		6F8616EA28FB62DC0012FBB0 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		6F8616EC28FB6CF30012FBB0 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		6F8616EE28FB84670012FBB0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		87B50BBA293EB3C800D1B616 /* OrgLogisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgLogisticsViewController.swift; sourceTree = "<group>"; };
+		87B50BBC293EC8E000D1B616 /* RecipientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientButton.swift; sourceTree = "<group>"; };
 		94BE423628FF1DB5009153E5 /* OrganizationPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationPageViewController.swift; sourceTree = "<group>"; };
 		94BE423828FF21EE009153E5 /* UpcomingEventsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingEventsCollectionViewCell.swift; sourceTree = "<group>"; };
 		94BE423928FF21EE009153E5 /* UpcomingEventsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingEventsCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 				6F8616D728FB5A960012FBB0 /* ViewController.swift */,
 				6F8616EC28FB6CF30012FBB0 /* NavigationViewController.swift */,
 				6F8616EA28FB62DC0012FBB0 /* TabBarController.swift */,
+				87B50BBA293EB3C800D1B616 /* OrgLogisticsViewController.swift */,
+				87B50BBC293EC8E000D1B616 /* RecipientButton.swift */,
 				6B8FAB15290CB17E00BFA171 /* Profile page */,
 				6F6A30AC28FE135F00DF8D12 /* Home View */,
 				6F062D8E28FE4BE30018F873 /* Explore Page */,
@@ -368,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87B50BBD293EC8E000D1B616 /* RecipientButton.swift in Sources */,
 				6F8616ED28FB6CF30012FBB0 /* NavigationViewController.swift in Sources */,
 				6F8616DE28FB5A960012FBB0 /* Gro_test.xcdatamodeld in Sources */,
 				14F65E9328FF4F5900EF92D0 /* LoginVC.swift in Sources */,
@@ -386,6 +393,7 @@
 				14F65E9128FF4F5900EF92D0 /* forgetPasswordVC.swift in Sources */,
 				6F062D9A28FF41650018F873 /* ProfileViewController.swift in Sources */,
 				6F6A30AB28FDF64E00DF8D12 /* OrgTableViewCell.swift in Sources */,
+				87B50BBB293EB3C800D1B616 /* OrgLogisticsViewController.swift in Sources */,
 				94F7CF1F290F673400F3D60A /* CalendarUtils.swift in Sources */,
 				147A3512291A20FF003325C1 /* DataManager.swift in Sources */,
 				94BE423A28FF21EE009153E5 /* UpcomingEventsCollectionViewCell.swift in Sources */,
@@ -548,7 +556,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Gro-test/Gro-test.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UK2N4DH3G3;
+				DEVELOPMENT_TEAM = 5A2566THH7;
 				INFOPLIST_FILE = "Gro-test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -567,7 +575,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Gro-test/Gro-test.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UK2N4DH3G3;
+				DEVELOPMENT_TEAM = 5A2566THH7;
 				INFOPLIST_FILE = "Gro-test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -87,13 +87,5 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
             nextVC.delegate = self
             nextVC.event = events[index]
         }
-        
-        if segue.identifier == "showOrgDetailToUser1" || segue.identifier == "showOrgDetailToUser2", let targetOrg = segue.destination as? OrganizationPageViewController{
-            DataManager.app.retrieveUserEmail(userName: org as! String, type: "orgData"){
-                result in
-                targetOrg.userEmail = result.email
-            }
-        }
-
     }
 }

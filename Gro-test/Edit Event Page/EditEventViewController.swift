@@ -60,7 +60,6 @@ class EditEventViewController: UIViewController, UITextFieldDelegate {
     }
     
     // Called when the user clicks on the view outside of the UITextField
-
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }

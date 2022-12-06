@@ -22,14 +22,17 @@ class OrganizationPageViewController: UIViewController {
     var userEmail = ""
     var orgAvartar:UIImage = UIImage()
     var runned = false
+    var eventImages: [UIImage] = []
+    
     @IBAction func updateInfoButton(_ sender: Any) {
         if(runned){
             DataManager.app.UploadUserData(email: self.userEmail, orgAvatar: self.orgAvartar, orgDescription: self.descriptionTextfield.text, type: "orgData", userName: self.OrgName.text as! String)
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("start of view did load - useremail is: \(userEmail)")
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 90, height: 90)
         self.OrgName.text = "loading"
@@ -48,29 +51,53 @@ class OrganizationPageViewController: UIViewController {
         contactButton.layer.cornerRadius = 5
         eventsButton.layer.cornerRadius = 5
         subscribeButton.layer.cornerRadius = 5
-        
-        // Retrieving Data from backend
-        DataManager.app.retrieveUserData(email: self.userEmail){
-            result in
-            self.runned = true
-            let curOrgData:UserData = result[0]
-            self.OrgName.text = curOrgData.userName
-            selectedOrg = curOrgData.userName
-            self.descriptionTextfield.text = curOrgData.description
-            self.orgAvartar = curOrgData.avatar
-            
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        print("=============")
+//        print(selectedOrg)
+//        print("=============")
+        DispatchQueue.global(qos: .userInteractive).async {
+            DataManager.app.retrieveUserEmail(userName: selectedOrg as! String, type: "orgData") {
+                result in
+                
+                DispatchQueue.main.async {
+                    self.userEmail = result.email
+                    
+                    // Retrieving Data from backend
+                    DataManager.app.retrieveUserData(email: self.userEmail){
+                        result in
+                        self.runned = true
+                        let curOrgData:UserData = result[0]
+                        self.OrgName.text = curOrgData.userName
+                        selectedOrg = curOrgData.userName
+                        self.descriptionTextfield.text = curOrgData.description
+                        self.orgAvartar = curOrgData.avatar
+                    }
+                    
+                    // Retrieve event images from backend
+                    DataManager.app.retrieveEventData(OrgName: self.OrgName.text!) {
+                        result in
+                        for each in result {
+                            self.eventImages.append(each.image)
+                        }
+                    }
+                }
+            }
         }
     }
 }
 
 extension OrganizationPageViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
+        return eventImages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UpcomingEventsCollectionViewCell", for: indexPath) as! UpcomingEventsCollectionViewCell
-        cell.configure(with: UIImage(named: "Image")!)
+        cell.configure(with: self.eventImages[indexPath.row])
         return cell
     }
 }
@@ -93,4 +120,5 @@ extension OrganizationPageViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0.0
     }
+    
 }
